@@ -71,7 +71,13 @@ def build_feed(episodes):
     <itunes:author>{PODCAST_AUTHOR}</itunes:author>
     <itunes:category text="{PODCAST_CATEGORY}"/>
     <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="{REPO_URL}/icon.png"/>
     <itunes:type>episodic</itunes:type>
+    <image>
+      <url>{REPO_URL}/icon.png</url>
+      <title>{PODCAST_TITLE}</title>
+      <link>{REPO_URL}</link>
+    </image>
 {items}  </channel>
 </rss>"""
 

@@ -7,11 +7,17 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Mar 2026 22:53:35 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2026 22:55:48 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://gragera-boti.github.io/ai-explained/icon.png"/>
     <itunes:type>episodic</itunes:type>
+    <image>
+      <url>https://gragera-boti.github.io/ai-explained/icon.png</url>
+      <title>AI Explained</title>
+      <link>https://gragera-boti.github.io/ai-explained</link>
+    </image>
     <item>
       <title>Quantization — How AI Models Shrink to Fit Your Laptop</title>
       <description>What is quantization? How does it let you run massive AI models on a laptop with 8GB of RAM? We break down the math, the formats (GGUF, GPTQ, AWQ), and why neural networks are surprisingly tolerant of rounding.</description>
