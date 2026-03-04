@@ -1,0 +1,21 @@
+Welcome to AI Explained. I'm your host, and today we're diving into quantization — the technique that lets you run massive AI models on your laptop instead of a data center.
+
+So here's the problem. Modern large language models like GPT or LLaMA have billions of parameters. Each parameter is typically stored as a 32-bit floating point number. That's 4 bytes per parameter. A 7 billion parameter model? That's 28 gigabytes just for the weights. Good luck fitting that in your laptop's memory.
+
+Quantization is the solution. It's essentially controlled rounding. Instead of storing each number with 32 bits of precision, you use fewer bits — 16, 8, or even 4 bits. It's the same idea behind how JPEG compresses images. You lose some detail, but the result is still perfectly usable.
+
+Let's make this concrete. Imagine you have a ruler marked in millimeters. That's your 32-bit precision. Now imagine replacing it with a ruler marked only in centimeters. You've lost some precision — you can't tell the difference between 3.2 and 3.7 centimeters anymore. But for most practical purposes, centimeter precision is fine. That's what quantization does to neural network weights.
+
+The most common approach is called linear quantization. You take the range of values in your model — say, negative 1 to positive 1 — and map it onto 256 discrete levels, which is what 8 bits can represent. Each weight gets rounded to the nearest level. The model gets smaller, runs faster, and uses less memory.
+
+But here's what's fascinating. You'd expect all this rounding to destroy the model's quality. And with aggressive quantization, it can. But researchers discovered that neural networks are remarkably tolerant of this kind of noise. An 8-bit quantized model typically performs almost identically to the original. Even 4-bit quantization — which is 8 times smaller than the original — often retains 95% or more of the model's capability.
+
+There are different quantization formats you'll encounter in the wild. GGUF is popular in the open source community — it's the format used by llama.cpp and the models you download in LM Studio. GPTQ is another approach that uses calibration data to be smarter about which weights to round and how. AWQ, or Activation-Aware Weight Quantization, takes it further by identifying which weights matter most and preserving their precision.
+
+You'll also see names like Q4_K_M or Q5_K_S when browsing models. The Q number tells you the bit precision — Q4 means 4-bit. The K means it uses a technique called k-quant that varies precision across different parts of the model. And the letter at the end — S for small, M for medium, L for large — tells you the overall quality tradeoff.
+
+Here's the practical takeaway. If you have 8 gigabytes of RAM, you can comfortably run a 4-bit quantized 7 billion parameter model. That same model at full precision would need 28 gigabytes. Quantization literally makes the impossible possible.
+
+And this is why quantization matters so much right now. The race in AI isn't just about making models bigger. It's about making them smaller and faster without losing what makes them smart. Every time you run a local model on your phone or laptop, quantization is the invisible hero making it happen.
+
+That's quantization. Tomorrow we'll explore tokenization — how AI models actually read and understand text. Until then, I'm your host at AI Explained. Thanks for listening.

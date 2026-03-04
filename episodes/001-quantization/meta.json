@@ -1,0 +1,9 @@
+{
+  "title": "Quantization — How AI Models Shrink to Fit Your Laptop",
+  "description": "What is quantization? How does it let you run massive AI models on a laptop with 8GB of RAM? We break down the math, the formats (GGUF, GPTQ, AWQ), and why neural networks are surprisingly tolerant of rounding.",
+  "date": "2026-03-05",
+  "episode_number": 1,
+  "duration": "4:18",
+  "voice": "en-US-ChristopherNeural",
+  "topics": ["quantization", "GGUF", "GPTQ", "AWQ", "model compression"]
+}
