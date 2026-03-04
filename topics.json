@@ -1,0 +1,37 @@
+{
+  "upcoming": [
+    "Tokenization — How AI reads text",
+    "Transformers — The architecture behind modern AI",
+    "Attention mechanism — How models focus on what matters",
+    "Fine-tuning vs pre-training — Teaching old models new tricks",
+    "RAG (Retrieval Augmented Generation) — Giving AI a reference library",
+    "Embeddings — How AI understands meaning as numbers",
+    "Temperature and sampling — Why AI responses vary",
+    "LoRA and adapters — Cheap fine-tuning for everyone",
+    "Context windows — How much AI can remember at once",
+    "Prompt engineering — Talking to AI effectively",
+    "RLHF — How AI learns human preferences",
+    "Mixture of Experts — Why some models are huge but fast",
+    "Diffusion models — How AI generates images",
+    "Neural network basics — Layers, weights, and activations",
+    "Backpropagation — How AI learns from mistakes",
+    "GPUs vs CPUs — Why AI needs special hardware",
+    "MLX and Apple Silicon — Running AI on your Mac",
+    "Hallucinations — Why AI makes things up",
+    "Chain of thought — Teaching AI to reason step by step",
+    "Agents and tool use — AI that can take actions",
+    "Distillation — Shrinking smart models into small ones",
+    "Benchmarks — How we measure AI intelligence",
+    "Open source vs closed models — The AI access debate",
+    "Multimodal models — AI that sees, hears, and reads",
+    "Speculative decoding — Making inference faster",
+    "KV cache — How AI remembers within a conversation",
+    "Positional encoding — How AI knows word order",
+    "Beam search vs greedy decoding — How AI picks words",
+    "Synthetic data — Training AI on AI-generated content",
+    "Alignment — Making AI do what we actually want"
+  ],
+  "completed": [
+    "Quantization — How AI Models Shrink to Fit Your Laptop"
+  ]
+}
