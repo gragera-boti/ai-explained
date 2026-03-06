@@ -1,0 +1,9 @@
+{
+  "title": "Tokenization — How AI reads text",
+  "description": "How do language models convert human text into numbers they can process? We explore tokenization — from simple character mapping to sophisticated subword algorithms like BPE. Why the word 'tokenization' might be split into multiple pieces, and why this invisible step shapes everything about AI text processing.",
+  "date": "2026-03-07",
+  "episode_number": 2,
+  "duration": "5:34",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["tokenization", "BPE", "subword", "vocabulary", "text preprocessing", "language models"]
+}

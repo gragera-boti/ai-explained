@@ -1,0 +1,29 @@
+Welcome to AI Explained. I'm your host, and today we're diving into tokenization — the hidden first step that happens every time you chat with ChatGPT, Claude, or any AI language model.
+
+Here's a fundamental problem: computers think in numbers, but humans communicate with words. When you type "The quick brown fox," your AI model needs to convert those letters into numbers it can actually process. That conversion process? That's tokenization.
+
+Think of tokenization as creating a dictionary between human language and machine language. But it's trickier than you might think. The naive approach would be to just map each letter to a number. A equals 1, B equals 2, and so on. But this creates massive sequences — the word "tokenization" becomes 12 separate numbers. That's inefficient and makes it hard for models to understand meaning.
+
+At the other extreme, you could map entire words to numbers. "The" gets number 1, "quick" gets number 2, "brown" gets number 3. This works better for meaning, but creates a different problem: your dictionary becomes enormous. English has hundreds of thousands of words. Add in proper nouns, technical terms, and typos, and you need millions of entries. Plus, what happens when you encounter a word that's not in your dictionary? The model just breaks.
+
+The solution most modern AI uses is called subword tokenization. Instead of splitting text at character or word boundaries, you split at meaningful sub-parts. Think of it like finding the Lego blocks of language. The word "unhappiness" might become three tokens: "un", "happy", and "ness". Each piece appears in other words too — "unlikely," "happiness," "sadness." Your model learns these building blocks once and can combine them to understand new words.
+
+The most popular algorithm for this is called Byte Pair Encoding, or BPE. Here's how it works. You start with individual characters. Then you look at your training text and ask: what pair of characters appears together most often? Maybe it's "th". So you create a new token "th" and replace all instances of t-h with this single token. Then you repeat the process. Maybe "th" plus "e" appears often, so you create "the". You keep going until you have around 50,000 tokens.
+
+OpenAI's GPT models use a variant of BPE. Google uses something called SentencePiece, which is similar but handles languages without spaces differently. The result is a vocabulary that balances efficiency with coverage.
+
+Let me show you what this looks like in practice. Take the sentence "Tokenization is preprocessing text." A BPE tokenizer might split this as: "Token", "ization", " is", " pre", "processing", " text", ".". Notice how common prefixes and suffixes get their own tokens? That's the algorithm finding those linguistic Lego blocks.
+
+But here's where it gets interesting. The same text can be tokenized differently by different models. GPT-3's tokenizer might split "tokenization" one way, while PaLM's might split it another. This matters because longer token sequences mean the model has to do more work, and they count against your context limit.
+
+In fact, this is why some languages are more expensive to process than others. Languages that don't fit well with the training data's assumptions — say, using a BPE trained mostly on English to tokenize Chinese — end up with much longer token sequences. Every character might become its own token, making processing slower and more expensive.
+
+There's also an interesting quirk: tokenizers struggle with numbers and code. The number 347 might be split into three separate tokens: "3", "4", "7". This is why language models often struggle with arithmetic — they're not seeing "three hundred forty-seven" as one concept, but as three unrelated pieces.
+
+Modern tokenizers have gotten much smarter. They handle punctuation better, understand more languages, and can even process code more efficiently. But the basic principle remains the same: find the right balance between a manageable vocabulary size and meaningful chunks of language.
+
+Here's why this matters to you. When you're crafting prompts, understanding tokenization helps you be more efficient. Shorter, common words use fewer tokens. Repeated phrases get tokenized consistently. And if you're working with the API, you're literally paying per token, so efficiency matters.
+
+Tokenization is the first translation step from human language to machine understanding. It's invisible to most users, but it shapes everything that happens next. A bad tokenization strategy can cripple even the most sophisticated model. A good one makes the impossible conversations we have with AI today actually possible.
+
+That's tokenization — the bridge between human words and machine intelligence. Tomorrow we'll explore transformers, the architecture that processes those tokens and turns them into understanding. Until then, I'm your host at AI Explained. Thanks for listening.

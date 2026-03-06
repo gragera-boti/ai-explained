@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Tokenization — How AI reads text",
     "Transformers — The architecture behind modern AI",
     "Attention mechanism — How models focus on what matters",
     "Fine-tuning vs pre-training — Teaching old models new tricks",
@@ -32,6 +31,7 @@
     "Alignment — Making AI do what we actually want"
   ],
   "completed": [
-    "Quantization — How AI Models Shrink to Fit Your Laptop"
+    "Quantization — How AI Models Shrink to Fit Your Laptop",
+    "Tokenization — How AI reads text"
   ]
 }
