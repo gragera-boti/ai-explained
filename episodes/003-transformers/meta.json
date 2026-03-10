@@ -1,0 +1,9 @@
+{
+  "title": "Transformers — The architecture behind modern AI",
+  "description": "How does the architecture powering GPT, Claude, and every major AI model actually work? We break down the transformer — from the limitations of older recurrent networks, to the self-attention mechanism that lets models process entire sentences at once. Queries, keys, values, multi-head attention, and why this 2017 paper changed everything.",
+  "date": "2026-03-10",
+  "episode_number": 3,
+  "duration": "7:14",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["transformers", "self-attention", "encoder-decoder", "multi-head attention", "positional encoding", "attention is all you need", "neural networks"]
+}

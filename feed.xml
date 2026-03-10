@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Mar 2026 22:21:40 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2026 22:22:09 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Transformers — The architecture behind modern AI</title>
+      <description>How does the architecture powering GPT, Claude, and every major AI model actually work? We break down the transformer — from the limitations of older recurrent networks, to the self-attention mechanism that lets models process entire sentences at once. Queries, keys, values, multi-head attention, and why this 2017 paper changed everything.</description>
+      <pubDate>Mon, 09 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/003-transformers/003-transformers.mp3" length="2606544" type="audio/mpeg"/>
+      <guid isPermaLink="false">003-transformers</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7:14</itunes:duration>
+      <itunes:episode>3</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Tokenization — How AI reads text</title>
       <description>How do language models convert human text into numbers they can process? We explore tokenization — from simple character mapping to sophisticated subword algorithms like BPE. Why the word &apos;tokenization&apos; might be split into multiple pieces, and why this invisible step shapes everything about AI text processing.</description>
