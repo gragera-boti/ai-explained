@@ -1,0 +1,39 @@
+Welcome to AI Explained. I'm your host, and today we're tackling the big one — transformers. Not the robots, the neural network architecture. This is the design behind GPT, Claude, Gemini, and virtually every AI model making headlines today. If you want to understand modern AI, this is where it all starts.
+
+Before transformers came along in 2017, the dominant approach for processing language was called recurrent neural networks, or RNNs. Imagine reading a book, but you're only allowed to look at one word at a time, left to right, and you have to remember everything you've read so far in a single mental note. That's essentially how RNNs worked. They processed words sequentially — one after another — carrying forward a compressed summary of everything they'd seen.
+
+The problem? That summary kept getting overwritten. By the time you reached the end of a long sentence, the model had mostly forgotten the beginning. It's like trying to remember a phone number while someone keeps telling you new digits. Early tricks like LSTM cells helped, but the fundamental bottleneck remained: sequential processing is slow, and long-range memory is fragile.
+
+In 2017, a team of researchers at Google published a paper with a bold title: "Attention Is All You Need." That paper introduced the transformer architecture, and it changed everything.
+
+The core idea is surprisingly intuitive. Instead of reading words one by one, what if the model could look at every word in the sentence simultaneously and decide which words are most relevant to each other? That's the concept of self-attention, and it's the beating heart of the transformer.
+
+Let me give you an analogy. Imagine you're at a dinner party with ten people. In the old RNN approach, you'd talk to each person one at a time, in order, trying to remember all previous conversations. With a transformer, you're having all ten conversations at once, and each person can instantly reference what anyone else has said. It's massively parallel, and nothing gets lost.
+
+Here's how self-attention actually works, stripped down to the essentials. For each word in a sentence, the model creates three vectors: a Query, a Key, and a Value. Think of it like a library system. The Query is your search question — "what information do I need?" The Key is the label on each book — "here's what I contain." And the Value is the actual content of the book. The model compares each Query against every Key to figure out which words to pay attention to, then retrieves the relevant Values.
+
+Take the sentence: "The cat sat on the mat because it was tired." When the model processes the word "it," the attention mechanism compares "it" against every other word and discovers that "it" should attend strongly to "cat" — not "mat." That's how the model resolves ambiguity. It's not following grammatical rules; it's learning patterns of relevance from data.
+
+Now, transformers don't just do this once. They use something called multi-head attention, which runs several attention operations in parallel. Each "head" can focus on different types of relationships. One head might track grammatical structure. Another might focus on semantic meaning. A third might handle positional relationships. It's like having multiple specialists analyzing the same text simultaneously and then combining their insights.
+
+The full transformer architecture has two main parts: an encoder and a decoder. The encoder reads the input and builds a rich understanding of it. The decoder generates output one token at a time, using both the encoder's understanding and the tokens it's already produced. The original paper designed this for translation — French in, English out. But modern language models like GPT use only the decoder half. They predict the next token based on everything that came before, which is why they're called autoregressive models.
+
+Each encoder and decoder layer follows the same pattern: self-attention, then a feed-forward neural network. Stack six or more of these layers, and you get a model that builds increasingly abstract representations. The first layers might capture basic word relationships. Middle layers might understand sentence structure. The deepest layers encode complex meaning and reasoning patterns.
+
+There's one more crucial ingredient: positional encoding. Since the transformer processes all words simultaneously, it has no inherent sense of word order. The sentence "dog bites man" and "man bites dog" would look identical without it. Positional encodings solve this by adding a unique signal to each token based on its position in the sequence. The original paper used sine and cosine waves of different frequencies, which turns out to be a remarkably elegant solution.
+
+So why did transformers win? Three reasons.
+
+First, parallelism. Because every word is processed simultaneously, transformers can take full advantage of GPUs, which are designed for parallel computation. Training that used to take months suddenly took weeks.
+
+Second, scalability. The architecture scales beautifully. Want a smarter model? Add more layers, more attention heads, more parameters. This is what enabled the jump from millions of parameters to hundreds of billions.
+
+Third, transfer learning. A transformer pre-trained on massive text data develops a general understanding of language that transfers to almost any task. Fine-tune it on medical text, it becomes a medical expert. Fine-tune it on code, it becomes a programmer. This flexibility was unprecedented.
+
+The impact has been staggering. GPT showed that transformer decoders could generate remarkably coherent text. BERT showed that transformer encoders could understand language for search and classification. Vision Transformers proved the architecture works for images too, not just text. Today, transformers power everything from Google Search to GitHub Copilot to drug discovery.
+
+But they're not perfect. The attention mechanism compares every token against every other token, which means computation grows quadratically with sequence length. Double your input, quadruple the compute. That's why context windows have limits, and why researchers are constantly working on more efficient attention variants.
+
+Still, the transformer remains the foundation. Eight years after "Attention Is All You Need," no architecture has dethroned it. It's the engine inside every major AI system you interact with, turning tokens into understanding, one attention calculation at a time.
+
+That's the transformer — the architecture that launched the AI revolution. Next time, we'll zoom into the attention mechanism itself and explore exactly how models learn to focus on what matters. Until then, I'm your host at AI Explained. Thanks for listening.
