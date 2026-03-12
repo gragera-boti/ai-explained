@@ -1,0 +1,9 @@
+{
+  "title": "Attention Mechanism — How Models Focus on What Matters",
+  "description": "From the cocktail party effect to the Transformer revolution: how attention lets AI models decide what's important in a sea of information. We break down queries, keys, values, multi-head attention, and why this single idea powers every major language model today.",
+  "date": "2026-03-12",
+  "episode_number": 4,
+  "duration": "5:26",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["attention", "self-attention", "transformers", "multi-head attention", "queries keys values", "RNN", "NLP", "machine learning"]
+}
