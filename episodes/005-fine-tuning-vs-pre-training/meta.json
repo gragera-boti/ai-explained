@@ -1,0 +1,9 @@
+{
+  "title": "Fine-Tuning vs Pre-Training — Teaching Old Models New Tricks",
+  "description": "What's the difference between pre-training and fine-tuning a language model? We break down the two-stage process behind modern AI: the expensive foundation-building phase and the affordable customization step that makes models actually useful.",
+  "date": "2026-03-13",
+  "episode_number": 5,
+  "duration": "7:00",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["fine-tuning", "pre-training", "transfer learning", "LoRA", "parameter-efficient fine-tuning", "RLHF", "foundation models", "instruction tuning"]
+}
