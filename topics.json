@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "RAG (Retrieval Augmented Generation) — Giving AI a reference library",
     "Embeddings — How AI understands meaning as numbers",
     "Temperature and sampling — Why AI responses vary",
     "LoRA and adapters — Cheap fine-tuning for everyone",
@@ -32,6 +31,7 @@
     "Tokenization — How AI reads text",
     "Transformers — The architecture behind modern AI",
     "Attention mechanism — How models focus on what matters",
-    "Fine-tuning vs pre-training — Teaching old models new tricks"
+    "Fine-tuning vs pre-training — Teaching old models new tricks",
+    "RAG (Retrieval Augmented Generation) — Giving AI a reference library"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "title": "RAG (Retrieval Augmented Generation) — Giving AI a Reference Library",
+  "description": "How RAG lets AI models look things up instead of guessing. We cover vector databases, semantic search, the three-step pipeline of indexing, retrieval, and generation — and why this technique is behind most reliable AI assistants today.",
+  "date": "2026-03-14",
+  "episode_number": 6,
+  "duration": "6:08",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["RAG", "retrieval augmented generation", "vector database", "embeddings", "semantic search", "hallucinations", "LLM", "information retrieval"]
+}
