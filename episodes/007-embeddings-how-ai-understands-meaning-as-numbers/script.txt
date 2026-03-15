@@ -1,0 +1,43 @@
+Embeddings — How AI Understands Meaning as Numbers
+
+You know how when someone says the word "bank," you instantly know whether they mean the side of a river or a place that holds your money — just from context? Your brain does something remarkable there. It takes a word and maps it to a meaning, considering everything around it.
+
+AI models need to do the same thing. But they can't read words the way you do. They only understand numbers. So how do you turn meaning — something as squishy and human as meaning — into math?
+
+That's what embeddings are. And once you understand them, a huge number of AI applications suddenly make sense.
+
+Let's start simple. Imagine you had to describe every city in the world using just two numbers: temperature and population. Tokyo might be something like 16 degrees, 14 million. Reykjavik: 5 degrees, 130 thousand. Miami: 25 degrees, 450 thousand. Now if you plotted these on a graph, cities with similar vibes would end up near each other. Warm, big cities over here. Cold, small cities over there.
+
+Embeddings work on the same principle — except instead of two numbers, you use hundreds or even thousands. And instead of cities, you're describing words, sentences, images, or entire documents.
+
+When an AI model creates an embedding, it takes a piece of content — say, the sentence "The cat sat on the mat" — and converts it into a long list of numbers. Maybe 384 numbers. Maybe 1,536. The exact count depends on the model. But here's the magic: that list of numbers captures the meaning of the sentence in a way that lets you compare it to other sentences mathematically.
+
+So "The cat sat on the mat" and "A kitten was resting on a rug" would end up with very similar number lists, because they mean nearly the same thing. Meanwhile, "Stock prices rose sharply today" would have a completely different set of numbers — because it lives in a different region of meaning-space.
+
+Now, where did this idea come from? It goes back to a linguist named John Rupert Firth, who said in 1957: "You shall know a word by the company it keeps." Think about that for a second. If you see the word "espresso" in a sentence, you'll probably also see words like "coffee," "morning," "cup," or "barista" nearby. The pattern of words that appear around "espresso" tells you what espresso means — without anyone ever defining it explicitly.
+
+This insight powered one of the first big breakthroughs in embeddings: Word2Vec, released by a team at Google in 2013. Word2Vec trained a neural network on massive amounts of text and learned to represent each word as a vector — a list of numbers — based on the contexts it appeared in.
+
+And Word2Vec could do something wild. You could take the vector for "king," subtract "man," add "woman," and the result would land right next to "queen." The math actually captured the relationship between gender and royalty. It wasn't programmed to know this — it learned it from patterns in text.
+
+But those early embeddings had a limitation. Each word got one vector, period. The word "bank" had the same embedding whether you were talking about a river bank or a savings bank. Modern embedding models, built on the transformer architecture we covered in episode three, solve this problem. They create contextual embeddings — the numbers change based on what's around the word. So "bank" in "I sat by the river bank" gets a completely different embedding than "bank" in "I need to go to the bank."
+
+So what can you actually do with embeddings? Quite a lot, it turns out.
+
+The most obvious application is search. Not keyword search, where you're matching exact words, but semantic search — searching by meaning. If you search for "how to fix a leaky faucet" and someone wrote a guide titled "repairing a dripping tap," keyword search might miss it. But their embeddings would be nearly identical, because they mean the same thing. Google, Bing, and pretty much every modern search engine use embeddings under the hood.
+
+Then there's recommendation systems. Spotify embeds songs and your listening history into the same space. Songs that land near your recent listens get recommended. Netflix does something similar with shows. Snapchat uses embeddings to match ads to users. Facebook uses them for social search.
+
+You can also use embeddings for clustering — grouping similar things together automatically. Feed a thousand customer support tickets through an embedding model, and you can instantly see which ones are about billing, which are about technical issues, and which are about shipping. No one had to manually label anything.
+
+And here's one more that ties directly to something we covered two episodes ago: RAG, or Retrieval Augmented Generation. Remember how RAG gives an AI model access to a reference library? Embeddings are how that library gets searched. Your documents get embedded and stored in a vector database. When you ask a question, your question gets embedded too, and the system finds the documents whose embeddings are closest to yours. Those get fed to the language model as context.
+
+One practical detail worth mentioning: the distance between embeddings is typically measured using cosine similarity. Don't let the name scare you — it's basically asking "are these two arrows pointing in the same direction?" Two embeddings pointing the same way in that high-dimensional space have a cosine similarity near 1. Completely unrelated content scores near 0.
+
+Simon Willison, a well-known developer in the Python community, described embeddings perfectly: they're "a really neat trick that often comes wrapped in a pile of intimidating jargon." He used them to build a related-articles feature for his blog. He embedded all 472 of his articles, stored the vectors in a SQLite database, and now the site can instantly find the five most related articles for any post — just by comparing embedding distances.
+
+The beauty of embeddings is that they're a bridge between the fuzzy, intuitive world of human meaning and the precise, numerical world that computers need. They turn "this feels similar to that" into something a machine can calculate in microseconds.
+
+So the next time an AI understands that your question about "affordable housing" is related to an article about "low-cost apartments," even though those phrases share zero words in common — that's embeddings at work. Meaning, compressed into numbers, living in a space where similar ideas are neighbors.
+
+In our next episode, we'll look at temperature and sampling — the mechanisms that control why AI gives you a different answer each time you ask the same question. See you then.
