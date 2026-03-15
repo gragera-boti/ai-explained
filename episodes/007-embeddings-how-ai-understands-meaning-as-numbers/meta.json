@@ -1,0 +1,9 @@
+{
+  "title": "Embeddings — How AI Understands Meaning as Numbers",
+  "description": "What are embeddings and why do they matter? We explore how AI converts words, sentences, and documents into lists of numbers that capture meaning — enabling semantic search, recommendations, and RAG. From Word2Vec to modern transformers, discover the bridge between human meaning and machine math.",
+  "date": "2026-03-15",
+  "episode_number": 7,
+  "duration": "7:25",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["embeddings", "word2vec", "semantic search", "vector databases", "cosine similarity", "NLP", "transformers", "RAG"]
+}

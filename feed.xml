@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Mar 2026 09:49:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 09:49:54 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Embeddings — How AI Understands Meaning as Numbers</title>
+      <description>What are embeddings and why do they matter? We explore how AI converts words, sentences, and documents into lists of numbers that capture meaning — enabling semantic search, recommendations, and RAG. From Word2Vec to modern transformers, discover the bridge between human meaning and machine math.</description>
+      <pubDate>Sat, 14 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/007-embeddings-how-ai-understands-meaning-as-numbers/007-embeddings-how-ai-understands-meaning-as-numbers.mp3" length="2549952" type="audio/mpeg"/>
+      <guid isPermaLink="false">007-embeddings-how-ai-understands-meaning-as-numbers</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7:25</itunes:duration>
+      <itunes:episode>7</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>RAG (Retrieval Augmented Generation) — Giving AI a Reference Library</title>
       <description>How RAG lets AI models look things up instead of guessing. We cover vector databases, semantic search, the three-step pipeline of indexing, retrieval, and generation — and why this technique is behind most reliable AI assistants today.</description>
