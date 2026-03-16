@@ -1,0 +1,20 @@
+{
+  "title": "Temperature and Sampling — Why AI Responses Vary",
+  "description": "Ever wonder why AI gives different answers to the same question? This episode explores temperature, top-k, top-p sampling, and the math behind how language models choose their words — from greedy decoding to creative chaos.",
+  "date": "2026-03-16",
+  "episode_number": 8,
+  "duration": "7:00",
+  "voice": "en-US-AndrewNeural",
+  "topics": [
+    "temperature",
+    "sampling",
+    "top-k",
+    "top-p",
+    "nucleus sampling",
+    "greedy decoding",
+    "softmax",
+    "logits",
+    "language generation",
+    "decoding strategies"
+  ]
+}

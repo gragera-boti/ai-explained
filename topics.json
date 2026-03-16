@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Temperature and sampling — Why AI responses vary",
     "LoRA and adapters — Cheap fine-tuning for everyone",
     "Context windows — How much AI can remember at once",
     "Prompt engineering — Talking to AI effectively",
@@ -32,6 +31,7 @@
     "Attention mechanism — How models focus on what matters",
     "Fine-tuning vs pre-training — Teaching old models new tricks",
     "RAG (Retrieval Augmented Generation) — Giving AI a reference library",
-    "Embeddings — How AI understands meaning as numbers"
+    "Embeddings — How AI understands meaning as numbers",
+    "Temperature and sampling — Why AI responses vary"
   ]
 }
