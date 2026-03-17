@@ -1,0 +1,9 @@
+{
+  "title": "LoRA and Adapters — Cheap Fine-Tuning for Everyone",
+  "description": "How LoRA lets you customize massive AI models by training just a tiny fraction of their parameters. The clever math behind low-rank adaptation, and why it democratized fine-tuning.",
+  "date": "2026-03-17",
+  "episode_number": 9,
+  "duration": "6:30",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["LoRA", "fine-tuning", "adapters", "PEFT", "low-rank adaptation", "parameter-efficient", "DoRA", "LLM customization"]
+}
