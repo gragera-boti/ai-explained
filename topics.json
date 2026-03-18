@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Context windows — How much AI can remember at once",
     "Prompt engineering — Talking to AI effectively",
     "RLHF — How AI learns human preferences",
     "Mixture of Experts — Why some models are huge but fast",
@@ -32,6 +31,7 @@
     "RAG (Retrieval Augmented Generation) — Giving AI a reference library",
     "Embeddings — How AI understands meaning as numbers",
     "Temperature and sampling — Why AI responses vary",
-    "LoRA and adapters — Cheap fine-tuning for everyone"
+    "LoRA and adapters — Cheap fine-tuning for everyone",
+    "Context windows — How much AI can remember at once"
   ]
 }

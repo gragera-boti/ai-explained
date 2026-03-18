@@ -1,0 +1,9 @@
+{
+  "title": "Context Windows — How Much AI Can Remember at Once",
+  "description": "What is a context window, and why does it matter? We explore the fixed-size memory that limits how much text an AI model can consider at once — from tiny 1K-token windows to today's two-million-token giants — and why bigger isn't always better.",
+  "date": "2026-03-18",
+  "episode_number": 10,
+  "duration": "5:48",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["context window", "tokens", "attention mechanism", "KV cache", "lost in the middle", "working memory", "RAG", "Gemini", "Claude", "transformer"]
+}

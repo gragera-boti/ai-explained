@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Mar 2026 06:03:26 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 06:03:52 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Context Windows — How Much AI Can Remember at Once</title>
+      <description>What is a context window, and why does it matter? We explore the fixed-size memory that limits how much text an AI model can consider at once — from tiny 1K-token windows to today&apos;s two-million-token giants — and why bigger isn&apos;t always better.</description>
+      <pubDate>Tue, 17 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/010-context-windows/010-context-windows.mp3" length="2476800" type="audio/mpeg"/>
+      <guid isPermaLink="false">010-context-windows</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:48</itunes:duration>
+      <itunes:episode>10</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>LoRA and Adapters — Cheap Fine-Tuning for Everyone</title>
       <description>How LoRA lets you customize massive AI models by training just a tiny fraction of their parameters. The clever math behind low-rank adaptation, and why it democratized fine-tuning.</description>
