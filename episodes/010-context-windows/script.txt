@@ -1,0 +1,39 @@
+Context Windows — How Much AI Can Remember at Once
+
+Imagine you're having a conversation with someone who has a very specific kind of amnesia. They can remember everything you've said — but only for the last few minutes. The moment the conversation gets too long, the earliest parts start falling off the edge. That, in essence, is what a context window is for a large language model.
+
+The context window is the total amount of text an AI model can consider at any given moment. It includes everything: the system instructions it was given, the conversation history, any documents you've pasted in, and the response it's currently generating. All of it has to fit inside this fixed-size window.
+
+And that window is measured in tokens. Now, tokens aren't exactly words. Think of them as the chunks a model uses to read text. The word "understanding" might be one token. The word "unbelievable" might be split into "un," "believ," and "able." On average, one token is roughly three-quarters of a word in English. So when someone says a model has a 128,000-token context window, that's roughly 96,000 words — about the length of a full novel.
+
+Here's a useful way to think about it. A context window is like a desk. Everything the model is working with has to fit on that desk. Your question, the documents you've shared, the model's own draft response — all of it. If the desk is small, you can only spread out a few pages. If it's large, you can lay out an entire book and flip between chapters.
+
+Early language models had tiny desks. GPT-2 back in 2019 had a context window of just 1,024 tokens — maybe 750 words. That's about one page. By the time GPT-3 arrived, it expanded to 2,048 and then 4,096 tokens. Useful, but still limited. You couldn't paste in a long document and ask questions about it.
+
+Then things started moving fast. In 2023, Anthropic announced they had expanded Claude's context window from 9,000 to 100,000 tokens — roughly 75,000 words. To put that in perspective, the average person would need over five hours to read that much text. Claude could process it in under a minute. Anthropic demonstrated this by loading the entire text of The Great Gatsby into the model, changing a single line, and asking it to spot the difference. It found it in 22 seconds.
+
+By 2025, Google's Gemini pushed the boundary even further: two million tokens. That's roughly 1.5 million words — enough for several novels, or six hours of transcribed audio, or an entire codebase.
+
+But here's the thing: a bigger context window doesn't automatically mean better performance. There's a well-documented phenomenon called "lost in the middle." Research has shown that models tend to pay more attention to information near the beginning and end of their context window, and can sometimes miss or underweight information buried in the middle. It's a bit like reading a very long email — you remember how it started and how it ended, but the details in paragraph fourteen? Those get fuzzy.
+
+This matters practically. If you paste a hundred-page document and ask a question whose answer is on page fifty, the model might struggle more than if the answer were on page two or page ninety-nine. Prompt design — where you place the key information — actually makes a difference.
+
+So why can't we just make context windows infinitely large? Two reasons. First, computation. The attention mechanism inside a transformer — which we covered in episode three — compares every token with every other token. Double the context length and you roughly quadruple the computation needed. That's the quadratic scaling problem. Researchers have been working on more efficient attention mechanisms like sparse attention and linear attention to ease this, but it remains a fundamental constraint.
+
+Second, memory. Every token in the context window needs to be stored in GPU memory as part of what's called the key-value cache — the KV cache, which we'll dedicate a future episode to. Longer context means more memory, which means more expensive hardware.
+
+There's an interesting parallel to human cognition here. Psychologists distinguish between working memory and long-term memory. Working memory — the stuff you're actively holding in mind right now — is famously limited. Most people can juggle about seven items at once. Long-term memory, by contrast, is vast but requires effort to retrieve from.
+
+A context window is essentially a model's working memory. Everything in it is immediately accessible, but there's a hard cap. Techniques like RAG — Retrieval Augmented Generation, which we covered in episode six — act like a long-term memory system. Instead of cramming everything into the context window, you store documents externally and only pull in the relevant parts when needed.
+
+In practice, most applications use a combination. The context window holds the active conversation and the most relevant reference material, while RAG or similar retrieval systems handle the broader knowledge base. It's a design pattern, not unlike how you might work at your desk with a few key documents open, but with a filing cabinet nearby for everything else.
+
+One more thing worth knowing: context windows are shared between input and output. If a model has a 128,000-token window and you use 120,000 tokens for your prompt and documents, there are only 8,000 tokens left for the model's response. That's roughly six thousand words — plenty for most answers, but it's a tradeoff worth being aware of.
+
+So where is this heading? The trend is clearly toward larger context windows, more efficient attention mechanisms, and smarter retrieval systems working together. The goal isn't just to stuff more text into the window — it's to help models use that context effectively, paying attention to what matters regardless of where it appears.
+
+For now, when you're working with an AI model, think of the context window as the size of the shared workspace between you and the model. Everything you want it to consider needs to fit in that space. The better you organize what goes in, the better results you'll get out.
+
+That's context windows — the memory horizon of modern AI. Next time, we'll look at prompt engineering: the art of talking to AI effectively.
+
+Thanks for listening.
