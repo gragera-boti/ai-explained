@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Mar 2026 06:03:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2026 06:04:18 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Prompt Engineering — Talking to AI Effectively</title>
+      <description>The art and science of crafting effective prompts for AI models. We cover role assignment, few-shot and zero-shot prompting, chain-of-thought reasoning, context engineering, and practical tips for getting better results from any language model.</description>
+      <pubDate>Wed, 18 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/011-prompt-engineering/011-prompt-engineering.mp3" length="2204640" type="audio/mpeg"/>
+      <guid isPermaLink="false">011-prompt-engineering</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:16</itunes:duration>
+      <itunes:episode>11</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Context Windows — How Much AI Can Remember at Once</title>
       <description>What is a context window, and why does it matter? We explore the fixed-size memory that limits how much text an AI model can consider at once — from tiny 1K-token windows to today&apos;s two-million-token giants — and why bigger isn&apos;t always better.</description>

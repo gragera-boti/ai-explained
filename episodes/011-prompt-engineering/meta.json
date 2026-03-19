@@ -1,0 +1,9 @@
+{
+  "title": "Prompt Engineering — Talking to AI Effectively",
+  "description": "The art and science of crafting effective prompts for AI models. We cover role assignment, few-shot and zero-shot prompting, chain-of-thought reasoning, context engineering, and practical tips for getting better results from any language model.",
+  "date": "2026-03-19",
+  "episode_number": 11,
+  "duration": "6:16",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["prompt engineering", "few-shot prompting", "chain-of-thought", "context engineering", "LLM", "zero-shot", "role prompting"]
+}
