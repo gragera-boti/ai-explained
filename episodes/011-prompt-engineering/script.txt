@@ -1,0 +1,35 @@
+Prompt Engineering — Talking to AI Effectively
+
+You know that feeling when you ask someone for directions, and they give you a vague wave toward "over there"? Now imagine you asked really specifically: "How do I get to the coffee shop on the corner of Fifth and Main?" Suddenly, the answer is useful. That's prompt engineering in a nutshell — the art and science of asking AI the right questions, in the right way, to get the answers you actually want.
+
+Welcome to AI Explained. I'm your host, and today we're tackling prompt engineering — one of the most practical skills in the AI era, and one you're probably already doing without realizing it.
+
+So what is prompt engineering, exactly? At its core, it's the process of crafting inputs — called prompts — that guide a large language model toward producing the output you need. Think of it less like programming and more like communicating with a very capable but very literal colleague. The model doesn't read your mind. It reads your words. And small changes in how you phrase things can produce wildly different results.
+
+Here's a concrete example. If you ask a model "Tell me about Python," you might get a response about the programming language, the snake, or the Monty Python comedy troupe. But if you say "Explain Python's list comprehension syntax with three examples, suitable for someone who knows JavaScript," you'll get exactly what you need. That specificity? That's prompt engineering at work.
+
+Let's break down the key techniques that have emerged.
+
+First, there's role assignment. You can tell the model to behave as a specific persona — "You are an experienced database administrator" or "You are a patient math tutor for middle schoolers." This frames the entire conversation. It's like hiring a specialist instead of asking a generalist. The model adjusts its vocabulary, depth, and tone to match the role.
+
+Second, we have few-shot prompting. Instead of just describing what you want, you show the model examples. You provide two or three input-output pairs, and the model picks up the pattern. It's a bit like training a new employee by showing them completed work before handing them a task. Research shows this can dramatically improve accuracy, especially for structured tasks like classification or formatting.
+
+There's also zero-shot prompting, where you give no examples at all — just a clear instruction. Modern models are surprisingly good at this, but few-shot tends to be more reliable when precision matters.
+
+Now, one of the most powerful techniques is chain-of-thought prompting. Instead of asking for just the answer, you ask the model to show its reasoning step by step. Add the phrase "Let's think through this step by step" to a math problem, and suddenly the model's accuracy jumps. Why? Because you're encouraging it to break complex problems into manageable pieces, rather than trying to leap straight to a conclusion. It's the difference between asking someone "What's 17 times 24?" and asking "Walk me through multiplying 17 by 24."
+
+Here's something that surprises a lot of people: the order and formatting of your prompt matters enormously. Studies have shown that simply reordering examples in a prompt can shift accuracy by over 40 percentage points. The placement of instructions, the use of delimiters like triple quotes or XML tags to separate sections, even the difference between saying "don't" versus telling the model what to do — all of these details compound.
+
+And that brings us to a broader concept that's gaining traction: context engineering. While prompt engineering focuses on the specific question you ask, context engineering is about everything surrounding that question — the system instructions, retrieved documents, conversation history, and tool definitions that together form the model's entire input window. Think of the prompt as what you say in a meeting, and the context as everything on the whiteboard, the agenda, and the documents everyone read beforehand.
+
+In production systems, engineers carefully manage this context. They decide what gets included, in what order, and with what priority. A customer support chatbot, for instance, might have developer-level instructions saying "Always be polite and never discuss competitors," user messages with the actual customer question, and retrieved knowledge base articles relevant to the query. Getting this layering right is what separates a prototype from a reliable product.
+
+Now, there's a philosophical question lurking here. Is prompt engineering a real skill, or just a temporary workaround? The honest answer is: it's both. As models get smarter, they need less hand-holding. Some research suggests that AI models can now generate better prompts than humans in certain cases. But understanding how to communicate effectively with AI — knowing what information to include, how to structure a request, when to provide examples — that's a skill that transfers across every model and every generation of AI.
+
+It's a lot like learning to write clear emails or effective documentation. The tools change. The underlying skill of clear communication doesn't.
+
+A few practical tips to take away. Be specific about what you want — format, length, audience, and style. Use delimiters to separate different parts of your prompt. When accuracy matters, show examples. For complex reasoning, ask for step-by-step thinking. And iterate — prompting is experimental. Your first attempt is rarely your best.
+
+That's prompt engineering: the surprisingly deep art of talking to AI effectively. It's accessible to anyone, but mastering it takes the same thing as mastering any form of communication — practice, clarity, and a willingness to refine.
+
+Thanks for listening to AI Explained. Next time, we'll explore RLHF — how AI learns from human preferences to become more helpful and less harmful. See you then.
