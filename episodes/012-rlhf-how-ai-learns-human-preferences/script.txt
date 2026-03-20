@@ -1,0 +1,55 @@
+RLHF — How AI Learns Human Preferences
+
+You know that feeling when you're training a dog? You can't exactly explain to it what you want in words. You can't hand it a rulebook. But you can say "good boy" when it sits and "no" when it jumps on the couch. Over time, the dog figures out what you like and what you don't.
+
+That's essentially the idea behind RLHF — Reinforcement Learning from Human Feedback. It's one of the most important techniques in modern AI, and it's a big part of why today's language models feel so much more helpful and natural than models from just a few years ago.
+
+So let's break it down.
+
+When a large language model is first trained — during what's called pretraining — it learns to predict the next word in a sequence. Feed it billions of sentences from the internet, books, and code, and it learns the statistical patterns of language. It gets really good at generating text that sounds plausible.
+
+But here's the problem: plausible isn't the same as good. A pretrained model might give you a technically accurate answer buried in jargon, or a creative story that goes completely off the rails, or a response that's subtly biased or even harmful. It knows how language works, but it doesn't know what humans actually want.
+
+And what humans want is surprisingly hard to define in code. You can't just write a formula that says "be helpful but not sycophantic, be honest but tactful, be creative but stay on topic." These are fuzzy, context-dependent, deeply human judgments. You know good when you see it, but try writing it down as a math equation.
+
+That's where RLHF comes in. Instead of trying to define "good" explicitly, you let humans show what good looks like.
+
+Here's how it works, step by step.
+
+Step one: you start with a pretrained language model. Think of it as a smart but socially unaware assistant. It knows a lot, but it doesn't know how to present that knowledge in a way humans appreciate.
+
+Step two: you collect human preferences. You give the model a prompt — say, "explain quantum computing to a ten-year-old." The model generates several different responses. Then you ask human evaluators to rank those responses. Which one is clearer? Which one is more engaging? Which one avoids unnecessary jargon? The humans don't need to write perfect answers themselves. They just need to compare and judge. And humans are really good at that — we make preference judgments all day long without even thinking about it.
+
+Step three: you train a reward model. This is a separate neural network that learns to predict how humans would rate a given response. It takes in a prompt and a response, and outputs a score — a single number representing how much a human would likely prefer that answer. You train it on all those human comparisons until it can reliably estimate human preferences on its own.
+
+Step four — and this is where the "reinforcement learning" part kicks in — you use that reward model to fine-tune the original language model. The language model generates a response, the reward model scores it, and the language model adjusts its behavior to get higher scores. The specific algorithm most commonly used here is called Proximal Policy Optimization, or PPO. It's a careful, stable way of nudging the model in the right direction without letting it change too dramatically in any one step.
+
+Think of it like this: the reward model is a stand-in for human judgment. It's a shortcut that lets the language model get millions of preference signals without needing a human in the loop every single time.
+
+Now, a few things make RLHF particularly clever.
+
+First, it's surprisingly data-efficient. You don't need millions of human comparisons to see real improvements. Studies have shown that even a relatively small dataset of preference rankings can meaningfully shift a model's behavior. OpenAI demonstrated this when training InstructGPT — the predecessor to ChatGPT — where a modest amount of human feedback produced dramatic improvements in helpfulness and safety.
+
+Second, comparison-based feedback is much more reliable than asking humans to score responses on a numerical scale. If I ask you to rate a response from one to ten, your seven and my seven might mean very different things. But if I show you two responses and ask which one is better, we'll agree far more often. Rankings are naturally more calibrated across different people.
+
+Third, the reward model doesn't have to be as big as the language model it's training. OpenAI used a 175-billion parameter language model but only a 6-billion parameter reward model. The reward model just needs to understand text well enough to evaluate it — it doesn't need to generate it.
+
+But RLHF isn't perfect. There are some real challenges.
+
+The most obvious one is that human preferences aren't universal. Different annotators bring different values, biases, and cultural contexts. If your pool of evaluators isn't diverse enough, the model will learn a narrow version of "good" that might not work well for everyone.
+
+There's also the risk of reward hacking. The language model is optimized to get high scores from the reward model, but the reward model is just an approximation of human preferences. Sometimes the language model finds shortcuts — responses that score well with the reward model but wouldn't actually impress a human. It's gaming the proxy instead of achieving the real goal. This is why researchers use a technique called a KL penalty — it constrains how far the fine-tuned model can drift from the original pretrained model, keeping it grounded.
+
+And then there's cost. High-quality human evaluation is expensive. Each comparison requires trained annotators who understand the task, and scaling that up takes real resources.
+
+Despite these challenges, RLHF has been transformative. It's the technique behind ChatGPT, Claude, and many of the AI assistants people interact with daily. It's also been extended beyond text — it's used in image generation to make outputs more aesthetically pleasing, and even in robotics, where human feedback helps agents learn physical tasks.
+
+More recently, researchers have been exploring alternatives and extensions. Direct Preference Optimization, or DPO, skips the separate reward model entirely and optimizes the language model directly on preference data. Constitutional AI, developed by Anthropic, uses AI-generated feedback alongside human feedback to scale the process. And techniques like RLAIF — Reinforcement Learning from AI Feedback — push even further in that direction.
+
+But at its core, the insight behind RLHF remains beautifully simple: when you can't write down the rules, let humans show you what they prefer, and learn from that. It turns the messy, subjective, hard-to-define concept of "good" into something a model can actually optimize for.
+
+It's not a perfect solution. Human preferences are complicated, sometimes contradictory, and always evolving. But RLHF gave us a practical way to bridge the gap between what a model can do and what humans actually want it to do. And that bridge is a big part of why AI feels so much more useful today than it did just a few years ago.
+
+That's RLHF. Next time you chat with an AI and it gives you a thoughtful, well-structured answer instead of a wall of raw information, there's a good chance RLHF is part of the reason why.
+
+Thanks for listening to AI Explained. See you in the next episode.
