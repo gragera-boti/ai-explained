@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Mar 2026 06:03:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 06:03:53 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>RLHF — How AI Learns Human Preferences</title>
+      <description>How do you teach AI what &apos;good&apos; means when you can&apos;t write it as a formula? RLHF lets humans show their preferences through comparisons, training a reward model that guides language models toward more helpful, safer, and more natural responses. We break down the full pipeline — from human rankings to reward models to reinforcement learning — and explore why this technique powers ChatGPT, Claude, and the modern AI assistants you use every day.</description>
+      <pubDate>Thu, 19 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/012-rlhf-how-ai-learns-human-preferences/012-rlhf-how-ai-learns-human-preferences.mp3" length="2816928" type="audio/mpeg"/>
+      <guid isPermaLink="false">012-rlhf-how-ai-learns-human-preferences</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>8:15</itunes:duration>
+      <itunes:episode>12</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Prompt Engineering — Talking to AI Effectively</title>
       <description>The art and science of crafting effective prompts for AI models. We cover role assignment, few-shot and zero-shot prompting, chain-of-thought reasoning, context engineering, and practical tips for getting better results from any language model.</description>

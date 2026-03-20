@@ -1,0 +1,20 @@
+{
+  "title": "RLHF — How AI Learns Human Preferences",
+  "description": "How do you teach AI what 'good' means when you can't write it as a formula? RLHF lets humans show their preferences through comparisons, training a reward model that guides language models toward more helpful, safer, and more natural responses. We break down the full pipeline — from human rankings to reward models to reinforcement learning — and explore why this technique powers ChatGPT, Claude, and the modern AI assistants you use every day.",
+  "date": "2026-03-20",
+  "episode_number": 12,
+  "duration": "8:15",
+  "voice": "en-US-AndrewNeural",
+  "topics": [
+    "RLHF",
+    "reinforcement learning",
+    "human feedback",
+    "reward model",
+    "PPO",
+    "alignment",
+    "InstructGPT",
+    "ChatGPT",
+    "DPO",
+    "preference learning"
+  ]
+}

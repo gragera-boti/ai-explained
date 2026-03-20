@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "RLHF — How AI learns human preferences",
     "Mixture of Experts — Why some models are huge but fast",
     "Diffusion models — How AI generates images",
     "Neural network basics — Layers, weights, and activations",
@@ -32,6 +31,7 @@
     "Temperature and sampling — Why AI responses vary",
     "LoRA and adapters — Cheap fine-tuning for everyone",
     "Context windows — How much AI can remember at once",
-    "Prompt engineering — Talking to AI effectively"
+    "Prompt engineering — Talking to AI effectively",
+    "RLHF — How AI learns human preferences"
   ]
 }
