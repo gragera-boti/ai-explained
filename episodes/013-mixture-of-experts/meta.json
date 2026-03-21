@@ -1,0 +1,9 @@
+{
+  "title": "Mixture of Experts — Why Some Models Are Huge but Fast",
+  "description": "How Mixture of Experts lets AI models have billions of parameters but only use a fraction at a time — giving you the intelligence of a huge model with the speed of a small one.",
+  "date": "2026-03-21",
+  "episode_number": 13,
+  "duration": "5:32",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["mixture-of-experts", "MoE", "sparsity", "transformers", "routing", "Mixtral", "efficiency", "scaling"]
+}

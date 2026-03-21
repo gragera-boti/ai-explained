@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Mar 2026 06:02:15 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 06:02:36 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Mixture of Experts — Why Some Models Are Huge but Fast</title>
+      <description>How Mixture of Experts lets AI models have billions of parameters but only use a fraction at a time — giving you the intelligence of a huge model with the speed of a small one.</description>
+      <pubDate>Fri, 20 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/013-mixture-of-experts/013-mixture-of-experts.mp3" length="2110752" type="audio/mpeg"/>
+      <guid isPermaLink="false">013-mixture-of-experts</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:32</itunes:duration>
+      <itunes:episode>13</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>RLHF — How AI Learns Human Preferences</title>
       <description>How do you teach AI what &apos;good&apos; means when you can&apos;t write it as a formula? RLHF lets humans show their preferences through comparisons, training a reward model that guides language models toward more helpful, safer, and more natural responses. We break down the full pipeline — from human rankings to reward models to reinforcement learning — and explore why this technique powers ChatGPT, Claude, and the modern AI assistants you use every day.</description>
