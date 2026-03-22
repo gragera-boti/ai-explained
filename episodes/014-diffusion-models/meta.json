@@ -1,0 +1,9 @@
+{
+  "title": "Diffusion Models — How AI Generates Images",
+  "description": "How do tools like Stable Diffusion and DALL-E create images from text? We break down the elegant idea behind diffusion models: learn to add noise, then run the process in reverse. From denoising basics to latent diffusion and text conditioning, this episode explains the technology powering AI image generation.",
+  "date": "2026-03-22",
+  "episode_number": 14,
+  "duration": "5:52",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["diffusion models", "image generation", "DDPM", "stable diffusion", "DALL-E", "denoising", "latent diffusion", "generative AI", "computer vision"]
+}
