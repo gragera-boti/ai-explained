@@ -1,0 +1,37 @@
+Diffusion Models — How AI Generates Images
+
+You've probably seen those AI-generated images by now. A photorealistic cat wearing a top hat. A painting of a medieval village that never existed. An astronaut riding a horse on Mars. Tools like Stable Diffusion, DALL-E, and Midjourney can conjure these from nothing but a text prompt. But how do they actually work?
+
+The answer is surprisingly elegant, and it starts with noise.
+
+Let's begin with an analogy. Imagine you have a beautiful photograph — say, a sunset over the ocean. Now imagine you slowly add static to it. A little grain at first, then more, then more — like tuning a television between channels. Eventually, all you have left is pure visual noise. Random pixels. No trace of the sunset remains.
+
+That process of gradually destroying an image with noise? That's the easy part. Any computer can do it. But here's the key insight behind diffusion models: what if you could learn to run that process in reverse? What if you could start with pure noise and gradually remove it, step by step, until a coherent image emerges?
+
+That is exactly what diffusion models do. They learn to denoise.
+
+Here's how it works in practice. During training, the model is shown millions of images. For each image, the training process adds noise at various levels — a little noise, a lot of noise, everything in between. At each noise level, the model is asked a simple question: given this noisy image, can you predict what the noise looks like? If you know what the noise is, you can subtract it and get one step closer to the original image.
+
+Think of it like a sculptor working with marble. The finished statue is "inside" the block — you just need to chip away everything that doesn't belong. The diffusion model learns which parts are noise and which parts are signal.
+
+The technical name for this training approach is the Denoising Diffusion Probabilistic Model, or DDPM. It was introduced in a landmark 2020 paper by Jonathan Ho and colleagues at Google. The math draws on ideas from thermodynamics — specifically, the physics of how particles spread out and reach equilibrium. Just as a drop of ink diffuses through water until it's evenly distributed, an image "diffuses" into noise. The neural network learns to reverse that thermodynamic process.
+
+Now, generating a new image is where it gets fun. You start with a canvas of pure random noise — just static. Then you run the model in a loop. Each step, the model looks at the current noisy image, predicts the noise component, and subtracts a portion of it. After hundreds of these small denoising steps, structure starts to emerge. Blobs become shapes. Shapes become objects. Objects gain texture and detail. It's genuinely mesmerizing to watch.
+
+But here's a question you might be asking: if the model just removes noise, how does it know to make a cat versus a mountain versus a spaceship? This is where text conditioning comes in. Models like Stable Diffusion don't work in isolation — they're paired with a text encoder, usually based on a model called CLIP. The text encoder converts your prompt, say "a golden retriever in a field of sunflowers," into a numerical representation. That representation guides the denoising process at every step, nudging the model toward generating content that matches your description.
+
+It's like giving our sculptor a photograph of what the statue should look like. They're still chipping away marble, but now they have a target.
+
+There's another clever trick that makes modern diffusion models practical: latent diffusion. Early diffusion models worked directly on full-resolution images, pixel by pixel. That's incredibly expensive computationally. Stable Diffusion, developed by researchers at LMU Munich and Runway, introduced a smarter approach. Instead of diffusing in pixel space, you first compress the image into a smaller "latent" representation using an autoencoder. The diffusion process happens in this compressed space, which is much faster. Then, once you've denoised in latent space, you decode back to a full image.
+
+Think of it like editing a novel's outline rather than rewriting every sentence. You work at a higher level of abstraction, then expand the details later.
+
+The results speak for themselves. Diffusion models produce images with remarkable quality and diversity, often surpassing older approaches like GANs — Generative Adversarial Networks — which were the previous gold standard. GANs work by pitting two networks against each other, which can lead to training instability and a tendency to produce variations on the same themes. Diffusion models avoid these pitfalls. Their training is more stable, and they naturally produce more diverse outputs.
+
+But diffusion models aren't perfect. They're slow compared to GANs — generating an image requires hundreds of sequential denoising steps, while a GAN produces one in a single pass. Researchers have been working hard on this, developing techniques like DDIM sampling and consistency models that reduce the number of steps needed, sometimes down to just a handful.
+
+There's also the question of what these models have learned from, and what they can reproduce. Since they're trained on vast datasets of images scraped from the internet, they raise real questions about copyright, consent, and creative ownership. These debates are far from settled.
+
+What's remarkable about diffusion models is how they turned a simple idea — learn to undo noise — into one of the most powerful generative tools we've ever built. They've been extended to generate video, audio, 3D models, and even molecular structures for drug design. The core principle remains the same: start with chaos, and learn to find the signal within it.
+
+That's the beauty of diffusion. Creation through careful destruction, run in reverse.
