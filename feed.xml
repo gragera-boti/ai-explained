@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Mar 2026 06:02:36 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 06:03:29 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Neural Network Basics — Layers, Weights, and Activations</title>
+      <description>What actually is a neural network? We break it down into its three core building blocks — layers that give structure, weights that store learned knowledge, and activation functions that make deep learning possible.</description>
+      <pubDate>Sun, 22 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/015-neural-network-basics/015-neural-network-basics.mp3" length="1965600" type="audio/mpeg"/>
+      <guid isPermaLink="false">015-neural-network-basics</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7:16</itunes:duration>
+      <itunes:episode>15</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Diffusion Models — How AI Generates Images</title>
       <description>How do tools like Stable Diffusion and DALL-E create images from text? We break down the elegant idea behind diffusion models: learn to add noise, then run the process in reverse. From denoising basics to latent diffusion and text conditioning, this episode explains the technology powering AI image generation.</description>

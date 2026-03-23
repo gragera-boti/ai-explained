@@ -1,0 +1,57 @@
+Neural Network Basics — Layers, Weights, and Activations
+
+Every AI model you've heard of — ChatGPT, image generators, voice assistants — runs on neural networks. But what actually is a neural network? Today, we're going to break it down into its three core building blocks: layers, weights, and activations. By the end, you'll have a solid mental model of how these systems work under the hood.
+
+Let's start with the big picture. A neural network is a mathematical function that takes some input — say, an image, a sentence, or a number — and produces an output, like a classification or a prediction. What makes it special is that it learns this function from data, rather than being explicitly programmed.
+
+The architecture is inspired, loosely, by the brain. I want to emphasize loosely. A biological neuron receives signals, processes them, and fires a signal to other neurons. An artificial neuron does something similar, but with pure math. It takes in numbers, does some arithmetic, and passes a result along.
+
+Now, let's talk about layers.
+
+A neural network is organized into layers of these artificial neurons. There are three types you need to know. The input layer is where your data enters the network. If you're feeding in a 28-by-28 pixel image, that's 784 input values — one per pixel.
+
+The output layer is where the answer comes out. For a model classifying handwritten digits, the output layer has 10 neurons — one for each digit from zero to nine.
+
+Everything in between? Those are hidden layers. And this is where the magic happens. Hidden layers are where the network builds up its internal understanding of the data. The first hidden layer might learn to detect simple edges or curves. The next layer combines those into shapes. Deeper layers recognize whole objects or concepts. Each layer builds on the one before it.
+
+A network with two or more hidden layers is called a deep neural network — and that's where the term deep learning comes from.
+
+Here's a useful analogy. Think of layers like a factory assembly line. Raw materials come in at one end. Each station along the line does one specific transformation — cutting, shaping, painting. By the end, you have a finished product. No single station does the whole job, but together they produce something complex.
+
+Next up: weights.
+
+Weights are the numbers that control the strength of the connection between neurons. Every connection between two neurons in adjacent layers has a weight associated with it. When data flows through the network, each input gets multiplied by its corresponding weight before being passed to the next neuron.
+
+Here's the key insight: weights are what the network actually learns. When we say a model has been "trained," we mean its weights have been adjusted — through a process called backpropagation, which we'll cover in a future episode — so that the network produces the right outputs for its training data.
+
+A model with 7 billion parameters? That's 7 billion weights that have been carefully tuned during training.
+
+Think of weights like volume knobs on a mixing board. Each knob controls how loud one instrument is in the final mix. Turn up the guitar, turn down the drums, and the song sounds different. The network learns which knobs to turn, and by how much, to produce the best result.
+
+In addition to weights, each neuron also has a bias — a single number that shifts the neuron's output up or down. It's like adjusting the baseline. Together, weights and biases are what we call the model's parameters.
+
+Finally, let's talk about activation functions.
+
+Here's the problem: if all a neural network did was multiply inputs by weights and add them up, the entire network would just be doing linear math. It wouldn't matter how many layers you stacked — the whole thing would collapse into a single linear transformation. You could replace ten layers with one and get the same result.
+
+Activation functions fix this by introducing nonlinearity. After each neuron computes its weighted sum, the result passes through an activation function that bends, squishes, or clips the output. This nonlinearity is what allows networks to learn complex patterns — curves, boundaries, abstract relationships.
+
+The most popular activation function today is called ReLU — Rectified Linear Unit. It's dead simple: if the input is positive, let it through unchanged. If it's negative, output zero. That's it. Despite being almost trivially simple, ReLU works remarkably well and is computationally cheap, which matters when you're running billions of calculations.
+
+Before ReLU, the sigmoid function was widely used. Sigmoid squishes any input into a range between zero and one — creating a smooth S-shaped curve. It's still used in certain spots, like output layers for binary classification, but ReLU dominates hidden layers.
+
+There's also GELU — the Gaussian Error Linear Unit — which is a smoother version of ReLU used in models like BERT and GPT. Instead of a hard cutoff at zero, GELU gradually tapers negative values, which can help with training stability.
+
+Let me tie it all together with a concrete example.
+
+Imagine you're building a network to classify handwritten digits. An image comes in as 784 pixel values. Those values flow into the first hidden layer — say, 512 neurons. Each neuron takes all 784 inputs, multiplies each by a learned weight, adds them up with a bias, and passes the result through ReLU. That gives you 512 new values.
+
+Those 512 values flow into a second hidden layer of 512 neurons, going through the same process — multiply, add, activate. Finally, those outputs reach 10 output neurons, one per digit. The network picks the neuron with the highest value as its prediction.
+
+The beauty is that nobody programmed it to look for loops in the number eight or straight lines in the number one. It figured that out on its own, by adjusting millions of weights during training until the outputs matched the correct labels.
+
+So there you have it. Layers give the network structure and depth. Weights control the strength of connections and are what the model actually learns. Activation functions introduce the nonlinearity that makes deep learning possible. These three ingredients, combined at massive scale, are the foundation of every modern AI system.
+
+Next time, we'll look at backpropagation — the algorithm that actually adjusts those weights during training. It's how neural networks learn from their mistakes, and it's more elegant than you might expect.
+
+Thanks for listening to AI Explained. See you in the next episode.

@@ -1,0 +1,9 @@
+{
+  "title": "Neural Network Basics — Layers, Weights, and Activations",
+  "description": "What actually is a neural network? We break it down into its three core building blocks — layers that give structure, weights that store learned knowledge, and activation functions that make deep learning possible.",
+  "date": "2026-03-23",
+  "episode_number": 15,
+  "duration": "7:16",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["neural networks", "layers", "weights", "biases", "activation functions", "ReLU", "sigmoid", "GELU", "deep learning", "parameters"]
+}
