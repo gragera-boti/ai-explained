@@ -1,0 +1,37 @@
+Backpropagation — How AI Learns from Mistakes
+
+Every time you use a language model, an image generator, or a voice assistant, there's a neural network behind it that had to learn what it knows. And the way it learned — the core mechanism that makes training possible — is an algorithm called backpropagation. It's arguably the single most important algorithm in all of deep learning. So let's break it down.
+
+To understand backpropagation, you first need the basic setup. A neural network takes in some input — say, the pixels of an image — and passes it through layers of connected nodes, each applying some math to eventually produce an output. Maybe that output is a label: "this is a cat" or "this is the number seven."
+
+When you first create a neural network, its internal parameters — called weights and biases — are essentially random. So its predictions are garbage. The question is: how do you go from random garbage to a network that can recognize faces, translate languages, or write poetry?
+
+The answer starts with a concept called the loss function. Think of it like a scorecard. After the network makes a prediction, the loss function measures how wrong that prediction was. If the network says "seven" and the answer was "two," the loss is high. If it says "two" and the answer was "two," the loss is low. The goal of training is simple: make that loss as small as possible.
+
+Now here's where it gets interesting. The loss depends on all those thousands — or billions — of weights inside the network. Changing any single weight changes the output, which changes the loss. So the question becomes: for each weight, which direction should we nudge it to reduce the loss?
+
+This is a calculus problem. Specifically, we need the gradient — a giant vector that tells us, for every weight in the network, how sensitive the loss is to changes in that weight. If a weight has a large gradient, tweaking it will have a big impact on the loss. If the gradient is tiny, that weight barely matters for this particular example.
+
+Here's an analogy. Imagine you're blindfolded on a hilly landscape, and you want to reach the lowest valley. You can't see, but you can feel the slope of the ground beneath your feet. The gradient is like that slope — it tells you which direction is downhill. You take a step in that direction, feel the slope again, take another step. That process of repeatedly stepping downhill is called gradient descent.
+
+But computing that gradient is the hard part. A modern neural network might have billions of weights. If you tried to calculate the effect of each weight independently — tweaking one, measuring the change, then tweaking the next — it would take forever. This is where backpropagation comes in.
+
+Backpropagation is essentially a clever shortcut for computing all those gradients at once. It works by going backwards through the network — starting at the output and the loss, then propagating the error signal back through each layer, all the way to the input. Hence the name: back-propagation.
+
+The mathematical trick behind it is the chain rule from calculus. The chain rule says: if a change in weight A affects neuron B, and neuron B affects neuron C, and neuron C affects the loss, then you can compute the total effect of weight A on the loss by multiplying those individual effects together. Backpropagation applies this rule systematically, layer by layer, reusing calculations from later layers when computing gradients for earlier ones. This reuse is what makes it efficient.
+
+Let's walk through the intuition with a concrete example. Say you have a simple network that's trying to recognize the digit two. It looks at the image, runs the numbers, and its output layer lights up — but the "seven" neuron is the most active. That's wrong.
+
+The loss function says: you're way off. Now, working backwards. The output layer got those values because of the weights connecting it to the previous layer. Some of those weights pushed "seven" up when they shouldn't have. Backpropagation calculates exactly how much each weight contributed to the error. Then it goes one layer deeper: those hidden neurons got their values from even earlier weights. The error signal keeps flowing backward, assigning blame to each connection along the way.
+
+Once you have all the gradients, you nudge every weight a tiny bit in the direction that reduces the loss. Then you do it again with the next training example. And again. Millions or billions of times. Gradually, the network's predictions get better.
+
+There are a few important details worth mentioning. First, you don't usually compute the gradient over the entire training set at once. Instead, you use small batches — maybe thirty-two or sixty-four examples at a time. This is called mini-batch gradient descent, and it's faster and often works better because the noise helps the network avoid getting stuck in bad spots on that hilly landscape.
+
+Second, the learning rate matters a lot. This is the size of each step you take downhill. Too big, and you overshoot the valley and bounce around chaotically. Too small, and training takes forever. Finding the right learning rate — and often adjusting it during training — is one of the key practical challenges.
+
+Third, backpropagation was not always popular. The algorithm was discovered independently by several researchers starting in the nineteen sixties and seventies, but it wasn't until nineteen eighty-six, when Rumelhart, Hinton, and Williams published their landmark paper "Learning Representations by Back-Propagating Errors," that it gained mainstream traction. That paper showed that hidden layers in neural networks could automatically learn useful features — edges, shapes, patterns — without being hand-programmed. That was a game-changer.
+
+Today, backpropagation is still the backbone of how we train virtually every neural network, from the smallest model on your phone to the largest language models in the cloud. The architectures have changed dramatically — transformers, diffusion models, mixture of experts — but they all learn through the same fundamental loop: make a prediction, measure the error, propagate it backwards, update the weights, repeat.
+
+It's a beautifully simple idea at its core. The network makes mistakes, and backpropagation tells it exactly how to fix them — one gradient at a time.
