@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Backpropagation — How AI learns from mistakes",
     "GPUs vs CPUs — Why AI needs special hardware",
     "MLX and Apple Silicon — Running AI on your Mac",
     "Hallucinations — Why AI makes things up",
@@ -32,6 +31,7 @@
     "RLHF — How AI learns human preferences",
     "Mixture of Experts — Why some models are huge but fast",
     "Diffusion models — How AI generates images",
-    "Neural network basics — Layers, weights, and activations"
+    "Neural network basics — Layers, weights, and activations",
+    "Backpropagation — How AI learns from mistakes"
   ]
 }

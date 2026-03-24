@@ -1,0 +1,9 @@
+{
+  "title": "Backpropagation — How AI Learns from Mistakes",
+  "description": "The algorithm that makes neural network training possible. We break down how backpropagation uses the chain rule to propagate errors backwards through a network, computing gradients efficiently so every weight gets nudged in the right direction.",
+  "date": "2026-03-24",
+  "episode_number": 16,
+  "duration": "7:02",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["backpropagation", "gradient descent", "chain rule", "loss function", "neural networks", "training", "weights", "deep learning"]
+}

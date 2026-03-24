@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Mar 2026 06:03:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 06:03:35 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Backpropagation — How AI Learns from Mistakes</title>
+      <description>The algorithm that makes neural network training possible. We break down how backpropagation uses the chain rule to propagate errors backwards through a network, computing gradients efficiently so every weight gets nudged in the right direction.</description>
+      <pubDate>Mon, 23 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/016-backpropagation-how-ai-learns-from-mistakes/016-backpropagation-how-ai-learns-from-mistakes.mp3" length="2378016" type="audio/mpeg"/>
+      <guid isPermaLink="false">016-backpropagation-how-ai-learns-from-mistakes</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7:02</itunes:duration>
+      <itunes:episode>16</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Neural Network Basics — Layers, Weights, and Activations</title>
       <description>What actually is a neural network? We break it down into its three core building blocks — layers that give structure, weights that store learned knowledge, and activation functions that make deep learning possible.</description>
