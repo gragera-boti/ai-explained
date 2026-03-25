@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "GPUs vs CPUs — Why AI needs special hardware",
     "MLX and Apple Silicon — Running AI on your Mac",
     "Hallucinations — Why AI makes things up",
     "Chain of thought — Teaching AI to reason step by step",
@@ -32,6 +31,7 @@
     "Mixture of Experts — Why some models are huge but fast",
     "Diffusion models — How AI generates images",
     "Neural network basics — Layers, weights, and activations",
-    "Backpropagation — How AI learns from mistakes"
+    "Backpropagation — How AI learns from mistakes",
+    "GPUs vs CPUs — Why AI needs special hardware"
   ]
 }

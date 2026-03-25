@@ -1,0 +1,9 @@
+{
+  "title": "GPUs vs CPUs — Why AI Needs Special Hardware",
+  "description": "Why does AI training require GPUs instead of regular CPUs? We explore parallel computing, Tensor Cores, memory bandwidth, and how the gaming industry accidentally built the perfect AI chip.",
+  "date": "2026-03-25",
+  "episode_number": 17,
+  "duration": "7:32",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["GPU", "CPU", "parallel computing", "Tensor Cores", "NVIDIA", "matrix multiplication", "CUDA", "HBM", "AI hardware", "deep learning"]
+}
