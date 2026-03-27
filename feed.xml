@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Mar 2026 06:03:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 06:04:25 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Hallucinations — Why AI Makes Things Up</title>
+      <description>Why do AI models confidently state things that are completely false? We explore the mechanics behind AI hallucinations — from statistical pattern matching to training data gaps — and what techniques like RAG, RLHF, and chain-of-thought are doing to fight back.</description>
+      <pubDate>Thu, 26 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/019-hallucinations-why-ai-makes-things-up/019-hallucinations-why-ai-makes-things-up.mp3" length="2207664" type="audio/mpeg"/>
+      <guid isPermaLink="false">019-hallucinations-why-ai-makes-things-up</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:16</itunes:duration>
+      <itunes:episode>19</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>GPUs vs CPUs — Why AI Needs Special Hardware</title>
       <description>Why does AI training require GPUs instead of regular CPUs? We explore parallel computing, Tensor Cores, memory bandwidth, and how the gaming industry accidentally built the perfect AI chip.</description>

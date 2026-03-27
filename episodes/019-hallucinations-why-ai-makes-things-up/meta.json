@@ -1,0 +1,9 @@
+{
+  "title": "Hallucinations — Why AI Makes Things Up",
+  "description": "Why do AI models confidently state things that are completely false? We explore the mechanics behind AI hallucinations — from statistical pattern matching to training data gaps — and what techniques like RAG, RLHF, and chain-of-thought are doing to fight back.",
+  "date": "2026-03-27",
+  "episode_number": 19,
+  "duration": "6:16",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["hallucinations", "confabulation", "LLM", "factual accuracy", "RAG", "RLHF", "AI safety", "knowledge boundaries"]
+}

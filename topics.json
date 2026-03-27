@@ -1,7 +1,5 @@
 {
   "upcoming": [
-    "MLX and Apple Silicon — Running AI on your Mac",
-    "Hallucinations — Why AI makes things up",
     "Chain of thought — Teaching AI to reason step by step",
     "Agents and tool use — AI that can take actions",
     "Distillation — Shrinking smart models into small ones",
@@ -32,6 +30,8 @@
     "Diffusion models — How AI generates images",
     "Neural network basics — Layers, weights, and activations",
     "Backpropagation — How AI learns from mistakes",
-    "GPUs vs CPUs — Why AI needs special hardware"
+    "GPUs vs CPUs — Why AI needs special hardware",
+    "MLX and Apple Silicon — Running AI on your Mac",
+    "Hallucinations — Why AI makes things up"
   ]
 }
