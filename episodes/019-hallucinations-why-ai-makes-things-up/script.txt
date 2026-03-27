@@ -1,0 +1,37 @@
+Welcome to AI Explained. I'm your host, and today we're tackling one of the most fascinating — and frustrating — behaviors of modern AI: hallucinations. Why does AI sometimes make things up with absolute confidence?
+
+Let's start with what we mean. An AI hallucination is when a model generates something that sounds perfectly plausible but is completely false. It's not a bug in the traditional sense. The model isn't crashing or throwing an error. It's doing exactly what it was designed to do — predicting the next most likely word — and sometimes that process leads it wildly astray.
+
+Think of it like this. Imagine you're playing a word association game, and someone says "The capital of Australia is..." Your brain might want to say Sydney, because Sydney is the most famous Australian city. But the actual answer is Canberra. Language models face this exact kind of problem millions of times per response, and sometimes the statistically likely answer isn't the correct one.
+
+Here's the core issue. Large language models don't have a database of facts they look up. They have patterns. During training, they consumed enormous amounts of text and learned statistical relationships between words and concepts. When you ask a question, the model isn't retrieving a fact — it's generating text that fits the pattern of what a correct answer looks like. Most of the time, this works remarkably well. But the model has no internal sense of "I know this" versus "I'm guessing." It treats everything with the same confident tone.
+
+This is why some researchers prefer the term "confabulation" over "hallucination." In psychology, confabulation is when someone fills in gaps in their memory with fabricated stories, genuinely believing them to be true. That's closer to what's actually happening. The model isn't lying — it has no concept of truth. It's filling in gaps in its patterns with plausible-sounding content.
+
+So what causes hallucinations? Several things converge.
+
+First, training data quality. If the training data contains errors, contradictions, or biases, the model absorbs those too. It can't distinguish a well-sourced Wikipedia article from a random forum post — it just learns patterns from both.
+
+Second, the model sometimes encounters questions about topics it has very little training data on. In those cases, it has fewer reliable patterns to draw from, so it improvises. And it improvises confidently, because that's what its training optimized it to do. Nobody wants an assistant that says "um, I'm not sure" before every sentence.
+
+Third, there's a mathematical reality at play. These models work by assigning probabilities to the next word in a sequence. Sometimes two very different factual claims have similar probability scores. The model has to pick one, and it doesn't always pick the right one. Remember our episode on temperature and sampling? Higher temperature settings make this even worse by introducing more randomness into word selection.
+
+Let me give you a famous real-world example. When Google launched its Bard chatbot, one of its first public demonstrations included a claim that the James Webb Space Telescope had taken the first photos of a planet outside our solar system. That sounds reasonable — the Webb telescope is famous for its incredible images. But it was wrong. The first exoplanet images were captured years earlier by a different telescope. Google's stock dropped significantly that day. That's a hallucination with real consequences.
+
+The legal world has been hit too. In 2023, a lawyer submitted a court brief that cited several legal cases as precedent. The problem? Those cases didn't exist. The lawyer had used ChatGPT to help with research, and the model had invented entirely fictitious court cases, complete with realistic-sounding case names and citations. The judge was not amused.
+
+So how do we fight this? There are several approaches, and they're getting better.
+
+Retrieval Augmented Generation, or RAG — which we covered in episode six — is one of the most effective. Instead of relying solely on the model's internal patterns, you give it access to a curated knowledge base. The model can look up actual facts before generating its response. This dramatically reduces hallucinations for factual queries.
+
+Another approach is reinforcement learning from human feedback, or RLHF, which we covered in episode twelve. By training models to align with human preferences, you can teach them to be more cautious and honest about uncertainty. Modern models are much better at saying "I'm not sure about that" than their predecessors were.
+
+Chain-of-thought prompting helps too. When you ask a model to show its reasoning step by step, it's less likely to make confident leaps to wrong conclusions. The intermediate steps act as a kind of self-check.
+
+There's also ongoing research into giving models a better sense of their own knowledge boundaries — teaching them to distinguish between what they know well and what they're uncertain about. This is sometimes called calibration, and it's one of the most active areas of AI safety research.
+
+But here's the honest truth: hallucinations are not a solved problem. They might be inherent to how these models work. As long as language models are fundamentally pattern-matching and probability engines rather than reasoning systems with verified knowledge bases, there will always be some risk of confident fabrication.
+
+The practical takeaway? Use AI as a brilliant first draft, not as a source of truth. Verify important claims. Use RAG and grounding techniques when accuracy matters. And remember — when a model states something with absolute confidence, that confidence tells you nothing about whether the statement is actually true.
+
+That's hallucinations — perhaps the most human-like flaw in artificial intelligence. Thanks for listening to AI Explained. See you next time.
