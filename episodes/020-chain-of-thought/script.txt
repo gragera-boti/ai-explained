@@ -1,0 +1,33 @@
+Chain of Thought: Teaching AI to Reason Step by Step
+
+Have you ever watched someone try to multiply two big numbers in their head, and they just blurt out an answer? Sometimes they get it right, sometimes wildly wrong. But if you ask them to show their work — write out the steps, carry the ones — suddenly they're much more reliable. That's essentially what chain of thought does for AI.
+
+Welcome to AI Explained. Today we're talking about one of the most influential ideas in modern AI: chain-of-thought prompting, the technique that taught language models to think out loud.
+
+Here's the problem. Large language models are trained to predict the next word. They're pattern matchers at heart. When you ask a simple factual question, that works fine. But when you ask something that requires reasoning — math, logic, multi-step problems — the model has to somehow jump straight from question to answer. It's like asking someone to solve a Sudoku puzzle by just writing the final grid without ever penciling in candidates. Sometimes they nail it. Often they don't.
+
+In January 2022, a team at Google led by Jason Wei published a paper called "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." The idea was beautifully simple. Instead of just showing the model examples of question-answer pairs, you show it examples that include the intermediate reasoning steps — the "chain of thought." You're not changing the model. You're not retraining anything. You're just changing what the prompt looks like.
+
+Let me give you a concrete example. Suppose you ask: "Roger has five tennis balls. He buys two more cans of tennis balls, each with three balls. How many does he have now?" A standard prompt might show the model similar problems with just the final answers. But a chain-of-thought prompt shows: "Roger started with five balls. Two cans of three means six more balls. Five plus six equals eleven. The answer is eleven." When you give the model a few of these worked-out examples, it learns to generate its own intermediate steps for new problems.
+
+The results were striking. On the GSM8K benchmark, a collection of grade-school math word problems, chain-of-thought prompting with Google's 540-billion parameter PaLM model achieved state-of-the-art accuracy. It beat fine-tuned GPT-3 models that had been specifically trained on math. And all it took was adding eight example solutions to the prompt.
+
+But here's where it gets interesting. This only works well with large models. Smaller models, when prompted to show their work, often generate nonsensical reasoning chains that lead to wrong answers. The ability to benefit from chain of thought appears to be what researchers call an emergent property — it shows up once models reach a certain scale. Think of it like asking a child versus an adult to explain their reasoning. The child might say "because it just is," while the adult can walk you through the logic. You need a certain level of capability before thinking out loud actually helps.
+
+Now, the really wild part came a few months later. Researchers at the University of Tokyo, led by Takeshi Kojima, discovered something called zero-shot chain of thought. Instead of carefully crafting examples with reasoning steps, you could just add the phrase "Let's think step by step" to the end of your prompt. That's it. Five words. And the model would spontaneously start generating intermediate reasoning before giving its answer. Problems that the model previously got wrong, it now got right — just because you told it to slow down and think.
+
+It sounds almost too simple, right? Like telling a student "show your work" on a math test. But that's exactly the analogy. When you force the model to produce intermediate tokens — those reasoning steps — each step becomes context for the next. The model is essentially giving itself a scratchpad. Each line of reasoning narrows down the possible answers, making the final prediction more accurate.
+
+This insight spawned a whole family of techniques. Tree of thought extends the idea from a single chain into a branching structure, where the model explores multiple reasoning paths and picks the best one. Self-consistency generates several different chains of thought for the same problem and takes a majority vote on the answer. Auto-CoT automates the process of creating good examples, clustering questions by type and generating demonstrations automatically.
+
+And then something bigger happened. Model builders started baking chain of thought directly into how models are trained, not just how they're prompted. OpenAI's o1 model, released in 2024, was specifically trained to perform extended internal reasoning. Anthropic, Google, and others followed with similar approaches. These models don't need you to say "think step by step" — they do it automatically, sometimes spending thousands of tokens reasoning through a problem before responding. The prompt engineering hack became an architectural principle.
+
+Why does this matter beyond academic benchmarks? Because chain of thought is what makes AI useful for real reasoning tasks. When a coding assistant debugs your program, it's walking through the logic step by step. When an AI agent plans a series of actions — search the web, compare results, make a decision — it's chaining thoughts together. Without this capability, language models would be limited to pattern recall. With it, they can actually solve novel problems.
+
+There's a philosophical dimension here too. Chain-of-thought prompting revealed something surprising about these models. The reasoning capability was already in there, latent in the weights. The models had learned logical patterns from their training data, but they needed the right format — the right scaffolding — to express it. It's as if the knowledge of how to reason was trapped behind a wall, and the simple act of saying "show your work" knocked that wall down.
+
+Of course, it's not magic. Chain-of-thought reasoning can still be wrong. Models can generate confident, well-structured chains of logic that arrive at completely incorrect conclusions. The reasoning can look plausible while being fundamentally flawed. And more reasoning tokens means slower responses and higher costs. There are real tradeoffs.
+
+But the core insight endures: AI works better when it thinks out loud. And sometimes the most powerful improvements aren't about building bigger models or training on more data. Sometimes it's about asking the right question in the right way.
+
+That's chain of thought. A simple idea that changed how we interact with AI. Thanks for listening.
