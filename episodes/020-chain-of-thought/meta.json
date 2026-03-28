@@ -1,0 +1,9 @@
+{
+  "title": "Chain of Thought — Teaching AI to Reason Step by Step",
+  "description": "How a simple prompting trick — asking AI to show its work — unlocked reasoning capabilities in large language models, from Jason Wei's 2022 paper to modern reasoning models like o1.",
+  "date": "2026-03-28",
+  "episode_number": 20,
+  "duration": "6:08",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["chain-of-thought", "prompting", "reasoning", "CoT", "zero-shot-CoT", "tree-of-thought", "emergent-abilities", "Jason-Wei", "GSM8K"]
+}
