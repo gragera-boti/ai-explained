@@ -1,0 +1,9 @@
+{
+  "title": "Agents and Tool Use — AI That Can Take Actions",
+  "description": "Language models can generate impressive text, but agents take it further — they can actually do things. This episode explains how tool use and function calling turn language models into systems that perceive, act, and adapt in the real world.",
+  "date": "2026-03-29",
+  "episode_number": 21,
+  "duration": "7:45",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agents", "tool use", "function calling", "agentic AI", "workflows", "LLM", "automation", "guardrails"]
+}

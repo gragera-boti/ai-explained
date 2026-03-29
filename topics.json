@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Agents and tool use — AI that can take actions",
     "Distillation — Shrinking smart models into small ones",
     "Benchmarks — How we measure AI intelligence",
     "Open source vs closed models — The AI access debate",
@@ -32,6 +31,7 @@
     "GPUs vs CPUs — Why AI needs special hardware",
     "MLX and Apple Silicon — Running AI on your Mac",
     "Hallucinations — Why AI makes things up",
-    "Chain of thought — Teaching AI to reason step by step"
+    "Chain of thought — Teaching AI to reason step by step",
+    "Agents and tool use — AI that can take actions"
   ]
 }

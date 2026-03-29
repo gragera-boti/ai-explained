@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Mar 2026 06:03:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2026 05:03:27 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Agents and Tool Use — AI That Can Take Actions</title>
+      <description>Language models can generate impressive text, but agents take it further — they can actually do things. This episode explains how tool use and function calling turn language models into systems that perceive, act, and adapt in the real world.</description>
+      <pubDate>Sat, 28 Mar 2026 23:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/021-agents-and-tool-use/021-agents-and-tool-use.mp3" length="2662128" type="audio/mpeg"/>
+      <guid isPermaLink="false">021-agents-and-tool-use</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7:45</itunes:duration>
+      <itunes:episode>21</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Chain of Thought — Teaching AI to Reason Step by Step</title>
       <description>How a simple prompting trick — asking AI to show its work — unlocked reasoning capabilities in large language models, from Jason Wei&apos;s 2022 paper to modern reasoning models like o1.</description>
