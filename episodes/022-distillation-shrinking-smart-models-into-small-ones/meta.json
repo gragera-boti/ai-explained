@@ -1,0 +1,9 @@
+{
+  "title": "Distillation — Shrinking Smart Models into Small Ones",
+  "description": "How knowledge distillation transfers the intelligence of massive AI models into smaller, faster ones you can run on a phone. We cover soft targets, temperature scaling, teacher-student training, and real-world examples like DistilBERT.",
+  "date": "2026-03-30",
+  "episode_number": 22,
+  "duration": "6:26",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["distillation", "knowledge distillation", "model compression", "teacher-student", "soft targets", "temperature", "DistilBERT", "edge deployment"]
+}
