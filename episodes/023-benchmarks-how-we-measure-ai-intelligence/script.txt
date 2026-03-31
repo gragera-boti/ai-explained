@@ -1,0 +1,47 @@
+When a new AI model drops, the first thing you see is a table of numbers. MMLU: 92 percent. GPQA: 71 percent. MATH: 96 percent. SWE-bench: 55 percent. But what do those numbers actually mean? And more importantly — should you trust them?
+
+Today we're talking about benchmarks: the standardized tests of the AI world.
+
+Let's start with the basic idea. A benchmark is just a collection of questions or tasks with known correct answers. You run a model through those questions, count how many it gets right, and you get a score. Simple, right?
+
+Well, not quite. Because what you choose to test — and how you test it — shapes everything.
+
+Think of it like testing a chef. You could quiz them on food safety regulations. You could ask them to identify ingredients blindfolded. Or you could just have them cook a meal and taste the result. Each test tells you something different, and none of them tells you the whole story.
+
+The most famous AI benchmark is probably MMLU — Massive Multitask Language Understanding. It's essentially a giant multiple-choice exam covering 57 subjects, from elementary math to professional law to college chemistry. When it was introduced in 2020, the best models scored around 44 percent. A few years later, top models were hitting the mid-90s. MMLU did its job — it separated better models from worse ones — but eventually, models got so good at it that scores clustered near the ceiling, and the benchmark stopped being useful for comparing frontier systems.
+
+This is the lifecycle of almost every AI benchmark. It starts hard, models improve, it becomes easy, and researchers create something harder.
+
+That's exactly what happened next. MMLU-Pro expanded the multiple-choice options from four to ten, added harder questions, and required more reasoning. GPQA — the Graduate-level Google-Proof Q&A benchmark — took things further. Its questions were written by PhD experts in physics, biology, and chemistry, specifically designed so you couldn't just Google the answer. Even domain experts in adjacent fields struggled with these questions, yet a specialist in the right field could answer them.
+
+Then there are benchmarks that test reasoning more directly. Big Bench Hard takes 23 of the most challenging tasks from Google's Big Bench suite — things like multi-step arithmetic, boolean logic, and sarcasm detection. MATH focuses on high-school competition-level math problems. These go beyond "do you know the answer" into "can you actually think through the problem."
+
+But here's where it gets interesting. Knowledge and reasoning benchmarks only test half the picture. What about practical skills?
+
+That's where coding benchmarks come in. HumanEval asks models to write Python functions from descriptions — a kind of live programming exam. SWE-bench goes even further: it gives models real GitHub issues from popular open-source projects and asks them to write patches that fix the bugs. This is much closer to what a software engineer actually does — reading existing code, understanding the problem, and writing a targeted fix.
+
+And then there's the more subjective side. Chatbot Arena, run by researchers at UC Berkeley, takes a completely different approach. Instead of automated scoring, real humans have conversations with two anonymous models side by side and pick which response they prefer. The results are aggregated into an Elo rating, like chess rankings. It's noisy and expensive, but it captures something the multiple-choice tests miss: do people actually enjoy talking to this model?
+
+Now, here's the part that keeps researchers up at night: benchmarks can be gamed.
+
+If a model has seen the benchmark questions during training — even indirectly, through web scraping — its score is inflated. This is called data contamination, and it's a serious problem. Some companies have been caught cherry-picking which benchmarks to report, showing only the ones where their model looks best. Others optimize specifically for benchmark performance in ways that don't generalize to real tasks.
+
+There's a term for this in education: teaching to the test. A student who memorizes practice exam answers might ace the test but struggle with anything slightly different. The same thing can happen with AI models.
+
+IFEval tries to sidestep this by testing something deceptively simple: can the model follow explicit formatting instructions? Things like "write your answer in exactly three bullet points" or "include the word 'banana' in your response." It turns out that following precise instructions is harder than it sounds, and this benchmark reveals real differences between models that other tests miss.
+
+MuSR — Multistep Soft Reasoning — takes yet another approach, using algorithmically generated puzzles about a thousand words long. Murder mysteries, object placement problems, team allocation challenges. Because the problems are generated, they're hard to memorize, and solving them requires combining reasoning with long-range comprehension. Most models do barely better than random chance.
+
+So what should you take away from all this?
+
+First: no single benchmark tells you if a model is "good." Each one measures a specific slice of capability. MMLU tests broad knowledge. GPQA tests deep expertise. SWE-bench tests practical coding. Chatbot Arena tests human preference. You need the full picture.
+
+Second: trends matter more than absolute numbers. A model scoring 90 on MMLU in 2026 means something very different than 90 on MMLU in 2023. The benchmarks themselves evolve, and older ones get retired or replaced.
+
+Third: be skeptical of cherry-picked results. When a company says their model is "state of the art," ask: on which benchmark? Evaluated how? Compared to what? The details matter enormously.
+
+And finally: the benchmarks we have today are already showing their limits. As models get more capable, we need harder, more nuanced tests. Researchers are working on benchmarks for long-horizon reasoning, multi-turn dialogue, real-world tool use, and scientific discovery. The goal posts keep moving — and that's actually a good sign. It means the field is advancing faster than our ability to measure it.
+
+Benchmarks aren't perfect. They're proxies — useful, necessary proxies — for something we don't yet fully know how to define: what it means for a machine to be intelligent. But they're the best measuring sticks we have, and understanding them is essential for cutting through the hype and seeing what AI can actually do.
+
+That's benchmarks — the report cards of the AI world. They're imperfect, gameable, and constantly evolving. Just like the models they measure.
