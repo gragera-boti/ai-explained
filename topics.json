@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Benchmarks — How we measure AI intelligence",
     "Open source vs closed models — The AI access debate",
     "Multimodal models — AI that sees, hears, and reads",
     "Speculative decoding — Making inference faster",
@@ -32,6 +31,7 @@
     "Hallucinations — Why AI makes things up",
     "Chain of thought — Teaching AI to reason step by step",
     "Agents and tool use — AI that can take actions",
-    "Distillation — Shrinking smart models into small ones"
+    "Distillation — Shrinking smart models into small ones",
+    "Benchmarks — How we measure AI intelligence"
   ]
 }

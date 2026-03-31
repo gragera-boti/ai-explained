@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Mar 2026 05:03:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 05:03:49 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Benchmarks — How We Measure AI Intelligence</title>
+      <description>What do MMLU, GPQA, and SWE-bench actually test? We break down how AI benchmarks work, why they matter, and why you shouldn&apos;t trust any single score.</description>
+      <pubDate>Mon, 30 Mar 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/023-benchmarks-how-we-measure-ai-intelligence/023-benchmarks-how-we-measure-ai-intelligence.mp3" length="2588256" type="audio/mpeg"/>
+      <guid isPermaLink="false">023-benchmarks-how-we-measure-ai-intelligence</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7</itunes:duration>
+      <itunes:episode>23</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Distillation — Shrinking Smart Models into Small Ones</title>
       <description>How knowledge distillation transfers the intelligence of massive AI models into smaller, faster ones you can run on a phone. We cover soft targets, temperature scaling, teacher-student training, and real-world examples like DistilBERT.</description>
