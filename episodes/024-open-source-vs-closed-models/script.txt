@@ -1,0 +1,51 @@
+Open Source vs Closed Models — The AI Access Debate
+
+When ChatGPT launched in late 2022, there was one way to access a truly powerful AI model: you went through OpenAI's API, you paid their prices, and you played by their rules. The best AI was locked behind a corporate gate.
+
+Fast forward to 2026, and that picture looks completely different. Meta's Llama models have been downloaded over 350 million times. Mistral, a small European lab, routinely punches above its weight. Alibaba's Qwen is competitive on global benchmarks. Open models now match closed ones for most real-world tasks.
+
+So what happened? And what do we even mean by "open" and "closed" in AI?
+
+Let's start with the basics.
+
+A closed model is one where a company trains it, hosts it, and gives you access through an API. You send text in, you get text back. You never see the model's internals — its weights, its training data, its architecture details. OpenAI's GPT series, Anthropic's Claude, and Google's Gemini are all closed models. You're renting intelligence.
+
+An open model — or more precisely, an open-weight model — is one where the developer releases the trained model weights for anyone to download. You can run it on your own hardware, fine-tune it for your specific needs, inspect how it behaves, and deploy it without asking permission. Meta's Llama is the flagship example.
+
+Now, here's where it gets nuanced. The Open Source Initiative — the same folks who've been defining open source software since the 1990s — spent two years crafting a definition for open source AI. They published it in 2024. Their standard says true open source AI requires releasing the training code, the model weights, and enough information about the training data that someone could substantially reproduce the result.
+
+By that strict definition, most "open" AI models aren't fully open source. Llama gives you the weights but not the training data. Same with Mistral. The community sometimes calls this "openwashing" — borrowing the goodwill of the open source brand without fully delivering on its promises.
+
+But let's be practical about why this matters.
+
+Think of it like cooking. A closed model is a restaurant meal. You order it, it arrives, it's great. But you can't see the recipe, you can't adjust the seasoning, and if the restaurant closes or doubles its prices, you're out of luck.
+
+An open-weight model is more like a recipe with the finished dish included. You get the trained model — that's the dish — and enough information to serve it yourself. You might not know exactly where the chef sourced every ingredient, but you can tweak the recipe, cook it in your own kitchen, and serve it to whoever you want.
+
+Full open source AI would be getting the recipe, the ingredient list, the supplier names, and the kitchen equipment specs. That level of transparency exists for some smaller models, but the frontier labs — even the "open" ones — don't go that far.
+
+So why does the open versus closed distinction matter in practice? Three big reasons.
+
+First: cost. When you use a closed API, you pay per token — per chunk of text processed. For a startup experimenting with a chatbot, that's fine. But at scale, those costs multiply fast. A company processing millions of requests per day can see a 90 percent cost reduction by switching to a self-hosted open model. You're trading API fees for GPU hardware, and at high volume, the math overwhelmingly favors self-hosting.
+
+Second: privacy and control. When you send data to a closed API, it leaves your infrastructure. For a healthcare company handling patient records, or a law firm processing confidential documents, that's a non-starter. Open models let you run everything on your own servers. The data never leaves your building.
+
+Third: customization. Closed APIs give you the model as-is. You can prompt-engineer your way to better results, but you can't fundamentally change how the model works. With open weights, you can fine-tune — take the base model and train it further on your specific data. A legal firm can create a model that deeply understands contract law. A biotech company can build one fluent in molecular biology. This kind of specialization is where open models often outperform closed ones, even if the closed model is generally more capable.
+
+But closed models aren't going away, and they still have real advantages.
+
+Frontier reasoning — the kind of complex, multi-step problem-solving that OpenAI's o1 model demonstrated — remains proprietary territory. Open models have narrowed the gap, but for the hardest reasoning tasks, closed models still lead.
+
+Safety tuning is another edge. Companies like Anthropic invest enormous resources in alignment and guardrails. Open models vary wildly in their safety properties. When you release model weights to the world, you lose control over how they're used. That's a feature for researchers and a concern for policymakers.
+
+And then there's convenience. Closed APIs are managed infrastructure. You don't need a machine learning operations team. You don't need to worry about GPU procurement, model serving, or scaling. For many teams, that simplicity is worth the premium.
+
+The competitive dynamic between open and closed models has been genuinely good for everyone. In 2023, the capability gap between the best open and closed models was about 12 to 18 months. By 2026, it's shrunk to roughly three to six months. And that pressure from open alternatives is a big reason why API pricing from the closed providers keeps dropping. Even if you never run an open model yourself, their existence saves you money.
+
+Here's the strategic insight that matters most: don't lock yourself in. The smartest approach for most teams is to build your applications with portability in mind. Prototype quickly with closed APIs, evaluate open alternatives before you scale, and maintain the ability to switch. The landscape shifts every quarter. The model that's best for your use case today might not be the right choice in six months.
+
+As Yann LeCun, Meta's chief AI scientist, put it: open source AI isn't just about cost savings — it's about ensuring humanity maintains options as AI becomes critical infrastructure.
+
+Whether you're a developer choosing your first model, a company architect planning a production system, or just someone curious about how AI works, this debate shapes everything. The question isn't really open versus closed anymore. It's about finding the right tool for your specific constraints — your privacy requirements, your budget, your scale, your need for customization.
+
+The days of closed models being the obviously superior choice are over. And that's good news for everyone building with AI.

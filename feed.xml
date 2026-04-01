@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Mar 2026 05:03:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 05:04:31 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Open Source vs Closed Models — The AI Access Debate</title>
+      <description>The battle between open and closed AI models is reshaping the industry. We explore what open source really means in AI, why Meta&apos;s Llama and Mistral are closing the gap with GPT and Claude, and how to choose between them for your own projects.</description>
+      <pubDate>Tue, 31 Mar 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/024-open-source-vs-closed-models/024-open-source-vs-closed-models.mp3" length="2600784" type="audio/mpeg"/>
+      <guid isPermaLink="false">024-open-source-vs-closed-models</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>7:20</itunes:duration>
+      <itunes:episode>24</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Benchmarks — How We Measure AI Intelligence</title>
       <description>What do MMLU, GPQA, and SWE-bench actually test? We break down how AI benchmarks work, why they matter, and why you shouldn&apos;t trust any single score.</description>

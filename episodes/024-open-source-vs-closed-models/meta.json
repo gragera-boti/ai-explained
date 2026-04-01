@@ -1,0 +1,20 @@
+{
+  "title": "Open Source vs Closed Models — The AI Access Debate",
+  "description": "The battle between open and closed AI models is reshaping the industry. We explore what open source really means in AI, why Meta's Llama and Mistral are closing the gap with GPT and Claude, and how to choose between them for your own projects.",
+  "date": "2026-04-01",
+  "episode_number": 24,
+  "duration": "7:20",
+  "voice": "en-US-AndrewNeural",
+  "topics": [
+    "open source AI",
+    "closed models",
+    "Llama",
+    "Mistral",
+    "GPT",
+    "Claude",
+    "model deployment",
+    "fine-tuning",
+    "AI access",
+    "openwashing"
+  ]
+}
