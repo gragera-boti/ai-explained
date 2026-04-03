@@ -1,0 +1,37 @@
+Welcome to AI Explained, the podcast that breaks down artificial intelligence one concept at a time. Today, we're talking about multimodal models — AI systems that don't just read text, but can also see images, hear audio, and work across multiple types of information simultaneously.
+
+To understand why this matters, think about how you experience the world. Right now, you're hearing my voice — that's audio. If you looked at the show art for this episode, that was vision. And if you read the episode description, that was language. You seamlessly combine all of these inputs to understand what's going on. For decades, AI could only handle one of these at a time. A language model read text. A vision model looked at pictures. An audio model processed sound. They were specialists living in separate rooms, never talking to each other.
+
+Multimodal models break down those walls.
+
+So what exactly is a multimodal model? In AI, a "modality" just means a type of data — text, images, audio, video, even 3D structures. A multimodal model is one that can process and reason across two or more of these modalities at the same time. Think of it as the difference between someone who only reads books and someone who watches documentaries, listens to podcasts, and reads — they build a much richer understanding of the world.
+
+The big names you might have heard — GPT-4o, Google Gemini, Claude — these are all multimodal. You can show them a photo and ask questions about it. You can give them an audio clip and ask for a summary. Some can even generate images or speech as output, not just text.
+
+But how do you actually get a model to understand both images and text? This is where it gets interesting.
+
+The core challenge is translation. Text naturally comes as a sequence of tokens — words or word fragments that a language model already knows how to handle. But an image is a grid of pixels. Audio is a waveform. These are fundamentally different data formats. The trick is finding a way to convert everything into a common language the model can work with.
+
+One popular approach is what researchers call "early fusion." You take a pre-trained language model that already understands text, and you pair it with an image encoder — a neural network trained to extract meaningful features from images. Then, you create a small connector layer, sometimes just a simple neural network, that translates image features into something that looks like text tokens to the language model. The image gets turned into a sequence of "image tokens" that get fed right alongside the text tokens. From the language model's perspective, it's all just tokens.
+
+This is exactly how models like LLaVA work. Take a language model, take an image encoder like a Vision Transformer, connect them with a linear layer, and fine-tune the whole thing on image-text pairs. Elegant in its simplicity.
+
+Another approach is called "cross-attention fusion." Instead of mashing everything into one token stream, you let each modality be processed separately first, and then you introduce special cross-attention layers where the language model can peek at the visual information when it needs to. Google's Flamingo model pioneered this — it injects visual information into a frozen language model through these cross-attention layers. Think of it like a translator sitting between two people who speak different languages, helping them have a conversation without either needing to learn the other's language.
+
+Then there's contrastive learning, popularized by OpenAI's CLIP model. Instead of training one model to do everything, you train two separate encoders — one for images, one for text — and you teach them to map matching pairs close together in a shared mathematical space. Show CLIP a photo of a golden retriever and the sentence "a photo of a dog," and their embeddings end up close together. Show it that same image and "a photo of a car," and the embeddings are far apart. This shared embedding space is incredibly powerful for things like zero-shot image classification, where you can classify images into categories the model has never been explicitly trained on.
+
+For audio, the process follows a similar pattern. Speech gets converted into a spectrogram — basically a visual representation of sound over time — and then that spectrogram gets chopped into patches and processed just like an image would be. This is how OpenAI's Whisper model works for speech recognition, and it's how models like GPT-4o can process voice input.
+
+Now, why does multimodality matter beyond being a cool technical achievement? Because the real world is multimodal. If you ask an AI to help you fix a plumbing problem, sending it a photo of the leaky pipe is worth a thousand words of description. If you're a doctor looking at a medical scan, you want to ask questions about what you see. If you're a student, you might want to photograph a textbook page and ask for an explanation.
+
+Multimodal models also unlock entirely new categories of tasks. Visual question answering — show the model an image and ask it questions. Image captioning — have the model describe what it sees. Text-to-image generation — describe what you want and the model creates it. Cross-modal retrieval — search for images using text descriptions, or find text that matches an image.
+
+But there are challenges. Training multimodal models requires massive datasets of paired data — millions of images with descriptions, hours of audio with transcriptions. The more modalities you add, the more complex the training becomes. There's also the alignment problem: making sure the model truly understands the relationship between what it sees and what it reads, rather than just finding superficial correlations.
+
+And there's the question of hallucination, which we covered in a previous episode. Multimodal models can hallucinate across modalities too — confidently describing objects in an image that aren't actually there, or misinterpreting visual information in subtle ways.
+
+Despite these challenges, the trajectory is clear. AI is moving from text-only specialists to rich, multimodal systems that perceive the world more like we do. The latest models don't just process multiple modalities — some can generate across them too, creating images, speech, and text all from a single model.
+
+We're moving toward AI systems that understand the world the way we do — not through a single narrow channel, but through the full richness of sight, sound, and language working together.
+
+That's multimodal models. Thanks for listening to AI Explained. If you enjoyed this episode, subscribe wherever you get your podcasts, and I'll see you in the next one.
