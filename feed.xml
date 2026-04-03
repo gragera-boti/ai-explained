@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Apr 2026 05:06:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 05:06:21 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Multimodal Models — AI That Sees, Hears, and Reads</title>
+      <description>How modern AI systems process images, audio, and text together. We explore early fusion, cross-attention, contrastive learning (CLIP), and why multimodality is the future of AI.</description>
+      <pubDate>Thu, 02 Apr 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/021-multimodal-models-ai-that-sees-hears-and-reads/021-multimodal-models-ai-that-sees-hears-and-reads.mp3" length="2545056" type="audio/mpeg"/>
+      <guid isPermaLink="false">021-multimodal-models-ai-that-sees-hears-and-reads</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:41</itunes:duration>
+      <itunes:episode>21</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Open Source vs Closed Models — The AI Access Debate</title>
       <description>The battle between open and closed AI models is reshaping the industry. We explore what open source really means in AI, why Meta&apos;s Llama and Mistral are closing the gap with GPT and Claude, and how to choose between them for your own projects.</description>

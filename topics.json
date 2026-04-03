@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Multimodal models — AI that sees, hears, and reads",
     "Speculative decoding — Making inference faster",
     "KV cache — How AI remembers within a conversation",
     "Positional encoding — How AI knows word order",
@@ -32,6 +31,7 @@
     "Agents and tool use — AI that can take actions",
     "Distillation — Shrinking smart models into small ones",
     "Benchmarks — How we measure AI intelligence",
-    "Open source vs closed models — The AI access debate"
+    "Open source vs closed models — The AI access debate",
+    "Multimodal models — AI that sees, hears, and reads"
   ]
 }

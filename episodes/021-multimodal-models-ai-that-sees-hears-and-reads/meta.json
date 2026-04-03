@@ -1,0 +1,9 @@
+{
+  "title": "Multimodal Models — AI That Sees, Hears, and Reads",
+  "description": "How modern AI systems process images, audio, and text together. We explore early fusion, cross-attention, contrastive learning (CLIP), and why multimodality is the future of AI.",
+  "date": "2026-04-03",
+  "episode_number": 21,
+  "duration": "6:41",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["multimodal", "vision-language models", "CLIP", "cross-attention", "early fusion", "GPT-4o", "Gemini", "image understanding", "audio processing"]
+}
