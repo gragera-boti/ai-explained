@@ -1,0 +1,37 @@
+Speculative Decoding — Making Inference Faster
+
+Have you ever been stuck behind someone at the grocery checkout who pays one coin at a time? They dig through their pocket, pull out a coin, hand it over, wait for the cashier to count it, then go back for the next one. Painful, right? That's basically how large language models generate text. One token at a time. And it's slow.
+
+Today we're going to talk about speculative decoding — a clever trick that makes AI inference dramatically faster without changing the model's output at all. Same quality, less waiting. Let's dig in.
+
+First, a quick refresher on why text generation is slow. When a large language model like GPT-4 or Claude generates a response, it produces tokens one at a time. Each token requires a full forward pass through the entire model — billions of parameters, loaded from memory, multiplied together, just to pick the next word. And the bottleneck isn't actually computation. It's memory bandwidth — physically moving those massive weight matrices from GPU memory to the compute cores. You could have the fastest math engine in the world, but if you're feeding it data through a straw, it doesn't matter.
+
+So here's the thing. Each forward pass produces one token, but the hardware could handle more work during that same memory transfer. The weights are already loaded. You're underutilizing the GPU. It's like renting a moving truck to transport a single chair.
+
+This is where speculative decoding comes in. The idea was introduced in two independent papers in late 2022 and early 2023 — one from Google by Yaniv Leviathan and colleagues, and another from DeepMind by Charlie Chen and team. Both arrived at the same core insight.
+
+The trick is simple and elegant. You use two models instead of one. A small, fast "draft" model — sometimes called the assistant model — and your big, accurate "target" model. The draft model runs ahead and guesses what the next several tokens will be. Then the big model checks all those guesses at once, in a single forward pass.
+
+Think of it like a junior employee drafting a memo and sending it to their boss for review. The boss can scan the whole thing quickly, approve the parts that are correct, and fix the first mistake. That's much faster than the boss writing every word from scratch.
+
+Here's how it works step by step. The draft model auto-regressively generates, say, five candidate tokens. It's small, so this is fast — maybe a model with 1 billion parameters instead of 70 billion. Then you feed all five candidates to the big model at once. The big model does one forward pass and tells you what it would have generated at each position.
+
+Now you compare. If the first three tokens match, great — you just generated three tokens with a single forward pass of the big model instead of three separate passes. When you hit the first mismatch, you keep everything before it, replace the wrong token with the correct one, and throw away the rest. Then the draft model starts guessing again from that corrected point.
+
+The beautiful part? The math guarantees that the output is identical to what the big model would have produced on its own. This isn't an approximation. It's not a quality trade-off. Through a modified rejection sampling scheme, the distribution of the target model is perfectly preserved. You get the exact same text, just faster.
+
+How much faster? The DeepMind paper showed 2 to 2.5x speedup with Chinchilla, a 70 billion parameter model, in a distributed setup. Hugging Face demonstrated similar gains with Whisper for speech transcription — a one-hour audio clip that previously took six minutes to transcribe could be done in about three. And these are real-world numbers, not synthetic benchmarks.
+
+The speedup you get depends on what's called the acceptance rate — how often the draft model correctly predicts what the target model would say. If you're generating predictable text, like common phrases or structured data, the draft model will have a high hit rate, and you'll see bigger speedups. For more creative or unpredictable text, the acceptance rate drops, and the benefit shrinks — but it never gets slower than the original, because in the worst case you still get at least one token per big-model forward pass, same as before.
+
+Now, you might wonder — where does this draft model come from? Typically it's a smaller model from the same family. If your target is Llama 70B, your draft might be Llama 7B or even Llama 1B. Hugging Face calls their implementation "assisted generation" and it's built right into the Transformers library. You literally pass an assistant model alongside your main model, and the framework handles the rest.
+
+There are some variations worth mentioning. Some approaches use the target model itself as the drafter by only running a subset of its layers. Others train a tiny model specifically to be a good drafter for a particular target. There's also "Medusa," which adds extra prediction heads to the target model so it can draft its own candidates without needing a separate model at all.
+
+The key takeaway is this: speculative decoding exploits an asymmetry in transformer inference. Generating tokens one by one is slow because you're memory-bound — you load all the weights but only do a tiny amount of work. Verifying multiple tokens at once is almost the same cost as generating a single one, because the weights are loaded regardless. So you let a cheap model do the speculative work, and the expensive model just verifies. It's delegation at its finest.
+
+This technique is now widely deployed. Apple uses it for on-device AI. Major inference providers like vLLM and TensorRT-LLM support it. It's one of those rare optimizations that gives you a free lunch — real speedups with zero quality loss.
+
+Next time you're chatting with an AI and the response comes back surprisingly fast, speculative decoding might be one of the reasons why. A small model guessed what the big model was going to say, and got it right.
+
+That's speculative decoding. Same output, less waiting. See you next time.
