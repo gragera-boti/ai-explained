@@ -1,0 +1,9 @@
+{
+  "title": "Speculative Decoding — Making Inference Faster",
+  "description": "How a small draft model can speed up large language model inference by 2-3x without changing the output at all. We explore the elegant trick of letting a cheap model guess and an expensive model verify.",
+  "date": "2026-04-04",
+  "episode_number": 26,
+  "duration": "5:24",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["speculative decoding", "inference optimization", "draft model", "assisted generation", "LLM speed", "rejection sampling", "memory bandwidth"]
+}

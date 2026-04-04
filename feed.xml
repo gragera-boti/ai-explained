@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Apr 2026 05:06:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 05:07:25 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Speculative Decoding — Making Inference Faster</title>
+      <description>How a small draft model can speed up large language model inference by 2-3x without changing the output at all. We explore the elegant trick of letting a cheap model guess and an expensive model verify.</description>
+      <pubDate>Fri, 03 Apr 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/026-speculative-decoding-making-inference-faster/026-speculative-decoding-making-inference-faster.mp3" length="2290608" type="audio/mpeg"/>
+      <guid isPermaLink="false">026-speculative-decoding-making-inference-faster</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:24</itunes:duration>
+      <itunes:episode>26</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Multimodal Models — AI That Sees, Hears, and Reads</title>
       <description>How modern AI systems process images, audio, and text together. We explore early fusion, cross-attention, contrastive learning (CLIP), and why multimodality is the future of AI.</description>
