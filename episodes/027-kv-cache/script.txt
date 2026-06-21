@@ -1,0 +1,21 @@
+KV Cache — How AI Remembers Within a Conversation
+
+You're having a chat with an AI assistant. You ask a question, it answers. You follow up, it remembers what you said earlier. That feels natural, right? But behind the scenes, there's a clever piece of engineering making that possible. It's called the KV cache, and it's one of the main reasons your AI conversations don't get slower and slower with every message.
+
+Let's start with how language models work under the hood. When you send a message to a model like GPT or Claude, the model doesn't just look at your latest sentence. It processes the entire conversation history — every word you've said, every word it has generated — through its attention mechanism. Specifically, every token in the sequence computes what's called a key and a value vector. These are used in the self-attention layers to determine how much each token should "pay attention" to every other token.
+
+Here's the key insight. Once a token has been processed and its key and value vectors have been computed, those vectors never change. Token number five in the conversation will always have the same key and value for the rest of that conversation, no matter how many new tokens come after it. It's like setting a book on a shelf — once it's there, its position doesn't move when you add more books.
+
+So what the KV cache does is exactly what it sounds like: it caches those key and value vectors. After the first forward pass, instead of discarding the keys and values for all previous tokens, the model stores them in memory. Then, on the next pass, it only needs to compute keys and values for the new token. The attention mechanism runs as usual, but it reuses the cached keys and values from every previous step.
+
+If you've ever wondered why your first response from a language model is often the slowest, then subsequent responses in the same conversation feel faster — the KV cache is why. The first message has no cache, so the model has to process everything from scratch. But every message after that only processes the new tokens, reusing the cached representations from earlier turns.
+
+This isn't just a nice-to-have optimization. It's absolutely essential for making chat applications practical. Without the KV cache, a conversation with ten thousand tokens would require each new token to recompute keys and values for all ten thousand previous ones. That would mean your response times would grow linearly with conversation length, making long conversations unusably slow.
+
+But the KV cache isn't free. It trades computation for memory. Storing keys and values for every layer, every attention head, and every token adds up fast. A typical KV cache for a 70 billion parameter model with a 32 thousand token context window can require multiple gigabytes of memory. This is one of the main things that limits context length in practice — not the model's ability to handle more tokens, but the memory needed to cache all those keys and values.
+
+That's why there's a whole field of research on KV cache optimization. Techniques like multi-query attention and grouped query attention share the KV cache across multiple attention heads, reducing memory usage significantly without major quality loss. There are also KV cache quantization methods that store the keys and values in lower precision, and eviction policies that decide which tokens to drop from the cache when memory gets tight.
+
+So next time you're having a long conversation with an AI and it remembers what you said twenty messages ago, remember the humble KV cache. It's the silent workhorse that makes that memory possible, balancing computation, memory, and speed in a way that feels completely invisible to you.
+
+That's the KV cache. Efficient memory, faster conversations. See you next time.

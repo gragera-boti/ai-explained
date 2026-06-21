@@ -1,10 +1,15 @@
 {
   "upcoming": [
-    "KV cache — How AI remembers within a conversation",
+    "Structured output — JSON mode and constrained generation",
     "Positional encoding — How AI knows word order",
     "Beam search vs greedy decoding — How AI picks words",
     "Synthetic data — Training AI on AI-generated content",
-    "Alignment — Making AI do what we actually want"
+    "Alignment — Making AI do what we actually want",
+    "Agent observability — Tracing and debugging AI agents",
+    "Planning and decomposition — How agents break down tasks",
+    "MCP (Model Context Protocol) — Standardizing agent tools",
+    "Safety and guardrails for AI agents",
+    "Evaluation of agent systems"
   ],
   "completed": [
     "Quantization — How AI Models Shrink to Fit Your Laptop",
@@ -32,6 +37,11 @@
     "Benchmarks — How we measure AI intelligence",
     "Open source vs closed models — The AI access debate",
     "Multimodal models — AI that sees, hears, and reads",
-    "Speculative decoding — Making inference faster"
+    "Speculative decoding — Making inference faster",
+    "KV cache — How AI remembers within a conversation",
+    "ReAct — The pattern that makes AI agents actually work",
+    "Tool use and function calling — Giving AI the power to act",
+    "Multi-agent systems — Orchestrating multiple AI agents",
+    "Agent memory — How agents remember and forget"
   ]
 }

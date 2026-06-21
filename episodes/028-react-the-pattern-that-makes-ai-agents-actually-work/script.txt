@@ -1,0 +1,23 @@
+ReAct — The Pattern That Makes AI Agents Actually Work
+
+You've probably used a chat model. You type a question, it gives an answer. But what if you want the AI to actually do something? Book a flight, query a database, send an email? That's where agents come in, and at the heart of most agent systems today is a remarkably simple pattern called ReAct.
+
+ReAct stands for Reasoning plus Acting, and it was introduced in a 2022 paper by Shunyu Yao and colleagues at Princeton and Google. The core idea is elegant: instead of having an AI model either just think or just act, you let it do both, interleaved. Think, act, observe, think again, act again — in a loop until the task is done.
+
+To understand why this matters, it helps to look at the two alternatives they were trying to improve. On one side, you have pure reasoning — the model sits there and thinks through a problem, step by step. Chain-of-thought prompting works this way. It's great for math problems and logic puzzles, but it can't interact with the world. On the other side, you have pure acting — the model just takes actions based on its training. No explicit reasoning, no planning. This is what early reinforcement learning agents did, and they often made nonsensical choices because they never stopped to think.
+
+ReAct combines both. The model generates a sequence of what are essentially three alternating steps. First, a Thought — the model reasons about the current state, what it knows, and what it needs to find out. Second, an Action — the model calls a tool, runs a query, or takes some step that changes its environment. Third, an Observation — the result of that action comes back, and the model incorporates it into its reasoning. Then it loops back to Thought.
+
+Here's what this looks like in practice. Say you ask an agent, "What was the revenue of Apple's services division in 2024?" The agent thinks: "I don't have that information memorized. I should search for it." It takes an action: search the web for "Apple services revenue 2024." It gets an observation back with the data. Then it thinks again: "I found the number. Now I need to format it clearly." It generates the final answer. This think-act-observe cycle runs as many times as needed.
+
+The magic of ReAct is that the model's own language generation becomes the scratch pad for its reasoning. The thoughts are just normal text tokens, but they serve as working memory. The model reads its own previous thoughts to decide what to do next, creating a natural chain of reasoning that adapts to whatever it discovers along the way.
+
+The paper showed that ReAct dramatically outperformed both pure reasoning and pure acting on benchmarks like question answering and fact verification. But more importantly, it reduced what the authors called "hallucination in action selection" — the model making up tools or calling the wrong function. By explicitly reasoning about what to do next, the model catches its own mistakes before acting.
+
+This pattern is now everywhere. LangChain, AutoGPT, and every major agent framework uses some variant of the ReAct loop. The most popular implementation is the zero-shot ReAct agent, which works without any examples — just a description of available tools and the instruction to think, act, and observe in a loop.
+
+Of course, ReAct has its challenges. The loop can get expensive because each step generates more tokens, and a deeply nested chain of tool calls can consume significant context. There's also the risk of getting stuck in loops — the model keeps thinking and acting but never converges on an answer. Modern implementations add safeguards like iteration limits, timeout guards, and human-in-the-loop checkpoints to handle these edge cases.
+
+The key takeaway is this: ReAct changed how we build AI agents by recognizing something fundamental. For an AI to be truly useful, it needs to reason about what it's doing, not just do things blindly. And that reasoning shouldn't happen in some hidden internal state — it should be visible, traceable, and grounded in real observations.
+
+That's ReAct. Think, act, observe, repeat. See you next time.

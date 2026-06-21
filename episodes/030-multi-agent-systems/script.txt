@@ -1,0 +1,25 @@
+Multi-Agent Systems — Orchestrating Multiple AI Agents
+
+One agent is useful. But what if you could have a whole team of them, each specialized in a different task, talking to each other, and working together to solve problems a single agent couldn't handle alone? That's the promise of multi-agent systems, and it's one of the fastest-growing areas in AI today.
+
+The core idea is simple: instead of building one monolithic agent that does everything, you build multiple smaller, more focused agents and give them a way to coordinate. Think of it like a software engineering team. You don't have one person who designs, codes, tests, deploys, and monitors. You have specialists who communicate and hand off work to each other.
+
+There are several common patterns for structuring multi-agent systems. The most popular is the supervisor or orchestrator pattern. You have one coordinating agent — the supervisor — that receives the user's request and decides which specialist agent should handle each part. The supervisor might delegate a coding task to a developer agent, then pass the result to a reviewer agent, then to a testing agent. This works well when tasks can be clearly decomposed.
+
+Then there's the peer-to-peer pattern, where agents communicate directly with each other without a central coordinator. This is useful for more collaborative scenarios — a research agent might ask a data analysis agent "What does this data say about our hypothesis?" and get back a result. The challenge here is coordination: without a central decision-maker, agents can talk in circles or duplicate work.
+
+Another interesting pattern is the debate or adversarial pattern, where multiple agents argue different positions and converge on a better answer. You might have one agent argue "Yes, we should deploy this update" and another argue against it, with a third agent moderating. Research has shown that this can reduce hallucination and improve decision quality by forcing the model to consider counterarguments.
+
+The most famous example of a multi-agent system is probably AutoGen from Microsoft Research, which popularized the idea of agents that can converse with each other. There's also CrewAI, which uses a role-based approach where each agent has a role, goal, and backstory. And LangGraph from LangChain provides a lower-level framework for building stateful agent workflows where multiple agents share and update a common state.
+
+One of the key design decisions in multi-agent systems is how agents communicate. Do they share a common memory or workspace? Do they pass messages directly? The most flexible approach is a shared state that all agents can read and write to — often implemented as a graph or a shared message bus. This gives agents visibility into what others are doing without requiring direct peer-to-peer communication.
+
+Communication brings us to the biggest challenge in multi-agent systems: context efficiency. Every agent interaction adds tokens to the context window. If you have five agents having ten back-and-forth exchanges each, that's fifty interactions consuming your context. Without careful management, you'll hit context limits fast. Techniques like summarization, selective memory, and state compression are essential for making multi-agent systems practical at scale.
+
+Another challenge is the meta-cost of coordination. The supervisor agent itself needs context to understand what's happening, which means you're paying for an extra agent just to manage the others. For simple tasks, a single agent is often faster and cheaper. Multi-agent systems shine when tasks are complex enough that the specialization and parallelization payoff outweighs the coordination overhead.
+
+So here's the practical advice. Start with a single agent. If you hit limitations — either in quality, reliability, or capability — then consider breaking it into multiple agents. And when you do, start with the supervisor pattern: one coordinator, a few specialists, and clear handoff rules. It's simpler to debug, easier to observe, and more reliable than free-form peer-to-peer communication.
+
+Multi-agent systems aren't the right tool for every job. But when you have a complex task that benefits from specialization, parallel work streams, or adversarial refinement, a team of agents can dramatically outperform any single agent. It's not about building one smarter agent — it's about building smarter teams.
+
+That's multi-agent systems. Better together. See you next time.

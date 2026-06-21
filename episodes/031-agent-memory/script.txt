@@ -1,0 +1,27 @@
+Agent Memory — How Agents Remember and Forget
+
+Human memory is complicated. You have short-term memory that holds a phone number for a few seconds, long-term memory that stores your childhood home, and working memory that keeps track of what you're doing right now. AI agents need something similar, and how you design agent memory is one of the most important decisions in building effective agent systems.
+
+At its simplest, every conversation with a language model already has memory — the context window. Everything you've said, everything the model has said, it's all there in what's called the working memory. But this has a hard limit. Modern models support anywhere from 32,000 to 2 million tokens, but that's still finite, and it's expensive. A long conversation costs more in both compute and latency.
+
+Agent memory goes beyond this in several important ways. Let's break down the different types.
+
+First, there's episodic memory. This is the agent's record of what happened — past actions, observations, decisions, and outcomes. In a ReAct agent, episodic memory is the sequence of thoughts, actions, and observations that have already occurred. The agent reads its own history to understand context and avoid repeating mistakes. Without episodic memory, every interaction starts fresh, and the agent has no way to learn from what it just did.
+
+Second, there's semantic memory. This stores facts, concepts, and general knowledge that the agent accumulates. If your agent connects to a customer database and learns that a user prefers email over SMS, that's a semantic fact that should persist across sessions. This is typically implemented using a vector database or key-value store, separate from the model's context window. The agent retrieves relevant semantic memories when it needs them.
+
+Third, there's procedural memory — knowledge about how to do things. For an agent, this includes which tools to use in which situations, effective prompt patterns, and behavioral rules. In practice, this is often encoded as part of the system prompt or dynamically injected instructions that guide the agent's behavior. Over time, an agent that remembers "last time I tried tool X for this kind of query, it failed" can adapt its approach.
+
+The most common memory implementation for agents today is the hybrid approach. You keep a working memory in the context window (the current conversation and recent actions), and you use retrieval-augmented generation or RAG to pull in relevant semantic and episodic memories from an external store as needed. This gives you the best of both worlds: the speed of immediate context and the scale of an unlimited external memory.
+
+Let's talk about what happens when memory fills up. This is called the memory management problem. You need strategies for summarization, forgetting, and prioritization. One approach is to summarize the conversation periodically: "The user has discussed project Z, decided on approach Y, and is waiting for deliverable X." This compressed summary takes much less space than the full transcript. Another approach uses recency and relevance scoring — keep recent memories, drop old ones, and prioritize memories that were retrieved or used recently.
+
+There's also an important distinction between session memory and persistent memory. Session memory is what the agent remembers during one interaction. Persistent memory survives across sessions. If a user tells your agent "I'm a vegetarian," that should be remembered next week. Persistent memory requires an external storage system — a database, a vector store, or even a simple file — and a mechanism for the agent to read and write to it.
+
+One of the trickiest aspects of agent memory is what researchers call the memory consistency problem. If the agent remembers something incorrectly, it can compound errors. A model that misremembers a user's preference might make progressively worse decisions. This is why most practical systems make the agent confirm important facts with the user before committing them to long-term memory.
+
+The cutting edge of agent memory is looking at learned forgetting — letting the agent itself decide what's worth keeping and what should be discarded. Initial results suggest that models can be reasonably good at this, especially when given explicit criteria about what matters. But it's still an area where human oversight is recommended, especially when memories involve user preferences or constraints.
+
+So the key lesson is this: don't treat memory as a single thing. Think about what your agent needs to remember moment to moment, what it needs across sessions, and what it needs to know how to do. Design for each type of memory differently, and give yourself clear strategies for what happens when memory runs out.
+
+That's agent memory. Remember what matters, forget what doesn't. See you next time.

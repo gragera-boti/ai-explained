@@ -1,0 +1,9 @@
+{
+  "title": "Agent Memory — How Agents Remember and Forget",
+  "description": "Memory systems for AI agents: episodic, semantic, procedural, and working memory. We cover RAG-based retrieval, memory management strategies, session vs persistent memory, and how to design an agent that remembers what matters.",
+  "date": "2026-06-21",
+  "episode_number": 31,
+  "duration": "6:12",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent memory", "episodic memory", "semantic memory", "RAG", "memory management", "persistent memory", "vector database"]
+}

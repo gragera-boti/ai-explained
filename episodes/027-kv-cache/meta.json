@@ -1,0 +1,9 @@
+{
+  "title": "KV Cache — How AI Remembers Within a Conversation",
+  "description": "The KV cache is the silent workhorse behind every AI chat application. We explore how caching key-value vectors in the attention mechanism makes long conversations possible, the memory trade-offs involved, and cutting-edge optimization techniques.",
+  "date": "2026-06-21",
+  "episode_number": 27,
+  "duration": "4:36",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["KV cache", "attention mechanism", "inference optimization", "memory management", "language models", "transformer architecture"]
+}

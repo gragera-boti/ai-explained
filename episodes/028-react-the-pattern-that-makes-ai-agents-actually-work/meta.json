@@ -1,0 +1,9 @@
+{
+  "title": "ReAct — The Pattern That Makes AI Agents Actually Work",
+  "description": "The ReAct pattern — Reasoning plus Acting — is the foundation of modern AI agents. We explore the 2022 paper by Yao et al., how the think-act-observe loop works, and why combining reasoning with tool use beats either approach alone.",
+  "date": "2026-06-21",
+  "episode_number": 28,
+  "duration": "5:12",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["ReAct", "agents", "reasoning", "tool use", "chain of thought", "agent loop", "AI agents"]
+}

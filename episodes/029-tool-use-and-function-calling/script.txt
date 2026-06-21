@@ -1,0 +1,25 @@
+Tool Use and Function Calling — Giving AI the Power to Act
+
+A language model alone is like a brilliant scholar locked in a room with no windows and no doors. It can answer your questions based on what it already knows, but it can't look anything up, send a message, update a database, or control anything in the real world. Tool use and function calling are what finally open that door.
+
+Function calling is the mechanism by which a language model can request to invoke external tools. When you ask an AI assistant "What's the weather in Tokyo?", the model doesn't need to guess. Instead, it generates a structured request like getWeather(tokyo) and the system executes that function, gets the real data, and feeds it back to the model. The model then uses that real data to craft its response.
+
+This all started with OpenAI's function calling feature in June 2023, and it quickly became a standard capability across every major model provider. Today, Anthropic, Google, Meta, and Mistral all support some form of tool use. The underlying pattern is the same: you describe your available tools to the model as part of the system prompt, using a structured schema that specifies the function name, description, and parameters.
+
+When the model decides it needs to use a tool, it outputs what's essentially a JSON object — the function name and the arguments. The system intercepts this output, runs the actual function, and appends the result as a new message in the conversation. The model then continues its response, incorporating the tool's output.
+
+The critical design choice here is that the model doesn't actually execute anything. It just requests an execution. This separation of concerns is fundamental to building safe agents. The model suggests, the system decides. This means you can add guardrails, rate limits, permission checks, and validation layers between the model's request and the actual execution.
+
+Let's talk about how tools are described to the model. Each tool definition includes a name, a description, and a parameter schema in JSON Schema format. The description is surprisingly important — models rely heavily on natural language descriptions to understand when to use each tool. A vague description means the model will call the wrong tool, or not call it at all. There's an art to writing tool descriptions that are specific, concise, and guidance-aware.
+
+One challenge with tool use is what happens when the model has many tools to choose from. With a handful of tools, the model can easily pick the right one. But as you scale to dozens or hundreds of tools, selection becomes harder and context consumption grows. Techniques like tool retrieval, where you use embeddings to find the most relevant tools given the current query, are becoming essential for large-scale agent systems.
+
+Another challenge is error handling. Tools fail. APIs return errors, network requests time out, databases reject queries. A well-designed agent system needs to handle these failures gracefully. The observation returned to the model should include enough context about what went wrong so the model can decide whether to retry, try a different approach, or admit it can't proceed.
+
+There's also an important debate about reliability. Do you want the model to freely decide which tool to use, or do you want to pre-define a strict workflow? The answer depends on your use case. For simple, deterministic tasks, a hardcoded workflow is more reliable. For complex, open-ended tasks, letting the model decide which tools to use gives you flexibility at the cost of predictability.
+
+The most exciting frontier in tool use is probably tool composition — chaining multiple tools together to accomplish complex tasks. A single tool call might fetch data, the next might transform it, and a third might write it somewhere. The ReAct loop we covered in another episode is what drives this composition, letting the model string together multiple tool calls to achieve a goal.
+
+So remember: tool use is what transforms a language model from a knowledge repository into an active assistant. The model can suggest what to do, but you control when and how it happens. It's the difference between talking about a problem and actually solving it.
+
+That's tool use and function calling. See you next time.

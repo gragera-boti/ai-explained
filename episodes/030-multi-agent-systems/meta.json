@@ -1,0 +1,9 @@
+{
+  "title": "Multi-Agent Systems — Orchestrating Multiple AI Agents",
+  "description": "What happens when you have a whole team of specialized AI agents working together? We explore orchestration patterns — supervisor, peer-to-peer, and debate — and when multi-agent systems actually outperform a single agent.",
+  "date": "2026-06-21",
+  "episode_number": 30,
+  "duration": "5:48",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["multi-agent systems", "orchestration", "AutoGen", "CrewAI", "LangGraph", "agent coordination", "agent teams"]
+}

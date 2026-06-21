@@ -1,0 +1,9 @@
+{
+  "title": "Tool Use and Function Calling — Giving AI the Power to Act",
+  "description": "How language models call external tools and APIs. We cover function calling schemas, the separation of suggestion and execution, tool selection at scale, error handling, and why tool composition is the frontier of agent capability.",
+  "date": "2026-06-21",
+  "episode_number": 29,
+  "duration": "5:24",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["tool use", "function calling", "function calling API", "agent tools", "structured output", "tool composition"]
+}

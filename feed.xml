@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Apr 2026 05:07:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 08:08:44 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,61 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>KV Cache — How AI Remembers Within a Conversation</title>
+      <description>The KV cache is the silent workhorse behind every AI chat application. We explore how caching key-value vectors in the attention mechanism makes long conversations possible, the memory trade-offs involved, and cutting-edge optimization techniques.</description>
+      <pubDate>Sat, 20 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/027-kv-cache/027-kv-cache.mp3" length="1454688" type="audio/mpeg"/>
+      <guid isPermaLink="false">027-kv-cache</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>4:36</itunes:duration>
+      <itunes:episode>27</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>ReAct — The Pattern That Makes AI Agents Actually Work</title>
+      <description>The ReAct pattern — Reasoning plus Acting — is the foundation of modern AI agents. We explore the 2022 paper by Yao et al., how the think-act-observe loop works, and why combining reasoning with tool use beats either approach alone.</description>
+      <pubDate>Sat, 20 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/028-react-the-pattern-that-makes-ai-agents-actually-work/028-react-the-pattern-that-makes-ai-agents-actually-work.mp3" length="1592208" type="audio/mpeg"/>
+      <guid isPermaLink="false">028-react-the-pattern-that-makes-ai-agents-actually-work</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:12</itunes:duration>
+      <itunes:episode>28</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tool Use and Function Calling — Giving AI the Power to Act</title>
+      <description>How language models call external tools and APIs. We cover function calling schemas, the separation of suggestion and execution, tool selection at scale, error handling, and why tool composition is the frontier of agent capability.</description>
+      <pubDate>Sat, 20 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/029-tool-use-and-function-calling/029-tool-use-and-function-calling.mp3" length="1629216" type="audio/mpeg"/>
+      <guid isPermaLink="false">029-tool-use-and-function-calling</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:24</itunes:duration>
+      <itunes:episode>29</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Multi-Agent Systems — Orchestrating Multiple AI Agents</title>
+      <description>What happens when you have a whole team of specialized AI agents working together? We explore orchestration patterns — supervisor, peer-to-peer, and debate — and when multi-agent systems actually outperform a single agent.</description>
+      <pubDate>Sat, 20 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/030-multi-agent-systems/030-multi-agent-systems.mp3" length="1697328" type="audio/mpeg"/>
+      <guid isPermaLink="false">030-multi-agent-systems</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:48</itunes:duration>
+      <itunes:episode>30</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Agent Memory — How Agents Remember and Forget</title>
+      <description>Memory systems for AI agents: episodic, semantic, procedural, and working memory. We cover RAG-based retrieval, memory management strategies, session vs persistent memory, and how to design an agent that remembers what matters.</description>
+      <pubDate>Sat, 20 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/031-agent-memory/031-agent-memory.mp3" length="1838304" type="audio/mpeg"/>
+      <guid isPermaLink="false">031-agent-memory</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:12</itunes:duration>
+      <itunes:episode>31</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Speculative Decoding — Making Inference Faster</title>
       <description>How a small draft model can speed up large language model inference by 2-3x without changing the output at all. We explore the elegant trick of letting a cheap model guess and an expensive model verify.</description>
