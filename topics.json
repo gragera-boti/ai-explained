@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Structured output — JSON mode and constrained generation",
     "Positional encoding — How AI knows word order",
     "Beam search vs greedy decoding — How AI picks words",
     "Synthetic data — Training AI on AI-generated content",
@@ -42,6 +41,7 @@
     "ReAct — The pattern that makes AI agents actually work",
     "Tool use and function calling — Giving AI the power to act",
     "Multi-agent systems — Orchestrating multiple AI agents",
-    "Agent memory — How agents remember and forget"
+    "Agent memory — How agents remember and forget",
+    "Structured output — JSON mode and constrained generation"
   ]
 }

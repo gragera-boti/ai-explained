@@ -1,0 +1,9 @@
+{
+  "title": "Structured Output — JSON Mode and Constrained Generation",
+  "description": "How to make AI models return cleanly formatted JSON instead of messy prose. We cover JSON mode, grammar-based constrained generation, tool calling, and when to use each approach in production agent systems.",
+  "date": "2026-06-21",
+  "episode_number": 32,
+  "duration": "5:39",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["structured output", "JSON mode", "constrained generation", "grammar-based sampling", "structured decoding", "tool calling"]
+}

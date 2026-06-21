@@ -1,0 +1,27 @@
+Structured Output — JSON Mode and Constrained Generation
+
+You ask a language model to tell you the weather. It writes back a beautiful paragraph: "The sky is clear, the temperature is 72 degrees, and there's a gentle breeze from the southwest." That's lovely to read, but what if you're a program trying to use that information? You have to parse the sentence, extract the numbers, figure out which number is temperature and which is wind speed. It's fragile and error-prone. What you really want is the model to return structured data — a clean JSON object with temperature, conditions, and wind fields. That's what structured output is all about.
+
+Let's start with JSON mode. This is the simplest approach, and it's built into most major model providers today. You set a parameter, tell the model you want JSON back, and include a description of the expected format in your prompt. The model then generates its response as JSON. OpenAI, Anthropic, Google, and open-source models like Llama all support some version of this.
+
+But here's the catch: JSON mode is more of a request than a guarantee. The model will try very hard to produce valid JSON, and it usually succeeds, but it can still slip up. Every now and then it adds a trailing comma, forgets to close a bracket, or includes explanatory text before or after the JSON block. For production systems, that occasional failure is a real problem. A single malformed JSON response can crash an entire pipeline.
+
+This is where constrained generation comes in. Instead of asking the model nicely to produce JSON, you force the generation process to only produce valid tokens that conform to a specific grammar. This is done at the token level during generation, not just by prompting.
+
+The technique works by defining a grammar — often described as a context-free grammar or a JSON schema — and then using it to mask the model's output. At each step of generation, before the model picks the next token, you compute which tokens are valid according to the grammar. If the model has already produced the opening of a JSON object, you only allow tokens that would continue a valid object — keys, colons, commas, values, and the closing brace. Invalid tokens are literally removed from consideration.
+
+This is implemented differently depending on the framework. The most common approach is called grammar-based sampling or structured decoding. Libraries like Outlines, Guidance, and LMQL do this, and several model serving frameworks have built-in support. The key insight is that this isn't just better reliability — it's also safer. A model using constrained generation cannot produce arbitrary text. If you define a schema for a medical record query, the model physically cannot output SQL injection strings or personal information outside the expected fields.
+
+There's also a related technique called tool calling or function calling that we've covered in a previous episode. Tool calling is essentially constrained generation for a specific use case — the model's output is constrained to match the schema of the tools you've defined. JSON mode and constrained generation are the more general versions of this same idea.
+
+When should you use each approach? JSON mode is great for quick prototyping and scenarios where occasional errors are acceptable. If you're building a demo or a tool where a human can verify the output, JSON mode is perfectly fine. But for production systems — automated pipelines, agent loops that chain results together, or any scenario where parsing failures cause real problems — constrained generation is the better choice.
+
+There's an important practical consideration: speed. Constrained generation is slightly slower than free-form generation because of the token masking step. For each token, the system has to compute a valid token mask. This adds a small amount of latency per token, usually measured in milliseconds. For short responses, this is negligible. For long structured outputs with many fields, it adds up.
+
+The other consideration is that constrained generation works best when your schema is relatively static. If you need to generate JSON with completely arbitrary fields that change every request, the overhead of compiling a new grammar each time can outweigh the benefits. In those cases, JSON mode with validation and retry logic might be a better fit.
+
+We're also seeing an interesting middle ground emerge. Several model providers now offer structured output modes that aren't quite full grammar-based constraint but go beyond simple JSON mode. They use logit bias manipulation to encourage the model toward valid outputs without hard-blocking anything. It's a pragmatic compromise: you get most of the reliability benefit with none of the speed cost.
+
+The bottom line is this: if you're building anything with AI that needs to talk to other programs — and most agent systems do — structured output isn't optional. It's the difference between a system that works reliably and one that breaks in confusing ways. Start with JSON mode, validate religiously, and upgrade to constrained generation the moment reliability matters.
+
+That's structured output. Know what you want, and make sure you get it. See you next time.

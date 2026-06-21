@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jun 2026 08:08:44 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 08:11:36 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -71,6 +71,17 @@
       <itunes:author>Boti</itunes:author>
       <itunes:duration>6:12</itunes:duration>
       <itunes:episode>31</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Structured Output — JSON Mode and Constrained Generation</title>
+      <description>How to make AI models return cleanly formatted JSON instead of messy prose. We cover JSON mode, grammar-based constrained generation, tool calling, and when to use each approach in production agent systems.</description>
+      <pubDate>Sat, 20 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/032-structured-output-json-mode-and-constrained-generation/032-structured-output-json-mode-and-constrained-generation.mp3" length="1981872" type="audio/mpeg"/>
+      <guid isPermaLink="false">032-structured-output-json-mode-and-constrained-generation</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:39</itunes:duration>
+      <itunes:episode>32</itunes:episode>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
