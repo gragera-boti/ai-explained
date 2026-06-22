@@ -1,0 +1,9 @@
+{
+  "title": "Positional Encoding — How AI Knows Word Order",
+  "description": "How transformers understand word order through positional encoding. We cover sinusoidal encodings, learned embeddings, and Rotary Position Embedding (RoPE), explaining why these techniques are essential for modern language models like Llama, GPT, and Claude.",
+  "date": "2026-06-22",
+  "episode_number": 33,
+  "duration": "5:28",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["positional encoding", "sinusoidal encoding", "RoPE", "rotary position embedding", "transformer architecture", "sequence order", "context window"]
+}
