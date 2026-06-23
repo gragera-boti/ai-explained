@@ -1,0 +1,27 @@
+Beam Search vs Greedy Decoding — How AI Picks Words
+
+Imagine you're playing a game where you have to build a sentence one word at a time, and each word you choose affects the quality of the final sentence. Every time you pick a word, you get a score for how good that word is right now — but the real goal is to make the entire sentence great, not just each individual word. This is exactly the problem language models face every time they generate text, and how they solve it depends on a choice between two fundamental strategies: greedy decoding and beam search.
+
+Let's start with greedy decoding, which is the simpler of the two. Greedy decoding does exactly what it sounds like — at each step, the model picks the single most likely next word. If the model thinks "the" has a 40% chance, "a" has 30%, and "this" has 20%, greedy decoding picks "the" every time. It's greedy because it takes the best option right now without considering what it means for the words that come after.
+
+Greedy decoding is fast and straightforward. It's what many chat models use by default for quick responses. But it has a fundamental flaw: it can paint itself into a corner. By always picking the most probable next word, greedy decoding can produce repetitive, boring, or even nonsensical text. Think of it like driving — always taking the immediate turn that looks best might get you stuck on a dead-end road, missing the slightly less appealing turn that would have led to a much better route overall.
+
+This is where beam search comes in. Beam search is like keeping multiple alternative routes open at the same time. Instead of picking just one word, you keep track of several possible sequences — called "beams" — and explore them in parallel. At each step, you consider the top candidates across all beams, prune the weaker ones, and keep only the best ones moving forward.
+
+Let me explain with an example. Say your beam width is 3. You start with the first word. Instead of just picking the most likely word, you keep the three most likely first words — "The," "A," and "This" for example. For each of those, you then consider what the second word could be. That gives you 3 times the vocabulary size options to evaluate. You pick the three most likely complete two-word sequences from all those options. Maybe those end up being "The cat," "A dog," and "This is." You keep going like this, always maintaining your top three sequences, until the model generates an end-of-sequence token.
+
+The beam width controls the trade-off. A beam width of 1 is exactly greedy decoding. A beam width of 2 or 3 helps avoid the dead-end problem without too much extra computation. A beam width of 10 or more explores many possibilities but gets exponentially slower. Most production systems use a beam width between 3 and 6 for a good balance.
+
+But here's the interesting twist: beam search doesn't always produce better results for every task. For tasks that have a single correct answer — like machine translation, where "the cat sat on the mat" has one correct translation — beam search is excellent. It explores multiple phrasings and picks the most coherent overall sequence. This is why machine translation systems have used beam search for years.
+
+For creative or open-ended tasks like story writing or chatbot conversations, beam search can actually make things worse. Why? Because by always pursuing the highest-probability sequences, beam search tends to produce the most generic, unsurprising text. The model plays it safe, picking common word combinations over creative ones. This is called the "beam search curse" — the most probable sequence according to the model is often bland and repetitive. For creative tasks, techniques like temperature sampling or top-k sampling are usually preferred, which we covered in our episode on temperature and sampling.
+
+There's another problem with beam search: it tends to favor shorter sequences. Since probabilities are multiplied at each step, longer sequences have more terms multiplied together and thus lower overall scores. This "length bias" means beam search often picks shorter completions over longer, more detailed ones. Most implementations add a length normalization term to compensate — dividing the probability by the sequence length or using a penalty term.
+
+Greedy decoding also has a role to play beyond speed. For real-time chat applications where latency matters, greedy decoding is often the default. The quality loss is acceptable in many scenarios, especially when paired with techniques like speculative decoding — which we covered in a previous episode — to speed things up without sacrificing output quality.
+
+So when should you use which? If you need factual accuracy, consistent outputs, and a single best answer — think translation, summarization, or data extraction — beam search is your friend. If you want creativity, variety, and natural-sounding conversation, you're better off with sampling-based methods like temperature or top-p, or even just greedy decoding for raw speed.
+
+The key insight is that how a model picks its next word shapes everything about the text it produces. Greedy decoding chases the immediate best option. Beam search keeps its options open, exploring multiple paths to find a better overall journey. Neither is always right, but understanding the trade-off helps you choose the right tool for the job.
+
+That's beam search vs greedy decoding — how AI picks its words. See you next time.

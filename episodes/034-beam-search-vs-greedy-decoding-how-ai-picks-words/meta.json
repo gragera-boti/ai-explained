@@ -1,0 +1,9 @@
+{
+  "title": "Beam Search vs Greedy Decoding — How AI Picks Words",
+  "description": "How language models decide which word to generate next. We compare greedy decoding — picking the single most likely next word — against beam search, which explores multiple possible sequences in parallel. Learn when each strategy works best and why the choice matters for translation, chat, and creative writing.",
+  "date": "2026-06-23",
+  "episode_number": 34,
+  "duration": "6:05",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["beam search", "greedy decoding", "decoding strategies", "text generation", "language models", "inference"]
+}

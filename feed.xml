@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Jun 2026 04:05:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 04:11:54 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Beam Search vs Greedy Decoding — How AI Picks Words</title>
+      <description>How language models decide which word to generate next. We compare greedy decoding — picking the single most likely next word — against beam search, which explores multiple possible sequences in parallel. Learn when each strategy works best and why the choice matters for translation, chat, and creative writing.</description>
+      <pubDate>Mon, 22 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/034-beam-search-vs-greedy-decoding-how-ai-picks-words/034-beam-search-vs-greedy-decoding-how-ai-picks-words.mp3" length="2107152" type="audio/mpeg"/>
+      <guid isPermaLink="false">034-beam-search-vs-greedy-decoding-how-ai-picks-words</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:05</itunes:duration>
+      <itunes:episode>34</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Positional Encoding — How AI Knows Word Order</title>
       <description>How transformers understand word order through positional encoding. We cover sinusoidal encodings, learned embeddings, and Rotary Position Embedding (RoPE), explaining why these techniques are essential for modern language models like Llama, GPT, and Claude.</description>
