@@ -1,14 +1,17 @@
 {
   "upcoming": [
-    "Synthetic data — Training AI on AI-generated content",
-    "Alignment — Making AI do what we actually want",
-    "Agent observability — Tracing and debugging AI agents",
     "Planning and decomposition — How agents break down tasks",
     "MCP (Model Context Protocol) — Standardizing agent tools",
     "Safety and guardrails for AI agents",
-    "Evaluation of agent systems"
+    "Evaluation of agent systems",
+    "Coding agents — SWE-bench and autonomous software engineering",
+    "A2A (Agent-to-Agent Protocol) — Google's standard for agent communication",
+    "Open-source agent frameworks compared — LangChain, CrewAI, AutoGen, Smolagents",
+    "Human-in-the-loop — Designing safe agentic workflows",
+    "Agent security — Prompt injection, tool access control, and sandboxing"
   ],
   "completed": [
+    "Agent observability — Tracing and debugging AI agents",
     "Quantization — How AI Models Shrink to Fit Your Laptop",
     "Tokenization — How AI reads text",
     "Transformers — The architecture behind modern AI",

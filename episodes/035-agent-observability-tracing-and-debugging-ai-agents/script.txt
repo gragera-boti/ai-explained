@@ -1,0 +1,27 @@
+Agent Observability — Tracing and Debugging AI Agents
+
+Imagine you're a detective trying to figure out why a robbery went wrong. If all you have is a note saying "the robbery failed," you have nothing to work with. But if you have security footage showing every move, a transcript of every conversation, and a log of every decision — now you can pinpoint exactly where things went off track. That's the difference between a regular application and an AI agent. Regular apps are predictable. You know what happens when you call a function. But agents are probabilistic. Every decision branches into new possibilities, and when something goes wrong, you need observability to see why.
+
+Agent observability is the practice of collecting, tracing, and analyzing what an agent does — every thought, every tool call, every observation, every decision. It's the dashboard that tells you what your agent is actually doing, and more importantly, what it's doing wrong.
+
+Let's start with tracing. Tracing is the foundation of agent observability. A trace captures the full lifecycle of a single request through your agent system. It shows the input, the model's reasoning steps, which tools were called, what arguments were passed, what the tools returned, and what the model decided next. In a multi-agent system, a single trace might span multiple agents talking to each other, each with their own tool calls and reasoning chains.
+
+The most important concept in tracing is the span. A span represents a single unit of work. One span for the initial model call. Spans for each tool call. Spans for the tool execution. Nested spans for sub-tasks. When you visualize this, it looks like a tree — the root is the user's request, and branches reach down into every operation the agent performed. If a tool call takes thirty seconds when it should take two, you see it immediately in the trace.
+
+Why is this especially important for agents? Because agents are non-deterministic. You can run the same request twice and get completely different behavior. Without tracing, you're debugging blind. You see the final output, and you have no idea why the agent chose that path instead of a better one.
+
+Let me give you a concrete example. Your agent is supposed to book a flight. It fails. Without observability, you have nothing. With tracing, you can see that the agent called the search-flights tool with the wrong date format, got an error, retried with the same bad format three times, then gave up. Five seconds of looking at a trace and you know the problem: your date parsing prompt needs fixing.
+
+There are several tools and platforms for agent observability right now. LangSmith from the LangChain ecosystem provides traces, evaluations, and playground testing. LangFuse is an open-source alternative that gives you similar capabilities. Arize AI focuses on ML observability and has been extending into agent monitoring. There's also Weights & Biases Prompts, Helicone, and a growing number of open-source tracing libraries. The key is that most of them follow the OpenTelemetry standard or similar formats, so switching between them isn't as painful as it used to be.
+
+What should you be tracking? The most useful metrics for agent systems are: success rate — did the agent complete the task or not; latency per step — how long each reasoning cycle and tool call takes; tool call accuracy — did the agent call the right tool with the right arguments; cost per task — how many tokens and API calls did the agent burn through; and retry loops — how many times does the agent retry the same failing action. A high retry count is almost always a sign of a deeper problem, like missing instructions for handling errors.
+
+There's also an emerging practice called agent evaluation or eval-driven development. Instead of building an agent and hoping it works, you define a set of test cases — specific tasks with known correct answers — and you run them every time you change the agent's prompts, tools, or system instructions. Observability tools help here by letting you compare traces across different versions of the agent, so you can see if a change actually improved things or made them worse.
+
+One of the trickiest debugging problems unique to agents is the infinite loop. The agent picks up a tool, calls it, gets a result, and instead of moving forward, decides to call the same tool again with slightly different parameters. And again. And again. Without observability, you only notice this when your API bill arrives. With a good trace viewer, you spot the repeating pattern immediately and can add guardrails — a maximum step limit, a repetition detector, or a timeout.
+
+Another common problem is hallucinated tool arguments. The model might call search-flights with a destination city that doesn't exist. Observability shows you the exact arguments the model passed, and you can decide whether to fix the prompt, add validation, or use constrained generation to prevent invalid inputs.
+
+The bottom line is this: if you are building agents in production, observability is not optional. It's the difference between shipping with confidence and shipping with crossed fingers. Start with tracing, add evaluation, and instrument everything. An agent you can't see is an agent you can't trust.
+
+That's agent observability. Trace what matters, fix what breaks. See you next time.

@@ -1,0 +1,9 @@
+{
+  "title": "Agent Observability — Tracing and Debugging AI Agents",
+  "description": "How to see what your AI agent is actually doing — tracing every thought, tool call, and decision. We cover the fundamentals of observability for probabilistic agent systems, key metrics to track, common debugging patterns like infinite loops and hallucinated tool arguments, and the tools available for agent monitoring.",
+  "date": "2026-06-24",
+  "episode_number": 35,
+  "duration": "5:56",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent observability", "tracing", "debugging", "agent monitoring", "LangSmith", "LangFuse", "evaluation"]
+}
