@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Planning and decomposition — How agents break down tasks",
     "MCP (Model Context Protocol) — Standardizing agent tools",
     "Safety and guardrails for AI agents",
     "Evaluation of agent systems",
@@ -45,6 +44,7 @@
     "Agent memory — How agents remember and forget",
     "Structured output — JSON mode and constrained generation",
     "Positional encoding — How AI knows word order",
-    "Beam search vs greedy decoding — How AI picks words"
+    "Beam search vs greedy decoding — How AI picks words",
+    "Planning and decomposition — How agents break down tasks"
   ]
 }

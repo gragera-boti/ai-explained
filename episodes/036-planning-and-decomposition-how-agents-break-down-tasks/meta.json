@@ -1,0 +1,9 @@
+{
+  "title": "Planning and Decomposition — How Agents Break Down Tasks",
+  "description": "How AI agents plan and decompose complex goals into actionable steps. We cover implicit planning, explicit planning, hierarchical approaches, Chain of Thought, Tree of Thoughts, and the planner-verifier pattern that makes multi-step agent tasks reliable.",
+  "date": "2026-06-25",
+  "episode_number": 36,
+  "duration": "5:52",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["planning", "decomposition", "Chain of Thought", "Tree of Thoughts", "task planning", "agent reasoning", "hierarchical planning"]
+}
