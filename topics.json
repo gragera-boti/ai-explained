@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "MCP (Model Context Protocol) — Standardizing agent tools",
     "Safety and guardrails for AI agents",
     "Evaluation of agent systems",
     "Coding agents — SWE-bench and autonomous software engineering",
@@ -10,6 +9,7 @@
     "Agent security — Prompt injection, tool access control, and sandboxing"
   ],
   "completed": [
+    "MCP (Model Context Protocol) — Standardizing agent tools",
     "Agent observability — Tracing and debugging AI agents",
     "Quantization — How AI Models Shrink to Fit Your Laptop",
     "Tokenization — How AI reads text",

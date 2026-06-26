@@ -1,0 +1,23 @@
+MCP (Model Context Protocol) — Standardizing Agent Tools
+
+Imagine every device in your house needed its own unique remote that only worked with that one device — one for the TV, another for the soundbar, another for the lights, and a fourth for the thermostat. That's been the state of AI agent tooling until very recently. Every tool a developer wanted an agent to use required its own custom integration code. Want your agent to search the web? Write a wrapper. Query a database? Another wrapper. Call Slack? Yet another. It didn't scale.
+
+Enter the Model Context Protocol, or MCP. Think of it as the USB-C of AI agent tooling. Just as USB-C lets you charge your laptop, phone, and headphones with the same cable, MCP lets any MCP-compatible agent use any MCP-compatible tool without custom integration code. It's a standardized way for agents to discover, connect to, and interact with external tools.
+
+The protocol has three main parts. First, there are MCP servers — lightweight programs that expose specific capabilities. A server describes its tools in a standard format: "I have these functions, they accept these parameters, and they return results like this." Second, there are MCP clients — the agents or agent infrastructure that discover servers and present their tools to the language model. Third, there's the transport layer — how servers and clients communicate, handling authentication, errors, and message formatting so tool developers don't have to reinvent these fundamentals.
+
+The big idea behind MCP is separation of concerns. Tool builders focus on building great tools and exposing them through MCP. Agent builders focus on building great agents that can use any MCP tool. These worlds are decoupled. A company that builds a database analytics tool doesn't need integrations with every agent framework — they build one MCP server, and every compatible agent can use it. An agent developer, meanwhile, doesn't write custom code for every tool. They just connect to any MCP server and their agent can immediately use whatever that server exposes.
+
+This has profound implications for the ecosystem. Currently, giving an agent a broad toolset means building or carefully integrating every tool. With MCP, you compose any set of tools by pointing your agent at the right servers. Want a research agent that searches the web, reads PDFs, queries academic databases, and manages citations? Spin up MCP servers for each capability, and your agent orchestrates all of them seamlessly.
+
+MCP was originally proposed by Anthropic but is designed to be model-agnostic and framework-agnostic. Any language model — Claude, GPT, Gemini, open-source models — can use MCP tools as long as the agent infrastructure supports the protocol. Major frameworks including LangChain already support MCP out of the box, and the ecosystem is growing fast. Community-built MCP servers exist for GitHub, Slack, Postgres databases, file systems, and hundreds of other services.
+
+There's an interesting parallel here. Early websites had custom integrations between every client and server. Then came HTTP — a standard protocol that any client and any server could use. MCP is doing for AI tooling what HTTP did for web communication. It's the infrastructure layer that lets the ecosystem grow without everyone having to coordinate with everyone else.
+
+MCP isn't the only standard in this space. Google recently introduced A2A, the Agent-to-Agent Protocol, which handles communication between agents rather than between agents and tools. And some frameworks have their own proprietary approaches. But MCP's focus on the tool layer — the interface between agents and the external world — makes it especially important. Tools are how agents actually accomplish things, and making tool access universal opens up enormous possibilities.
+
+One practical note: MCP is still evolving. The protocol has early adopters and growing community support, but it's not yet universal. If you're building an agent today, supporting MCP alongside your existing tool integrations is a smart bet — it future-proofs your agent against a world where every service exposes an MCP server.
+
+So whether you're building agents or building tools for agents to use, MCP is worth understanding. It's the kind of infrastructure standard that quietly makes everything work better, and it's going to be a foundational piece of how agents interact with the real world.
+
+That's MCP — standardizing agent tools. See you next time.

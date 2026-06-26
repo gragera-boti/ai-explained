@@ -1,0 +1,9 @@
+{
+  "title": "MCP (Model Context Protocol) — Standardizing Agent Tools",
+  "description": "How the Model Context Protocol (MCP) standardizes tool access for AI agents. We cover MCP servers, clients, the transport layer, and why this USB-C-like standard is transforming how agents connect to external tools and services.",
+  "date": "2026-06-26",
+  "episode_number": 37,
+  "duration": "4:44",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["MCP", "Model Context Protocol", "tool use", "agent infrastructure", "standardization", "Anthropic"]
+}
