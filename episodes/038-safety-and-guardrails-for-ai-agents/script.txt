@@ -1,0 +1,25 @@
+Safety and Guardrails for AI Agents
+
+When you build an AI agent — something that can search the web, query databases, send emails, or spend money — you're doing something fundamentally different from running a chat model. A chat model can say something harmful. An agent can do something harmful. And that's a whole different level of risk. Safety and guardrails for AI agents isn't just about avoiding toxic language. It's about making sure your agent doesn't delete your production database, wire money to the wrong person, or get trapped in a destructive loop.
+
+Let's start with why agents need guardrails that go beyond what we use for regular language models. A standard LLM generates text. If it says something wrong, you ignore it or correct it. But an agent generates actions. It calls APIs, modifies files, sends messages, triggers payments. When an agent makes a mistake, the consequences are real. And because agents operate in loops — think, act, observe, repeat — mistakes can compound. One wrong tool call can cascade into a series of bad decisions before anyone notices.
+
+So what do guardrails for agentic systems actually look like? There are several layers.
+
+The first layer is input guardrails. Before the agent even starts processing a request, you check whether the request itself is safe. Does it ask the agent to do something it's not authorized for? Does it contain prompt injection attempts disguised as instructions? Input guardrails are typically rule-based or use a smaller, faster model to classify queries before they reach the main agent. If the request fails the check, it's blocked immediately.
+
+The second layer is tool-level guardrails. Every tool your agent can call needs its own safety perimeter. A search tool should be restricted to safe search parameters. A database tool needs query validation — you don't want your agent running "DROP TABLE users." An email tool should have a whitelist of allowed recipients. The key insight here is that tool-level guardrails are the most effective safety measure because they operate at the action level. Even if a malicious prompt convinces the agent to try something dangerous, the tool itself refuses to execute it.
+
+The third layer is output guardrails. Before the agent's action is actually executed, you run a validation pass. This is often done with another model — sometimes called a guardrail model or a safety judge — that reviews what the agent is about to do. Does this action match the user's intent? Is it safe given the current context? Output guardrails are particularly important for catching edge cases that rule-based checks miss, like a tool call that's technically valid but contextually dangerous.
+
+The fourth layer is human-in-the-loop guardrails. For high-risk actions — making payments, deleting data, sending bulk communications — you require human approval before execution. The agent prepares the action and presents it: "I'm about to send this email to 500 customers with this content. Approve or reject?" This adds latency, but for high-stakes decisions, it's essential. Many practical agent systems use a tiered approach: low-risk actions run fully autonomously, medium-risk actions get lightweight validation, and high-risk actions require human sign-off.
+
+There's also the challenge of concurrent actions. Modern agents can take multiple actions in parallel, which means guardrails need to evaluate each action independently while also considering the combined effect. Two safe actions taken together can be dangerous — "transfer $1000" and "delete the transfer log" are each individually fine, but together they're fraud. Guardrail systems need to reason about action sequences, not just individual actions.
+
+Let's talk about implementation. The most practical approach today is layered guardrails with an LLM-as-judge at the core. You use lightweight pre-checks for obvious dangers, a primary model to review tool calls in context, and strict tool-level constraints that act as a safety net. Frameworks like Guardrails AI, NVIDIA NeMo Guardrails, and LangChain's built-in safety hooks provide ready-made infrastructure for this. Microsoft's Guidance library is another powerful tool for constraining model outputs to valid actions.
+
+The open question in agent safety is how to handle novel situations. Rules cover what you've thought of, but agents will eventually encounter scenarios no one anticipated. This is where alignment techniques come in — training models to be inherently cautious and to ask for clarification when uncertain. The safest agent isn't the one with the most rules; it's the one that knows its own limits.
+
+So the bottom line is this: building an agent without guardrails is like building a car without brakes. You might get where you're going faster, but you won't like how you stop. Design guardrails at every layer — input, tool, output, and human oversight — and make sure they compose properly. Your agent will be slower, but it will be reliable, and in the real world, reliability is what makes agents actually useful.
+
+That's safety and guardrails for AI agents. Build safe ones, please. See you next time.

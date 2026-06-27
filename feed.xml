@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Jun 2026 04:08:36 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 04:09:24 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Safety and Guardrails for AI Agents</title>
+      <description>Why AI agents need safety measures beyond what regular language models require. We cover input guardrails, tool-level constraints, output validation, human-in-the-loop approval, and why layered guardrails are essential for building reliable agentic systems.</description>
+      <pubDate>Fri, 26 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/038-safety-and-guardrails-for-ai-agents/038-safety-and-guardrails-for-ai-agents.mp3" length="1974096" type="audio/mpeg"/>
+      <guid isPermaLink="false">038-safety-and-guardrails-for-ai-agents</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:27</itunes:duration>
+      <itunes:episode>38</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>MCP (Model Context Protocol) — Standardizing Agent Tools</title>
       <description>How the Model Context Protocol (MCP) standardizes tool access for AI agents. We cover MCP servers, clients, the transport layer, and why this USB-C-like standard is transforming how agents connect to external tools and services.</description>

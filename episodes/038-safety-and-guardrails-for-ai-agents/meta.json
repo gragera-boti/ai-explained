@@ -1,0 +1,9 @@
+{
+  "title": "Safety and Guardrails for AI Agents",
+  "description": "Why AI agents need safety measures beyond what regular language models require. We cover input guardrails, tool-level constraints, output validation, human-in-the-loop approval, and why layered guardrails are essential for building reliable agentic systems.",
+  "date": "2026-06-27",
+  "episode_number": 38,
+  "duration": "5:27",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["safety", "guardrails", "AI agents", "human-in-the-loop", "alignment", "agent infrastructure"]
+}
