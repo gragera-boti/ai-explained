@@ -1,0 +1,9 @@
+{
+  "title": "Evaluation of Agent Systems — Measuring What Matters",
+  "description": "Why evaluating AI agents is harder than evaluating regular language models. We cover end-to-end success metrics, progressive evaluation, benchmark suites like AgentBench and SWE-bench, trajectory-level evaluation, safety testing, and efficiency metrics for production agent systems.",
+  "date": "2026-06-28",
+  "episode_number": 39,
+  "duration": "5:36",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent evaluation", "benchmarks", "AgentBench", "SWE-bench", "agent observability", "safety evaluation", "agent infrastructure"]
+}
