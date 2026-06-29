@@ -1,0 +1,9 @@
+{
+  "title": "Coding Agents — SWE-bench and Autonomous Software Engineering",
+  "description": "How AI agents are learning to write, debug, and test code autonomously. We cover the SWE-bench benchmark, the agentic strategies that drive success rates from 2% to over 40%, and what this means for the future of software engineering.",
+  "date": "2026-06-29",
+  "episode_number": 40,
+  "duration": "5:00",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["coding agents", "SWE-bench", "autonomous software engineering", "code agents", "SWE-agent", "OpenHands"]
+}
