@@ -1,0 +1,25 @@
+A2A — Google's Agent-to-Agent Protocol
+
+We've talked about how agents use tools through MCP, and how they reason and act through ReAct. But what happens when one agent needs to talk to another agent? Not a human, not a tool, but another autonomous AI agent working on a different system? That's the problem Google's Agent-to-Agent Protocol, or A2A, was designed to solve.
+
+Think of it this way. MCP is like a USB-C port — it lets your agent plug into databases, APIs, and tools. A2A is more like a phone system — it lets one agent call another agent, ask for help, and get results back.
+
+Announced at Google Cloud Next in April 2025, A2A addresses a fundamental limitation of current agent systems. Today, most agents are islands. They can use tools, sure, but they can't easily collaborate with agents built by different teams using different frameworks. If you've built a customer support agent in LangChain and someone else built a billing agent in CrewAI, those two agents have no standard way to talk to each other. A2A changes that.
+
+The protocol is built around a few key concepts. The first is the agent card. Every agent that wants to participate in A2A publishes a machine-readable card that describes what it can do — its capabilities, the input it expects, the output it produces, and any authentication requirements. This is like a restaurant menu. Other agents can discover these cards and decide which agent to talk to for a given task.
+
+The second concept is task-oriented communication. Instead of having agents send free-form messages to each other, A2A structures everything around tasks. One agent sends a task to another agent, and the receiving agent takes ownership of completing it. The task can be simple, like "look up this customer ID," or complex, like "generate a quarterly report from these data sources." The protocol handles task status tracking, progress updates, and final results — all in a standardized format.
+
+The third concept is the separation of concerns between the orchestration layer and the agent layer. A2A doesn't dictate how you build your agents internally. Your agent could use ReAct, a plan-then-execute pattern, or any other architecture. It just needs to expose a standard A2A endpoint so other agents can talk to it. This is similar to how REST APIs don't care about your backend implementation — they just care about the requests and responses.
+
+One of the most interesting aspects of A2A is how it handles multi-step coordination. Imagine you have a travel planning agent that needs to coordinate with a flight booking agent, a hotel booking agent, and a weather data agent. A2A allows the travel agent to dispatch tasks to each specialist agent, track their progress independently, and combine results. If the flight booking agent takes longer than expected, the travel agent can check its status without blocking everything else.
+
+A2A also builds in security considerations from the start. Agents authenticate to each other, task requests can be scoped to specific capabilities, and agents can refuse tasks that fall outside their defined scope. This prevents one agent from asking another to do something it shouldn't.
+
+Now, where does A2A fit alongside MCP? They're complementary. MCP gives your agent tools. A2A gives your agent peers. An agent might use MCP to search a database, then use A2A to delegate the analysis to a specialist agent, then use MCP again to save the results. Both protocols work together to create a connected ecosystem of agents.
+
+The biggest implication of A2A is that it moves us from building individual agents to building agent ecosystems. Instead of one monolithic agent that tries to do everything, you can have a network of specialized agents that collaborate. A customer service agent that can hand off to a billing agent. A coding agent that can ask a documentation agent for context. An email agent that can query a calendar agent. Each specialized, each independent, but all able to work together through a standard protocol.
+
+A2A is still early. Google has open-sourced the specification and provided reference implementations, but adoption will depend on agent framework builders integrating it. LangChain, CrewAI, and others will need to add A2A support before most developers can use it in practice. But the direction is clear: the future of agents is not about one agent doing everything. It's about many agents working together.
+
+That's A2A — Agent-to-Agent Protocol. See you next time.

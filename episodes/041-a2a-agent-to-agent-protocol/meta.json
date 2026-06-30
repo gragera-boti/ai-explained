@@ -1,0 +1,9 @@
+{
+  "title": "A2A — Google's Agent-to-Agent Protocol",
+  "description": "How Google's Agent-to-Agent Protocol (A2A) enables AI agents built by different teams using different frameworks to discover, communicate, and collaborate with each other. We explore agent cards, task-oriented communication, and how A2A complements MCP to create connected agent ecosystems.",
+  "date": "2026-06-30",
+  "episode_number": 41,
+  "duration": "4:56",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["A2A", "Agent-to-Agent Protocol", "agent communication", "agent interoperability", "multi-agent systems", "agent ecosystems"]
+}
