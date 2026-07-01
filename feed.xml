@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2026 04:11:35 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 04:05:25 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Open-Source Agent Frameworks Compared — LangChain, CrewAI, AutoGen, Smolagents</title>
+      <description>A practical comparison of four open-source agent frameworks — LangChain, CrewAI, AutoGen, and Smolagents — each taking a different approach to building AI agents. From flexible Swiss Army knives to code-first minimalists, we break down which framework fits which use case.</description>
+      <pubDate>Tue, 30 Jun 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/042-open-source-agent-frameworks-compared-langchain-crewai-autogen-smolagents/042-open-source-agent-frameworks-compared-langchain-crewai-autogen-smolagents.mp3" length="1869552" type="audio/mpeg"/>
+      <guid isPermaLink="false">042-open-source-agent-frameworks-compared-langchain-crewai-autogen-smolagents</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>4:56</itunes:duration>
+      <itunes:episode>42</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>A2A — Google&apos;s Agent-to-Agent Protocol</title>
       <description>How Google&apos;s Agent-to-Agent Protocol (A2A) enables AI agents built by different teams using different frameworks to discover, communicate, and collaborate with each other. We explore agent cards, task-oriented communication, and how A2A complements MCP to create connected agent ecosystems.</description>

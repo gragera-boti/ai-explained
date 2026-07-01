@@ -1,0 +1,9 @@
+{
+  "title": "Open-Source Agent Frameworks Compared — LangChain, CrewAI, AutoGen, Smolagents",
+  "description": "A practical comparison of four open-source agent frameworks — LangChain, CrewAI, AutoGen, and Smolagents — each taking a different approach to building AI agents. From flexible Swiss Army knives to code-first minimalists, we break down which framework fits which use case.",
+  "date": "2026-07-01",
+  "episode_number": 42,
+  "duration": "4:56",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["LangChain", "CrewAI", "AutoGen", "Smolagents", "agent frameworks", "open-source agents"]
+}

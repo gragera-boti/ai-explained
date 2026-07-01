@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Open-source agent frameworks compared — LangChain, CrewAI, AutoGen, Smolagents",
     "Human-in-the-loop — Designing safe agentic workflows",
     "Agent security — Prompt injection, tool access control, and sandboxing"
   ],
@@ -45,6 +44,7 @@
     "Safety and guardrails for AI agents",
     "Evaluation of agent systems",
     "Coding agents — SWE-bench and autonomous software engineering",
-    "A2A (Agent-to-Agent Protocol) — Google's standard for agent communication"
+    "A2A (Agent-to-Agent Protocol) — Google's standard for agent communication",
+    "Open-source agent frameworks compared — LangChain, CrewAI, AutoGen, Smolagents"
   ]
 }
