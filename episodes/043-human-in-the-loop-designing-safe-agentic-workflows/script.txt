@@ -1,0 +1,29 @@
+Human-in-the-Loop — Designing Safe Agentic Workflows
+
+Imagine handing the keys to your car to a teenager who just got their license. You trust them enough to drive, but you'd want to be in the passenger seat for the first few trips — ready to grab the wheel if something goes wrong. That's exactly the philosophy behind human-in-the-loop design for AI agents. We give agents enough autonomy to be useful, but we keep a human ready to step in before anything goes off the rails.
+
+Human-in-the-loop, or HITL, is an approach where AI agents can take actions autonomously, but they pause and ask for human approval before executing certain types of actions. It's not about having a human micromanage every step — that defeats the purpose of having an agent in the first place. It's about identifying the critical decision points where human judgment matters most.
+
+Let's talk about the three main levels of human involvement. First, there's human-on-the-loop. This is the lightest touch: the agent operates autonomously, but a human monitors its behavior and can interrupt if something looks wrong. Think of it like an air traffic controller watching planes on radar — they don't fly the planes, but they can step in if a collision is imminent. This works well for low-risk tasks like sorting emails or generating draft responses.
+
+Second, there's human-in-the-loop proper. Here, the agent must request human approval before executing certain actions. For example, an agent that can send emails might draft the message, show it to the human, and wait for a click before sending. This is the most common pattern in production agent systems today. The key design question is: which actions require approval and which don't? A good rule of thumb is that any action with irreversible consequences — sending a message, deleting a file, making a payment — should require human approval. Read-only actions like searching a database or fetching a web page can be autonomous.
+
+Third, there's human-in-the-command. This is the most restrictive level: the human specifies each step, and the agent only executes. It's like giving dictation to an assistant who types but doesn't edit. This is useful for highly sensitive environments like medical diagnosis or legal document review, where even small mistakes can have serious consequences.
+
+How do you actually implement HITL in an agent system? The most common approach is the approval gate. You design your agent's workflow so that after it generates an action, it enters a pending state. The pending action is displayed to a human with context — what the agent is about to do, why it thinks it's the right thing, and what the expected outcome is. The human can approve, reject, or modify the action before it executes.
+
+There are two important design principles to get right here. First, provide enough context. If a human sees "Agent wants to send an email" without seeing what the email says, they can't make an informed decision. Your approval interface should show the agent's reasoning, the full action details, and any relevant context from previous steps. Second, handle rejection gracefully. What happens when the human says no? The agent needs to understand the rejection, ask for clarification if needed, and adapt its plan. A good HITL system turns a rejection into a learning moment rather than a dead end.
+
+Another key concept is escalation. Sometimes the agent encounters a situation it cannot handle — ambiguous instructions, unexpected errors, or requests outside its scope. A well-designed agent recognizes these cases and escalates to a human proactively, rather than guessing or doing something harmful. Escalation works like raising your hand in class — better to ask for help than to forge ahead with a wrong answer.
+
+The tool-calling layer is where HITL really shines. When an agent calls a tool — querying a database, writing to a CRM, or triggering a deployment — each tool can have its own approval policy. You can have different rules for different tools: fast approval for read queries, slow approval for writes, and mandatory review for destructive operations. This granular approach gives you safety without slowing down the agent unnecessarily.
+
+Consider a customer support agent that can refund orders. Without HITL, a malicious prompt injection could trick it into refunding every order in the system. With HITL, the agent generates refund actions but waits for human approval. The human reviews the context — "Refund $49.99 for customer X, order #12345, reason: damaged item" — and can spot anomalies. That human judgment catches problems that rules-based systems miss.
+
+There are challenges. The biggest is latency. Every time you pause for human approval, the agent slows down. In fast-moving domains like trading or real-time moderation, even a few seconds of delay can be too much. The solution is smart escalation — only pause for high-risk actions, and let the agent handle routine decisions autonomously. Over time, as you build trust, you can widen the autonomy envelope.
+
+Another challenge is human fatigue. If agents constantly ask for approval on trivial things, humans start clicking approve without actually reviewing. This is called automation bias, and it undermines the entire safety benefit of HITL. The fix is to tune your approval thresholds so that humans only see decisions that genuinely benefit from human judgment.
+
+Here's the practical takeaway. Start with tight human control — approve everything at first. As you observe the agent's behavior and build confidence, progressively open up the autonomy. Keep safety gates in place for irreversible actions. Design clear escalation paths for edge cases. And never let the agent bypass the human when it matters.
+
+That's human-in-the-loop — designing safe agentic workflows. See you next time.

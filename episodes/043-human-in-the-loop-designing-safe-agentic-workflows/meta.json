@@ -1,0 +1,9 @@
+{
+  "title": "Human-in-the-Loop — Designing Safe Agentic Workflows",
+  "description": "A practical guide to human-in-the-loop design for AI agents — from approval gates and escalation paths to the three levels of human involvement. Learn how to balance agent autonomy with human oversight to build safe, effective agent systems.",
+  "date": "2026-07-03",
+  "episode_number": 43,
+  "duration": "6:17",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["human-in-the-loop", "agent safety", "agentic workflows", "approval gates", "escalation"]
+}
