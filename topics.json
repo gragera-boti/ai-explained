@@ -1,7 +1,5 @@
 {
-  "upcoming": [
-    "Agent security — Prompt injection, tool access control, and sandboxing"
-  ],
+  "upcoming": [],
   "completed": [
     "MCP (Model Context Protocol) — Standardizing agent tools",
     "Agent observability — Tracing and debugging AI agents",
@@ -45,6 +43,7 @@
     "Coding agents — SWE-bench and autonomous software engineering",
     "A2A (Agent-to-Agent Protocol) — Google's standard for agent communication",
     "Open-source agent frameworks compared — LangChain, CrewAI, AutoGen, Smolagents",
-    "Human-in-the-loop — Designing safe agentic workflows"
+    "Human-in-the-loop — Designing safe agentic workflows",
+    "Agent security — Prompt injection, tool access control, and sandboxing"
   ]
 }

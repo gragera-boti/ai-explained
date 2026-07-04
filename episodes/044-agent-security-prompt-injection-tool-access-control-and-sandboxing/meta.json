@@ -1,0 +1,9 @@
+{
+  "title": "Agent Security — Prompt Injection, Tool Access Control, and Sandboxing",
+  "description": "A practical guide to AI agent security covering prompt injection attacks (direct and indirect), tool access control with least privilege and role-based permissions, output validation, and sandboxing strategies from Docker containers to virtual machines. Learn how to build agent systems that are secure by default.",
+  "date": "2026-07-04",
+  "episode_number": 44,
+  "duration": "6:16",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent security", "prompt injection", "tool access control", "sandboxing", "least privilege", "output validation", "code execution sandbox"]
+}
