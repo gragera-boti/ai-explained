@@ -1,0 +1,25 @@
+Building an Agent From Scratch — The Perceive-Think-Act Loop
+
+If you've been following this podcast, you've heard about agents doing everything from booking flights to writing code. But what actually happens inside an agent? How does a language model go from answering questions to taking actions in the real world? Today, we're building an agent from scratch, and it all starts with three simple steps: perceive, think, act.
+
+Let's start with the core loop. Every agent, no matter how sophisticated, follows the same fundamental rhythm. First, it perceives — it takes in information from its environment. That could be a user's question, the result of a database query, or the contents of a file. Second, it thinks — it reasons about what it's perceived and decides what to do next. Third, it acts — it carries out an action, whether that's calling a tool, generating a response, or updating its memory. Then it loops back to perceive the result of that action and starts again.
+
+This perceive-think-act loop is the heartbeat of every agent system. The variations between different frameworks are mostly about how you implement each step.
+
+Let's start with the perceive step. In a simple agent, perception is just the user's input — the question or instruction they type. But in a real agent, perception is much richer. The agent needs to perceive tool outputs, error messages, state changes, and even things like the current time or the user's location. A well-designed agent doesn't just read the latest message — it maintains a perception buffer that includes recent observations, system status, and relevant context retrieved from memory.
+
+The think step is where the language model does its work. You feed the perceived information into the model along with a system prompt that tells it how to reason. The model generates tokens that represent its thought process — what it knows, what it needs to find out, and what it plans to do next. This is where patterns like ReAct and chain-of-thought shine, because they structure the thinking into explicit steps that the model can follow and that you can inspect.
+
+Here's the crucial insight: the think step doesn't happen in isolation. The model reads its own previous thoughts as part of the context, creating a natural chain of reasoning. If the model thought "I need to look up the user's account balance" in the previous cycle, it sees that thought again and can build on it. This self-referential loop is what gives agents their ability to handle multi-step tasks.
+
+The act step is where the agent interacts with the world. The model's output gets parsed to determine what action to take. Most agents use a structured output format — typically JSON — that specifies a tool name and its parameters. For example, the model might output something like: call tool "search_web" with query "latest news about AI agents." The agent framework then executes that call, gets the result, and feeds it back into the perception step.
+
+But here's where things get practical. When you build an agent from scratch, you need to handle several things that aren't obvious at first. First, you need an action parser that reliably extracts the intended action from the model's free-text output. Second, you need error handling — what happens if a tool call fails? The agent should perceive the error and decide on a different approach. Third, you need a termination condition — when does the agent stop? That could be when it has enough information to answer, when it hits a maximum number of steps, or when the user interrupts.
+
+Let's build a minimal example in your head. The system prompt says: "You are an assistant that can check the weather and send emails. Think step by step, then output a JSON action." The user says: "Email my wife that it's going to rain today." The agent perceives the request. It thinks: "I need to check the weather first, then compose the email." It acts: calls check_weather("today"). It perceives the result: "Rain expected." It thinks: "Now I have the weather. I need to send the email." It acts: calls send_email(to="wife", body="It's going to rain today. Bring an umbrella!"). Done.
+
+This example seems simple, but it captures the entire pattern. What makes modern agents powerful is how many tools they can choose from, how sophisticated their reasoning is, and how gracefully they handle unexpected situations. But every single one of them starts with that same three-step loop.
+
+The key lesson is this: an agent is not a magic black box. It's a loop. Perceive what's happening, think about what to do, act on that decision, and repeat until the task is complete. That's all an agent really is — and once you understand that, you can build one yourself.
+
+That's building an agent from scratch — the perceive-think-act loop. See you next time.

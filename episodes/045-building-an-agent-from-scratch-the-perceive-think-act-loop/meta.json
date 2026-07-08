@@ -1,0 +1,9 @@
+{
+  "title": "Building an Agent From Scratch — The Perceive-Think-Act Loop",
+  "description": "A deep dive into the fundamental perceive-think-act loop that powers every AI agent. Learn how perception, reasoning, and action work together in a continuous cycle, how to handle errors and termination conditions, and how a simple three-step pattern gives agents the power to tackle complex multi-step tasks autonomously.",
+  "date": "2026-07-08",
+  "episode_number": 45,
+  "duration": "5:24",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent architecture", "perceive-think-act loop", "agent loop", "building agents", "agent fundamentals"]
+}

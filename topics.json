@@ -1,5 +1,25 @@
 {
-  "upcoming": [],
+  "upcoming": [
+    "Agent architecture patterns — Supervisor, swarm, router, event-driven",
+    "Tool design best practices — Writing tools agents can actually use",
+    "State management for agents — Persistence, memory, and context",
+    "Building reliable agents — Retries, fallbacks, circuit breakers, timeouts",
+    "Agentic RAG — When agents meet retrieval",
+    "Agent testing strategies — From unit tests to integration",
+    "Agent orchestration — Sequential, hierarchical, and dynamic task graphs",
+    "Streaming and real-time agent interactions",
+    "Autonomous agent loops — Self-directed task generation and execution",
+    "Agent delegation patterns — How agents hand off work to each other",
+    "Specialization and role assignment in agent teams",
+    "Agent communication protocols — Structured message passing between agents",
+    "Consensus and voting in multi-agent systems",
+    "Autonomous agents with persistent goals — Long-running agent systems",
+    "Swarm intelligence — Large-scale multi-agent coordination",
+    "Agent negotiation and conflict resolution",
+    "Error recovery in multi-agent systems — Handling agent failures gracefully",
+    "Self-reflection and improvement loops for autonomous agents",
+    "Human-agent collaboration — Designing effective human-agent teams"
+  ],
   "completed": [
     "MCP (Model Context Protocol) — Standardizing agent tools",
     "Agent observability — Tracing and debugging AI agents",
@@ -44,6 +64,7 @@
     "A2A (Agent-to-Agent Protocol) — Google's standard for agent communication",
     "Open-source agent frameworks compared — LangChain, CrewAI, AutoGen, Smolagents",
     "Human-in-the-loop — Designing safe agentic workflows",
-    "Agent security — Prompt injection, tool access control, and sandboxing"
+    "Agent security — Prompt injection, tool access control, and sandboxing",
+    "Building an agent from scratch — The perceive-think-act loop"
   ]
 }
