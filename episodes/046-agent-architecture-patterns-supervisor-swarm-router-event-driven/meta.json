@@ -1,0 +1,9 @@
+{
+  "title": "Agent Architecture Patterns — Supervisor, Swarm, Router, Event-Driven",
+  "description": "An exploration of the four major agent architecture patterns used in production AI systems. Learn how supervisor hierarchy, decentralized swarms, lightweight routers, and event-driven automation each solve different coordination problems, and how to choose the right pattern for your use case.",
+  "date": "2026-07-09",
+  "episode_number": 46,
+  "duration": "5:08",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent architecture", "supervisor pattern", "swarm pattern", "router pattern", "event-driven architecture", "agent coordination"]
+}

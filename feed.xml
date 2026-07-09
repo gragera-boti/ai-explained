@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Jul 2026 04:12:01 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 04:10:43 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Agent Architecture Patterns — Supervisor, Swarm, Router, Event-Driven</title>
+      <description>An exploration of the four major agent architecture patterns used in production AI systems. Learn how supervisor hierarchy, decentralized swarms, lightweight routers, and event-driven automation each solve different coordination problems, and how to choose the right pattern for your use case.</description>
+      <pubDate>Wed, 08 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/046-agent-architecture-patterns-supervisor-swarm-router-event-driven/046-agent-architecture-patterns-supervisor-swarm-router-event-driven.mp3" length="1824480" type="audio/mpeg"/>
+      <guid isPermaLink="false">046-agent-architecture-patterns-supervisor-swarm-router-event-driven</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:08</itunes:duration>
+      <itunes:episode>46</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Building an Agent From Scratch — The Perceive-Think-Act Loop</title>
       <description>A deep dive into the fundamental perceive-think-act loop that powers every AI agent. Learn how perception, reasoning, and action work together in a continuous cycle, how to handle errors and termination conditions, and how a simple three-step pattern gives agents the power to tackle complex multi-step tasks autonomously.</description>
