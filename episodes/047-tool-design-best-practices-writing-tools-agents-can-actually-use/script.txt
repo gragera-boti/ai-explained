@@ -1,0 +1,27 @@
+Tool Design Best Practices — Writing Tools Agents Can Actually Use
+
+Imagine you hire a brilliant assistant, and you tell them, "Go book me a table at that new Italian place downtown." But instead of handing them a phone, you hand them a fax machine from 1995 with a sticky note that says "Wait for the dial tone." Your assistant might be brilliant, but they're not going to book that table. That's exactly what happens when we give AI agents poorly designed tools. The model might be incredibly capable, but if the tools it has to interact with are confusing, fragile, or badly documented, the agent will fail — not because it's dumb, but because the tools aren't designed for it.
+
+Today, we're talking about tool design best practices for AI agents. Because in the agentic world, your agent is only as good as the tools you give it.
+
+Let's start with the golden rule: think of your tool as an API for a language model, not for a developer. When you write a function for a colleague, you can rely on shared context, implicit conventions, and the fact that they can read your mind a little bit. An AI agent can't do any of that. Every assumption you make about what the agent "should know" is an assumption that will be wrong at least some of the time. So your tools need to be explicit, self-contained, and ridiculously well-described.
+
+This brings us to the most important design element: the description. The description is how the model decides whether to use your tool at all. A bad description like "Search function" tells the agent almost nothing. A good description reads like a mini-manual: "Search the company knowledge base for documents matching the user's query. Returns up to 10 results ranked by relevance. Best used when the user asks about company policies, previous projects, or team information. Not suitable for real-time data — use get_stock_price for that." When the model sees this, it knows exactly when to call, what to expect, and — crucially — when NOT to call.
+
+Next, parameter design. Every parameter needs three things: a clear name, a description, and correct types. But there's a subtlety here. Models are surprisingly bad at understanding complex nested JSON schemas. If your parameter is an object with five nested fields, the model will get it wrong more often than you'd like. The best practice is to flatten your parameters as much as possible. Instead of a "filter" object with subfields, create separate parameters like "category_filter" and "date_filter." The model handles flat, descriptive parameters far better than nested structures.
+
+Another crucial practice is providing examples right in the parameter descriptions. If a parameter accepts a date string, don't just say "date string." Say "Date in YYYY-MM-DD format, e.g., 2026-07-10." The model will internalize the example and format dates correctly instead of guessing. This seems trivial, but it's one of the most effective single changes you can make.
+
+Let's talk about error handling. Your tools will fail. The database will be down, the API will rate-limit you, the file won't exist. When that happens, your tool needs to return a useful error message — not a cryptic stack trace. A good error response tells the agent what went wrong and what it can do about it. Instead of "Error 500," return "Payment API is currently unavailable. Try again in 30 seconds, or suggest the user contact billing by email." The model can then act on that information intelligently. It might retry, or it might tell the user what happened and offer an alternative.
+
+Idempotency is another important principle. If a tool creates a resource — like creating a support ticket — running it twice should not create two tickets. Design your tools so that repeated calls with the same parameters produce the same result. This lets the agent safely retry when there's a network timeout or an ambiguous response.
+
+And speaking of retries — make your tools robust to flaky agents. Agents sometimes call tools with slightly wrong parameters, or call the same tool twice. Your tool should handle this gracefully. Validate inputs, return clear errors, and avoid side effects on failure.
+
+Now, a word on tool granularity. Should you have one big "do_everything" tool or many tiny tools? Neither extreme works well. One massive tool with too many parameters confuses the model. Dozens of tiny tools make it hard for the model to figure out which to use. The sweet spot is what I'd call action-sized tools — each tool should correspond to one coherent action a human would take. "Send email," "Search documents," "Create calendar event" are good. "Get database connection" is too low-level; "manage customer relationship" is too high-level.
+
+Finally, test your tools the way your agent will use them. Don't just test that the function works — test that a language model can figure out how to call it correctly. Give a model the tool descriptions and a user request, and see if it picks the right tool with the right parameters. You'll be surprised how often it doesn't, and each failure reveals something you can improve in your descriptions or parameter design.
+
+The bottom line is this: your agent is only as capable as the tools it holds. Design those tools with care, describe them with clarity, and test them with rigor. A well-crafted tool set turns a good agent into a great one.
+
+That's tool design best practices. See you next time.

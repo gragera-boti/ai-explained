@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Tool design best practices — Writing tools agents can actually use",
     "State management for agents — Persistence, memory, and context",
     "Building reliable agents — Retries, fallbacks, circuit breakers, timeouts",
     "Agentic RAG — When agents meet retrieval",
@@ -65,6 +64,7 @@
     "Human-in-the-loop — Designing safe agentic workflows",
     "Agent security — Prompt injection, tool access control, and sandboxing",
     "Building an agent from scratch — The perceive-think-act loop",
-    "Agent architecture patterns — Supervisor, swarm, router, event-driven"
+    "Agent architecture patterns — Supervisor, swarm, router, event-driven",
+    "Tool design best practices — Writing tools agents can actually use"
   ]
 }

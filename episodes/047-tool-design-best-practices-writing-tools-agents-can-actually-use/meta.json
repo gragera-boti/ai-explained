@@ -1,0 +1,9 @@
+{
+  "title": "Tool Design Best Practices — Writing Tools Agents Can Actually Use",
+  "description": "Your AI agent is only as capable as the tools you give it. This episode covers the essential principles of designing tools that language models can actually use effectively — from clear descriptions and flat parameters to robust error messages and proper granularity.",
+  "date": "2026-07-10",
+  "episode_number": 47,
+  "duration": "6:06",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["tool design", "function calling", "agent tools", "tool best practices", "AI agents"]
+}

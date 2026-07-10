@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jul 2026 04:10:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 04:10:59 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Tool Design Best Practices — Writing Tools Agents Can Actually Use</title>
+      <description>Your AI agent is only as capable as the tools you give it. This episode covers the essential principles of designing tools that language models can actually use effectively — from clear descriptions and flat parameters to robust error messages and proper granularity.</description>
+      <pubDate>Thu, 09 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/047-tool-design-best-practices-writing-tools-agents-can-actually-use/047-tool-design-best-practices-writing-tools-agents-can-actually-use.mp3" length="2094624" type="audio/mpeg"/>
+      <guid isPermaLink="false">047-tool-design-best-practices-writing-tools-agents-can-actually-use</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:06</itunes:duration>
+      <itunes:episode>47</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Agent Architecture Patterns — Supervisor, Swarm, Router, Event-Driven</title>
       <description>An exploration of the four major agent architecture patterns used in production AI systems. Learn how supervisor hierarchy, decentralized swarms, lightweight routers, and event-driven automation each solve different coordination problems, and how to choose the right pattern for your use case.</description>
