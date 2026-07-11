@@ -1,0 +1,9 @@
+{
+  "title": "State Management for Agents — Persistence, Memory, and Context",
+  "description": "AI agents need to track where they are, what they've done, and where they're going across multiple steps, conversations, and sessions. This episode covers state machines, checkpointing, hot vs cold state, persistent storage, and distributed state in multi-agent systems.",
+  "date": "2026-07-11",
+  "episode_number": 48,
+  "duration": "6:44",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["state management", "agent memory", "persistence", "context management", "checkpointing", "agent state"]
+}

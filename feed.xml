@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Jul 2026 04:10:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 04:09:05 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>State Management for Agents — Persistence, Memory, and Context</title>
+      <description>AI agents need to track where they are, what they&apos;ve done, and where they&apos;re going across multiple steps, conversations, and sessions. This episode covers state machines, checkpointing, hot vs cold state, persistent storage, and distributed state in multi-agent systems.</description>
+      <pubDate>Fri, 10 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/048-state-management-for-agents-persistence-memory-and-context/048-state-management-for-agents-persistence-memory-and-context.mp3" length="2426112" type="audio/mpeg"/>
+      <guid isPermaLink="false">048-state-management-for-agents-persistence-memory-and-context</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:44</itunes:duration>
+      <itunes:episode>48</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Tool Design Best Practices — Writing Tools Agents Can Actually Use</title>
       <description>Your AI agent is only as capable as the tools you give it. This episode covers the essential principles of designing tools that language models can actually use effectively — from clear descriptions and flat parameters to robust error messages and proper granularity.</description>
