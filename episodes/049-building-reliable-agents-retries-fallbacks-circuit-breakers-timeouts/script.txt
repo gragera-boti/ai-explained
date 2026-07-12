@@ -1,0 +1,31 @@
+Building Reliable Agents — Retries, Fallbacks, Circuit Breakers, Timeouts
+
+Imagine you're building a house of cards on a wobbly table, in a room with open windows, while wearing oven mitts. Every tiny disturbance could bring the whole thing crashing down. That's what it's like running an AI agent in the real world without reliability patterns. Your agent talks to APIs that go down, databases that time out, language models that return garbled JSON, and network connections that drop mid-request. If your agent can't handle these failures gracefully, it's not an agent — it's a liability.
+
+Today, we're talking about building reliable agents. The four pillars of agent resilience: retries, fallbacks, circuit breakers, and timeouts.
+
+Let's start with the simplest and most essential pattern: retries. The idea is dead simple — if a tool call fails, try again. But naive retries can make things worse. If your API call failed because the server is overloaded, retrying immediately just adds to the load. That's why you need exponential backoff. Start with a one-second wait, then two seconds, then four, then eight. Each retry waits twice as long as the last. This gives the server time to recover and spreads out your agent's requests instead of hammering the same endpoint. Most SDKs handle this for you, but when you're building your own tools, remember that a retry without a delay is just polite denial of service.
+
+A good rule of thumb is three retries with exponential backoff and a maximum delay of thirty seconds. After that, assume the service is genuinely down and move on.
+
+But what do you move on to? That's where fallbacks come in. A fallback is a Plan B. If your primary tool fails after all retries, the agent should have an alternative path. For example, if your agent's main search tool is down, it could fall back to a cached search index or a different search provider. If the premium LLM is returning errors, fall back to a smaller, cheaper model. Fallbacks transform a hard failure into a soft one — the agent still delivers something useful, even if it's not the ideal result.
+
+The key to good fallbacks is to give the agent enough context to make smart decisions about when and how to fall back. If the primary tool fails with "rate limited," the agent knows it should wait and retry. If it fails with "endpoint not found," that's a permanent error — fall back immediately. Build this decision logic into your tool descriptions or into the agent's system prompt so it knows what to do.
+
+Now let's talk about the third pillar: circuit breakers. This is a pattern borrowed from distributed systems, and it's brilliant for agent reliability. Here's how it works. Imagine a circuit breaker in your house — when too much current flows, the breaker trips and cuts power to prevent a fire. In agent terms, a circuit breaker monitors failures to a particular service. Under normal conditions, the circuit is closed — requests pass through. After a certain number of consecutive failures — say, five — the circuit opens. New requests are rejected immediately without being sent, saving time and preventing further load on the failing service.
+
+After a cooldown period, the circuit goes into a half-open state, allowing a single test request through. If it succeeds, the circuit closes and normal operation resumes. If it fails, the circuit opens again for a longer cooldown. This pattern prevents cascading failures — when one service starts failing, your agent doesn't waste time hammering it. It fails fast and moves on.
+
+Where do you put circuit breakers? At the tool level. If your weather API tool keeps failing, the circuit breaker catches it. But you can also put circuit breakers at the step level — if the agent keeps failing at a particular reasoning step, the circuit breaker can force the agent to reconsider its approach entirely.
+
+The fourth pillar is timeouts. This might sound trivial, but it's one of the most common sources of agent bugs. An agent calls a tool and waits indefinitely for a response that never comes. Meanwhile, the agent's context window fills up with pending state, and the whole system hangs. Every tool call must have a timeout. If the database query takes longer than ten seconds, the agent should timeout, log the failure, and move on.
+
+Timeouts need to be set intelligently. A file upload tool might need sixty seconds. A simple database lookup should timeout in five. A complex reasoning call to an LLM might need thirty. The wrong timeout manifests in two ways. Too short and you get false failures — the tool would have worked if you'd waited. Too long and your agent stalls, degrading user experience and wasting compute.
+
+Here's the pattern that ties these four together. Your agent makes a tool call with a timeout. If it succeeds, great. If it times out or returns an error, the agent retries with exponential backoff. If retries are exhausted, the circuit breaker records a failure. If the circuit is open, skip the primary tool entirely and use the fallback. Log everything so you can tune the parameters later.
+
+This might sound like a lot of infrastructure for a simple agent, but here's the thing — reliability compounds. A single failure might be rare, but an agent that makes fifty tool calls is almost guaranteed to hit at least one failure. Without these patterns, that single failure cascades into a broken agent. With them, the agent absorbs the failure and keeps going.
+
+Real-world agent frameworks handle this differently. LangChain has built-in retry logic for tool calls. CrewAI's task manager includes timeout configuration for individual tasks. AutoGen has configurable max_consecutive_auto_reply settings that act as a simple circuit breaker. But even if you're building an agent from scratch, these four patterns — retries, fallbacks, circuit breakers, and timeouts — are straightforward to implement and make the difference between a toy agent and a production agent.
+
+That's building reliable agents — retries, fallbacks, circuit breakers, and timeouts. See you next time.

@@ -1,0 +1,9 @@
+{
+  "title": "Building Reliable Agents — Retries, Fallbacks, Circuit Breakers, Timeouts",
+  "description": "AI agents in production face failures constantly — APIs go down, networks timeout, models return garbled output. This episode covers the four essential reliability patterns every agent needs: retries with exponential backoff, fallback strategies, circuit breakers to prevent cascading failures, and timeouts to keep agents responsive.",
+  "date": "2026-07-12",
+  "episode_number": 49,
+  "duration": "6:44",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent reliability", "retries", "fallbacks", "circuit breakers", "timeouts", "error handling", "production agents"]
+}
