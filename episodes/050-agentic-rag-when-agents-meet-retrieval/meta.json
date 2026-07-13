@@ -1,0 +1,9 @@
+{
+  "title": "Agentic RAG — When agents meet retrieval",
+  "description": "Classic RAG retrieves documents once and hopes for the best. Agentic RAG gives the agent tools to iteratively search, refine queries, multi-hop across sources, and self-verify its answers. This episode covers query refinement loops, multi-hop retrieval, sub-question decomposition, and the production challenges of building RAG systems that think.",
+  "date": "2026-07-13",
+  "episode_number": 50,
+  "duration": "7:00",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agentic RAG", "retrieval augmented generation", "ReAct", "multi-hop retrieval", "query refinement", "agents", "tool use"]
+}

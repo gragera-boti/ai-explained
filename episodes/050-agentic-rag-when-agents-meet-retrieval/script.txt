@@ -1,0 +1,31 @@
+Agentic RAG — When agents meet retrieval
+
+Imagine asking a librarian for a book, but instead of just handing you one book and walking away, the librarian keeps asking you questions. "What specifically are you looking for? Did this chapter help? Should I look in a different section?" That's the difference between classic RAG and agentic RAG. One is a one-shot lookup. The other is an active, iterative research process.
+
+Let's start with what you already know about RAG — retrieval augmented generation. You take a user's question, turn it into an embedding, search a vector database for relevant documents, stuff those documents into the LLM's context window, and let the model generate an answer based on them. It works great for simple Q&A. But it has a fundamental limitation: the retrieval happens once, in a fixed way, before the LLM even sees the question.
+
+If the retrieval misses something, too bad. If the question is ambiguous and needs multiple searches, too bad. If the user wants to drill deeper into one result, too bad. Classic RAG treats retrieval as a single step at the beginning, and after that, the model is on its own.
+
+Agentic RAG flips this. Instead of a single retrieval step, the agent has retrieval as a tool it can call anytime. The agent thinks about what it needs, retrieves some information, thinks about whether that's enough, and if not, retrieves more. It can change its search strategy mid-conversation. It can ask follow-up retrieval questions that build on what it just learned.
+
+The simplest version of agentic RAG uses what's called the ReAct pattern — reasoning and acting. The agent writes out a thought, decides what to retrieve, makes the retrieval call, reads the results, writes a new thought, and either retrieves again or generates the final answer. This loop gives the agent the ability to correct its own course. If the first batch of documents is unhelpful, the agent realizes that and tries a different search.
+
+But there's a problem. Every retrieval call costs time and tokens. An agent that blindly retrieves at every step can rack up enormous costs and latency. So practical agentic RAG needs strategies to be efficient.
+
+The most common strategy is the query refinement loop. The agent starts with the user's original question, retrieves documents, reads them, and then generates a better search query based on what it's seen so far. Maybe the first search was too broad — "Tell me about climate policy" — and the agent realizes it needs something more specific, like "US carbon tax legislation 2024." Each iteration narrows the search space.
+
+A second strategy is multi-hop retrieval. Some questions can't be answered from a single document. "What was the revenue of the company that acquired AcmeCorp?" requires two hops: first find who acquired AcmeCorp, then find that company's revenue. An agentic RAG system breaks this down. It retrieves the acquisition details, extracts the acquirer's name, retrieves their financials, and then generates the answer. The agent plans the path rather than guessing a single query.
+
+There's also the sub-question approach. The agent takes the original question, breaks it into smaller sub-questions, retrieves for each one independently, and then synthesizes the results. This is especially useful for complex research queries that span multiple topics. Instead of one vague search that returns mediocre results across all dimensions, you get focused, high-quality retrieval for each dimension.
+
+One of my favorite patterns is the retrieval-as-judge pattern. The agent retrieves documents, generates a draft answer, and then explicitly evaluates whether the retrieved documents actually support the answer. If there are gaps or contradictions, the agent does another round of retrieval targeting the missing pieces. This self-verification loop significantly improves answer quality, especially for questions where the right answer depends on getting all the facts right.
+
+Now, let's talk about the dirty secret of classic RAG — chunking. In traditional RAG, documents are split into fixed-size chunks, and retrieval happens at the chunk level. But the right chunk size depends on the question. A question about a specific number needs a small, precise chunk. A question about a general trend needs a larger chunk with more context. Agentic RAG handles this naturally because the agent can retrieve multiple chunk sizes and decide which is most useful. It can even retrieve full documents when it needs broad context and specific paragraphs when it needs precision.
+
+The challenges of agentic RAG are real. Latency is the big one — each retrieval step adds hundreds of milliseconds. Token usage balloons because every retrieved document takes up context window space. And there's a risk of the agent going down a rabbit hole, retrieving more and more irrelevant documents. That's why most production systems set a hard limit on retrieval steps — three to five iterations max — and use the agent's confidence score as a stopping criterion.
+
+In practice, agentic RAG is where most production RAG systems are heading. A simple RAG pipeline with a single retrieval step works for maybe eighty percent of queries. But for that twenty percent of complex, multi-faceted, or ambiguous questions, agentic RAG makes the difference between a useless answer and a genuinely helpful one.
+
+So here's the bottom line. Classic RAG is a lookup. Agentic RAG is a conversation with a research assistant. The agent decides what to look up, when to look it up, and whether it's found enough to give you a confident answer. It's retrieval turned from a one-shot process into an iterative dialogue between the agent and its knowledge base.
+
+That's agentic RAG — when agents meet retrieval. See you next time.

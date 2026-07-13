@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Agentic RAG — When agents meet retrieval",
     "Agent testing strategies — From unit tests to integration",
     "Agent orchestration — Sequential, hierarchical, and dynamic task graphs",
     "Streaming and real-time agent interactions",
@@ -65,6 +64,7 @@
     "Agent architecture patterns — Supervisor, swarm, router, event-driven",
     "Tool design best practices — Writing tools agents can actually use",
     "State management for agents — Persistence, memory, and context",
-    "Building reliable agents — Retries, fallbacks, circuit breakers, timeouts"
+    "Building reliable agents — Retries, fallbacks, circuit breakers, timeouts",
+    "Agentic RAG — When agents meet retrieval"
   ]
 }
