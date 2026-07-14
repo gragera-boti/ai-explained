@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Agent testing strategies — From unit tests to integration",
     "Agent orchestration — Sequential, hierarchical, and dynamic task graphs",
     "Streaming and real-time agent interactions",
     "Autonomous agent loops — Self-directed task generation and execution",
@@ -16,6 +15,7 @@
     "Human-agent collaboration — Designing effective human-agent teams"
   ],
   "completed": [
+    "Agent testing strategies — From unit tests to integration",
     "MCP (Model Context Protocol) — Standardizing agent tools",
     "Agent observability — Tracing and debugging AI agents",
     "Quantization — How AI Models Shrink to Fit Your Laptop",

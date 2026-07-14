@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 04:10:56 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 04:09:36 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Agent testing strategies — From unit tests to integration</title>
+      <description>Testing AI agents is fundamentally different from testing traditional software — agents are non-deterministic, behavior-driven systems. This episode covers the full testing pyramid: tool unit tests, prompt property tests, conversation flow tests, behavioral evaluation with LLM-as-judge, adversarial testing, and integration testing against real APIs.</description>
+      <pubDate>Mon, 13 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/051-agent-testing-strategies-from-unit-tests-to-integration/051-agent-testing-strategies-from-unit-tests-to-integration.mp3" length="2297664" type="audio/mpeg"/>
+      <guid isPermaLink="false">051-agent-testing-strategies-from-unit-tests-to-integration</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:40</itunes:duration>
+      <itunes:episode>51</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Agentic RAG — When agents meet retrieval</title>
       <description>Classic RAG retrieves documents once and hopes for the best. Agentic RAG gives the agent tools to iteratively search, refine queries, multi-hop across sources, and self-verify its answers. This episode covers query refinement loops, multi-hop retrieval, sub-question decomposition, and the production challenges of building RAG systems that think.</description>

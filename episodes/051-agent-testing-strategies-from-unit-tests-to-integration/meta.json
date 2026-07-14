@@ -1,0 +1,9 @@
+{
+  "title": "Agent testing strategies — From unit tests to integration",
+  "description": "Testing AI agents is fundamentally different from testing traditional software — agents are non-deterministic, behavior-driven systems. This episode covers the full testing pyramid: tool unit tests, prompt property tests, conversation flow tests, behavioral evaluation with LLM-as-judge, adversarial testing, and integration testing against real APIs.",
+  "date": "2026-07-14",
+  "episode_number": 51,
+  "duration": "6:40",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent testing", "unit tests", "integration testing", "LLM-as-judge", "adversarial testing", "prompt testing", "behavioral testing"]
+}
