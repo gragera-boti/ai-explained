@@ -1,0 +1,9 @@
+{
+  "title": "Agent orchestration — Sequential, hierarchical, and dynamic task graphs",
+  "description": "How do you coordinate multiple AI agents to work together on complex tasks? This episode covers the three fundamental orchestration patterns: sequential pipelines for linear workflows, hierarchical supervisor-worker structures for flexible delegation, and dynamic self-organizing swarms for emergent coordination. Learn when to use each pattern and how real-world systems combine them.",
+  "date": "2026-07-15",
+  "episode_number": 52,
+  "duration": "5:13",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent orchestration", "sequential orchestration", "hierarchical orchestration", "dynamic orchestration", "swarm pattern", "supervisor pattern", "task decomposition"]
+}

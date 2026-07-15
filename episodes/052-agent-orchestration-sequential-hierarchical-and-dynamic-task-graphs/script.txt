@@ -1,0 +1,25 @@
+Agent orchestration — Sequential, hierarchical, and dynamic task graphs
+
+Imagine you're running a restaurant kitchen. You could have one chef do everything — chop vegetables, sear the steak, plate the dish, wash the pans. That works, but it's slow and error-prone. Or you could organize the kitchen. A head chef plans the orders, a line cook grills the proteins, a prep cook handles vegetables, and a dishwasher keeps things moving. Each person has a role, and the work flows between them in a coordinated way. That's orchestration, and for AI agents, it's just as important.
+
+Agent orchestration is about how you coordinate multiple agents to work together on complex tasks. There are three fundamental patterns: sequential, hierarchical, and dynamic. Each is useful for different kinds of problems, and most real-world systems use a mix of all three.
+
+Let's start with sequential orchestration. This is the simplest pattern. Agents work in a pipeline — agent A does its job, passes the result to agent B, who passes it to agent C, and so on. Think of an assembly line. A research agent gathers information, a drafting agent writes a first version, a review agent checks for errors, and a formatting agent produces the final output. Each agent has a narrow, specific responsibility, and the data flows in one direction.
+
+Sequential orchestration is great for tasks that have clear stages. You wouldn't have the review agent start before the drafting agent finishes — that makes no sense. It's predictable, easy to debug, and you can measure each step independently. The downside is that it's inflexible. If one agent takes too long, the whole pipeline blocks. If the research agent misses something, the drafting agent can't go back and ask for more information. It's a one-way street.
+
+Next is hierarchical orchestration. This is the supervisor-worker pattern. You have a managing agent that understands the high-level goal, breaks it into subtasks, and delegates each subtask to a specialized worker agent. The supervisor monitors progress, handles exceptions, and decides when the overall task is complete.
+
+Hierarchical orchestration is the most common pattern in production agent systems today. It works because it mirrors how human organizations work. The supervisor holds the context and the plan, while workers focus on narrow execution. If a worker fails, the supervisor can retry with a different approach or a different worker. If the task changes, the supervisor can re-plan and re-delegate. The trade-off is complexity — the supervisor needs to be smart enough to decompose tasks correctly, and you need clear communication protocols so workers understand their assignments.
+
+The most popular framework for hierarchical orchestration is the supervisor pattern in LangGraph, where a single orchestrator node routes messages to specialized agent nodes. CrewAI uses a similar model with manager agents. Microsoft's AutoGen introduced the concept of agent chats — a manager agent can spawn sub-conversations with worker agents to accomplish sub-goals.
+
+Then there's dynamic orchestration. This is the most flexible and the hardest to get right. In dynamic orchestration, agents don't follow a predetermined structure. Instead, they self-organize based on the task at hand. An agent might realize it needs information it doesn't have, so it broadcasts a request to other agents. Another agent that specializes in that type of data picks up the request, processes it, and sends back the result. There's no central planner — coordination emerges from the interactions between agents.
+
+The best example of dynamic orchestration is the swarm pattern, inspired by how bees or ants organize. Each agent has a simple set of behaviors, but collectively they solve complex problems. OpenAI's Swarm experiment and the newer research into graph-based agent topologies are exploring this direction. Dynamic orchestration is incredibly resilient — if one agent fails, others can pick up the work. But it's also unpredictable. You can't guarantee how many agents will be involved, how long the task will take, or even whether it will complete successfully.
+
+Most practical systems combine these patterns. You might have a hierarchical supervisor that delegates to pipeline workers for certain subtasks, and those workers might dynamically recruit helper agents if they hit a bottleneck. The key insight is that orchestration isn't about picking one pattern — it's about designing the right coordination structure for each part of your problem.
+
+When you're designing an orchestration system, start simple. Use sequential pipelines for well-understood, linear workflows. Add a supervisor when you need flexibility and error recovery. Experiment with dynamic patterns only when you have a problem that truly requires emergent coordination. Each layer of orchestration adds complexity, and the best system is the simplest one that reliably solves your problem.
+
+That's agent orchestration — sequential, hierarchical, and dynamic task graphs. See you next time.
