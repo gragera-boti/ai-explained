@@ -1,0 +1,9 @@
+{
+  "title": "Streaming and real-time agent interactions",
+  "description": "Why wait for a full response when your agent can start acting mid-sentence? This episode covers streaming in AI agents — how token-by-token generation enables real-time collaboration, interleaved tool calls, and natural conversational flow. From server-sent events to voice-based real-time APIs, learn what makes streaming agents feel alive.",
+  "date": "2026-07-16",
+  "episode_number": 53,
+  "duration": "5:42",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["streaming", "real-time agents", "SSE", "WebSockets", "interleaved execution", "reactive agents", "voice agents"]
+}

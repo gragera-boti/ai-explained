@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jul 2026 04:12:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 04:11:01 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Streaming and real-time agent interactions</title>
+      <description>Why wait for a full response when your agent can start acting mid-sentence? This episode covers streaming in AI agents — how token-by-token generation enables real-time collaboration, interleaved tool calls, and natural conversational flow. From server-sent events to voice-based real-time APIs, learn what makes streaming agents feel alive.</description>
+      <pubDate>Wed, 15 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/053-streaming-and-real-time-agent-interactions/053-streaming-and-real-time-agent-interactions.mp3" length="1971792" type="audio/mpeg"/>
+      <guid isPermaLink="false">053-streaming-and-real-time-agent-interactions</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:42</itunes:duration>
+      <itunes:episode>53</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Agent orchestration — Sequential, hierarchical, and dynamic task graphs</title>
       <description>How do you coordinate multiple AI agents to work together on complex tasks? This episode covers the three fundamental orchestration patterns: sequential pipelines for linear workflows, hierarchical supervisor-worker structures for flexible delegation, and dynamic self-organizing swarms for emergent coordination. Learn when to use each pattern and how real-world systems combine them.</description>
