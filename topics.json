@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Autonomous agent loops — Self-directed task generation and execution",
     "Agent delegation patterns — How agents hand off work to each other",
     "Specialization and role assignment in agent teams",
     "Agent communication protocols — Structured message passing between agents",
@@ -65,6 +64,7 @@
     "Building reliable agents — Retries, fallbacks, circuit breakers, timeouts",
     "Agentic RAG — When agents meet retrieval",
     "Agent orchestration — Sequential, hierarchical, and dynamic task graphs",
-    "Streaming and real-time agent interactions"
+    "Streaming and real-time agent interactions",
+    "Autonomous agent loops — Self-directed task generation and execution"
   ]
 }

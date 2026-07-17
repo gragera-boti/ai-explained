@@ -1,0 +1,9 @@
+{
+  "title": "Autonomous agent loops — Self-directed task generation and execution",
+  "description": "What happens when an AI agent generates its own tasks instead of waiting for instructions? This episode explores autonomous agent loops — how agents break down high-level goals, execute sub-tasks, and adapt on the fly. From AutoGPT to modern frameworks, learn how self-directed agents work and how to keep them safe.",
+  "date": "2026-07-17",
+  "episode_number": 54,
+  "duration": "6:05",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["autonomous agents", "self-directed task generation", "perceive-think-act loops", "goal decomposition", "agent planning", "AutoGPT", "task explosion", "self-reflection"]
+}

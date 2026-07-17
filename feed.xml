@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jul 2026 04:11:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 04:09:32 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Autonomous agent loops — Self-directed task generation and execution</title>
+      <description>What happens when an AI agent generates its own tasks instead of waiting for instructions? This episode explores autonomous agent loops — how agents break down high-level goals, execute sub-tasks, and adapt on the fly. From AutoGPT to modern frameworks, learn how self-directed agents work and how to keep them safe.</description>
+      <pubDate>Thu, 16 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/054-autonomous-agent-loops-self-directed-task-generation-and-execution/054-autonomous-agent-loops-self-directed-task-generation-and-execution.mp3" length="1993392" type="audio/mpeg"/>
+      <guid isPermaLink="false">054-autonomous-agent-loops-self-directed-task-generation-and-execution</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:05</itunes:duration>
+      <itunes:episode>54</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Streaming and real-time agent interactions</title>
       <description>Why wait for a full response when your agent can start acting mid-sentence? This episode covers streaming in AI agents — how token-by-token generation enables real-time collaboration, interleaved tool calls, and natural conversational flow. From server-sent events to voice-based real-time APIs, learn what makes streaming agents feel alive.</description>
