@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Agent delegation patterns — How agents hand off work to each other",
     "Specialization and role assignment in agent teams",
     "Agent communication protocols — Structured message passing between agents",
     "Consensus and voting in multi-agent systems",
@@ -12,6 +11,7 @@
     "Human-agent collaboration — Designing effective human-agent teams"
   ],
   "completed": [
+    "Agent delegation patterns — How agents hand off work to each other",
     "Agent testing strategies — From unit tests to integration",
     "MCP (Model Context Protocol) — Standardizing agent tools",
     "Agent observability — Tracing and debugging AI agents",

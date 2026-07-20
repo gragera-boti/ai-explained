@@ -1,0 +1,9 @@
+{
+  "title": "Agent delegation patterns — How agents hand off work to each other",
+  "description": "How do AI agents pass work to each other effectively? This episode explores delegation patterns in multi-agent systems — from sequential pipelines to hierarchical supervisors and event-driven architectures. Learn how handoffs work, what context needs to transfer, and how to avoid common pitfalls like cascading failures and context dilution.",
+  "date": "2026-07-20",
+  "episode_number": 55,
+  "duration": "5:31",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent delegation", "handoff patterns", "multi-agent orchestration", "sequential delegation", "hierarchical delegation", "event-driven agents", "context transfer", "LangGraph", "AutoGen"]
+}
