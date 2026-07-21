@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Specialization and role assignment in agent teams",
     "Agent communication protocols — Structured message passing between agents",
     "Consensus and voting in multi-agent systems",
     "Autonomous agents with persistent goals — Long-running agent systems",
@@ -65,6 +64,7 @@
     "Agentic RAG — When agents meet retrieval",
     "Agent orchestration — Sequential, hierarchical, and dynamic task graphs",
     "Streaming and real-time agent interactions",
-    "Autonomous agent loops — Self-directed task generation and execution"
+    "Autonomous agent loops — Self-directed task generation and execution",
+    "Specialization and role assignment in agent teams"
   ]
 }

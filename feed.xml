@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2026 04:12:17 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 04:10:39 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Specialization and role assignment in agent teams</title>
+      <description>Why does splitting work across specialized AI agents outperform a single generalist? This episode explores specialization and role assignment in multi-agent systems — from static roles and dynamic routing to emergent self-organization. Learn how role-based architectures improve reliability, simplify debugging, and scale complex agent workflows.</description>
+      <pubDate>Mon, 20 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/056-specialization-and-role-assignment-in-agent-teams/056-specialization-and-role-assignment-in-agent-teams.mp3" length="1934208" type="audio/mpeg"/>
+      <guid isPermaLink="false">056-specialization-and-role-assignment-in-agent-teams</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:28</itunes:duration>
+      <itunes:episode>56</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Agent delegation patterns — How agents hand off work to each other</title>
       <description>How do AI agents pass work to each other effectively? This episode explores delegation patterns in multi-agent systems — from sequential pipelines to hierarchical supervisors and event-driven architectures. Learn how handoffs work, what context needs to transfer, and how to avoid common pitfalls like cascading failures and context dilution.</description>

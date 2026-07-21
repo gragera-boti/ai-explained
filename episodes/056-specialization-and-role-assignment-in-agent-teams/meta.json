@@ -1,0 +1,9 @@
+{
+  "title": "Specialization and role assignment in agent teams",
+  "description": "Why does splitting work across specialized AI agents outperform a single generalist? This episode explores specialization and role assignment in multi-agent systems — from static roles and dynamic routing to emergent self-organization. Learn how role-based architectures improve reliability, simplify debugging, and scale complex agent workflows.",
+  "date": "2026-07-21",
+  "episode_number": 56,
+  "duration": "5:28",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["specialization", "role assignment", "multi-agent systems", "static roles", "dynamic routing", "emergent specialization", "agent teams", "CrewAI", "AutoGen"]
+}
