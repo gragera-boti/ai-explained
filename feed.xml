@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Jul 2026 04:10:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 04:10:32 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Agent communication protocols — Structured message passing between agents</title>
+      <description>How do AI agents talk to each other without getting confused? This episode explores agent communication protocols — from simple request-response to rich message formats with error handling, negotiation, and streaming. Learn about structured messages, correlation IDs, A2A, MCP, and why your agent team needs clear communication standards.</description>
+      <pubDate>Tue, 21 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/057-agent-communication-protocols-structured-message-passing-between-agents/057-agent-communication-protocols-structured-message-passing-between-agents.mp3" length="1870416" type="audio/mpeg"/>
+      <guid isPermaLink="false">057-agent-communication-protocols-structured-message-passing-between-agents</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:08</itunes:duration>
+      <itunes:episode>57</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Specialization and role assignment in agent teams</title>
       <description>Why does splitting work across specialized AI agents outperform a single generalist? This episode explores specialization and role assignment in multi-agent systems — from static roles and dynamic routing to emergent self-organization. Learn how role-based architectures improve reliability, simplify debugging, and scale complex agent workflows.</description>

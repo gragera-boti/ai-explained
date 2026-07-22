@@ -1,0 +1,9 @@
+{
+  "title": "Agent communication protocols — Structured message passing between agents",
+  "description": "How do AI agents talk to each other without getting confused? This episode explores agent communication protocols — from simple request-response to rich message formats with error handling, negotiation, and streaming. Learn about structured messages, correlation IDs, A2A, MCP, and why your agent team needs clear communication standards.",
+  "date": "2026-07-22",
+  "episode_number": 57,
+  "duration": "5:08",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["agent communication protocols", "structured message passing", "A2A protocol", "request-response", "agent-to-agent communication", "message format", "correlation IDs", "error handling"]
+}
