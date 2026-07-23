@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Jul 2026 04:10:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 04:11:31 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Consensus and Voting in Multi-Agent Systems</title>
+      <description>How do multiple AI agents agree on a single answer when they all see different evidence? This episode explores consensus mechanisms for multi-agent systems — from simple majority voting to weighted voting, structured debate, and adaptive protocols. Learn how to design agent teams that converge on better decisions together.</description>
+      <pubDate>Wed, 22 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/058-consensus-and-voting-in-multi-agent-systems/058-consensus-and-voting-in-multi-agent-systems.mp3" length="2081520" type="audio/mpeg"/>
+      <guid isPermaLink="false">058-consensus-and-voting-in-multi-agent-systems</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>5:39</itunes:duration>
+      <itunes:episode>58</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Agent communication protocols — Structured message passing between agents</title>
       <description>How do AI agents talk to each other without getting confused? This episode explores agent communication protocols — from simple request-response to rich message formats with error handling, negotiation, and streaming. Learn about structured messages, correlation IDs, A2A, MCP, and why your agent team needs clear communication standards.</description>

@@ -1,6 +1,5 @@
 {
   "upcoming": [
-    "Consensus and voting in multi-agent systems",
     "Autonomous agents with persistent goals — Long-running agent systems",
     "Swarm intelligence — Large-scale multi-agent coordination",
     "Agent negotiation and conflict resolution",
@@ -65,6 +64,7 @@
     "Streaming and real-time agent interactions",
     "Autonomous agent loops — Self-directed task generation and execution",
     "Specialization and role assignment in agent teams",
-    "Agent communication protocols — Structured message passing between agents"
+    "Agent communication protocols — Structured message passing between agents",
+    "Consensus and voting in multi-agent systems"
   ]
 }

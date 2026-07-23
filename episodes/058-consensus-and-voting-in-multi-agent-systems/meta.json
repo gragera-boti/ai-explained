@@ -1,0 +1,9 @@
+{
+  "title": "Consensus and Voting in Multi-Agent Systems",
+  "description": "How do multiple AI agents agree on a single answer when they all see different evidence? This episode explores consensus mechanisms for multi-agent systems — from simple majority voting to weighted voting, structured debate, and adaptive protocols. Learn how to design agent teams that converge on better decisions together.",
+  "date": "2026-07-23",
+  "episode_number": 58,
+  "duration": "5:39",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["consensus mechanisms", "multi-agent voting", "weighted voting", "structured debate", "agent deliberation", "Byzantine fault tolerance", "groupthink", "adaptive consensus"]
+}
