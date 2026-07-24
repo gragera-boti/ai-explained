@@ -7,7 +7,7 @@
     <link>https://gragera-boti.github.io/ai-explained</link>
     <description>Daily bite-sized episodes explaining AI concepts — from quantization to transformers. Narrated by Boti.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jul 2026 04:11:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 04:11:25 GMT</lastBuildDate>
     <itunes:author>Boti</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
@@ -18,6 +18,17 @@
       <title>AI Explained</title>
       <link>https://gragera-boti.github.io/ai-explained</link>
     </image>
+    <item>
+      <title>Autonomous Agents with Persistent Goals — Long-Running Agent Systems</title>
+      <description>How do AI agents work toward goals that span days, weeks, or months? This episode explores persistent goal architectures — from goal loops and prioritization to goal decomposition, context switching, and the supervisor-agent hierarchy. Learn what it takes to build agents that carry out missions, not just answer questions.</description>
+      <pubDate>Thu, 23 Jul 2026 22:00:00 GMT</pubDate>
+      <enclosure url="https://gragera-boti.github.io/ai-explained/episodes/059-autonomous-agents-with-persistent-goals-long-running-agent-systems/059-autonomous-agents-with-persistent-goals-long-running-agent-systems.mp3" length="2417904" type="audio/mpeg"/>
+      <guid isPermaLink="false">059-autonomous-agents-with-persistent-goals-long-running-agent-systems</guid>
+      <itunes:author>Boti</itunes:author>
+      <itunes:duration>6:43</itunes:duration>
+      <itunes:episode>59</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Consensus and Voting in Multi-Agent Systems</title>
       <description>How do multiple AI agents agree on a single answer when they all see different evidence? This episode explores consensus mechanisms for multi-agent systems — from simple majority voting to weighted voting, structured debate, and adaptive protocols. Learn how to design agent teams that converge on better decisions together.</description>

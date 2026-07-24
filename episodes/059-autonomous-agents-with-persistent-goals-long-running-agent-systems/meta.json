@@ -1,0 +1,9 @@
+{
+  "title": "Autonomous Agents with Persistent Goals — Long-Running Agent Systems",
+  "description": "How do AI agents work toward goals that span days, weeks, or months? This episode explores persistent goal architectures — from goal loops and prioritization to goal decomposition, context switching, and the supervisor-agent hierarchy. Learn what it takes to build agents that carry out missions, not just answer questions.",
+  "date": "2026-07-24",
+  "episode_number": 59,
+  "duration": "6:43",
+  "voice": "en-US-AndrewNeural",
+  "topics": ["autonomous agents", "persistent goals", "long-running agents", "goal loops", "prioritization", "goal decomposition", "context switching", "supervisor-agent hierarchy"]
+}
